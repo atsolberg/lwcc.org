@@ -1,0 +1,27 @@
+{
+  "presets": ["@babel/react", [
+    "@babel/env",
+    {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 9", "ie >= 11"]
+      },
+      "loose": true,
+      "modules": false
+    }
+  ], "@emotion/babel-preset-css-prop"],
+
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-syntax-dynamic-import"
+  ],
+
+  "env": {
+    "test": {
+      "presets": [{
+          "plugins": ["@babel/plugin-transform-modules-commonjs"]
+        }
+      ],
+      "plugins": ["@babel/plugin-transform-runtime"]
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "lwcc.org",
+  "version": "1.0.0",
+  "description": "Repo for the lwcc.org website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/scripts/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "jest -u",
+    "test:coverage": "jest --coverage",
+    "prettier": "prettier --write 'src/**/*.{js,scss}'",
+    "prettier:check": "prettier --list-different 'src/**/*.{js,scss}'",
+    "lint": "eslint src --cache",
+    "lint:errors": "eslint src --cache --quiet",
+    "lint:strict": "eslint src --config .eslintrc.base.js",
+    "validate": "npm-run-all -l prettier:check lint:errors test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atsolberg/lwcc.org.git"
+  },
+  "keywords": [
+    "lwcc"
+  ],
+  "author": "Aaron Solberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atsolberg/lwcc.org/issues"
+  },
+  "homepage": "https://github.com/atsolberg/lwcc.org#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@emotion/babel-preset-css-prop": "^10.0.14",
+    "@emotion/core": "^10.0.15",
+    "@fortawesome/fontawesome-free": "^5.10.1",
+    "axios": "^0.19.0",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-emotion": "^10.0.15",
+    "bootstrap": "^4.3.1",
+    "classnames": "^2.2.6",
+    "core-js": "^3.1.4",
+    "custom-event-polyfill": "^1.0.7",
+    "eslint-plugin-jest": "^22.14.1",
+    "font-awesome": "^4.7.0",
+    "immer": "^3.2.0",
+    "js-cookie": "^2.2.1",
+    "node-sass": "^4.12.0",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-async-script": "^1.1.1",
+    "react-bootstrap": "^1.0.0-beta.10",
+    "react-dom": "^16.8.6",
+    "react-transition-group": "^4.2.2",
+    "url-polyfill": "^1.1.7",
+    "use-immer": "^0.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.8.24",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "react-testing-library": "^8.0.1",
+    "sass": "^1.22.9"
+  }
+}
