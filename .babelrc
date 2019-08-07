@@ -8,20 +8,12 @@
       "loose": true,
       "modules": false
     }
-  ], "@emotion/babel-preset-css-prop"],
+  ], ["@emotion/babel-preset-css-prop", {
+    // without this, we will get a 'Reference Error: process is not defined'
+    "sourceMap": false
+  }]],
 
   "plugins": [
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    "@babel/plugin-syntax-dynamic-import"
-  ],
-
-  "env": {
-    "test": {
-      "presets": [{
-          "plugins": ["@babel/plugin-transform-modules-commonjs"]
-        }
-      ],
-      "plugins": ["@babel/plugin-transform-runtime"]
-    }
-  }
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+  ]
 }

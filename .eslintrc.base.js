@@ -54,6 +54,9 @@ module.exports = {
 
     // Deprecated rule
     'jsx-a11y/label-has-for': 'off',
+
+    // Allow 'any'
+    'react/forbid-prop-types': ['warn', { forbid: ['object', 'array'] }],
   },
   overrides: [
     {

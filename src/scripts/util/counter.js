@@ -2,7 +2,7 @@
  * Module to display and update count down widgets.
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { render } from 'react-dom';
 
 import { pad } from './string';
@@ -14,7 +14,7 @@ const mod = {};
  * @param ms
  * @returns {{d: number | *, h: number|*, m: number|*, s: number|*}}
  */
-const formatTime = (ms) => {
+const formatTime = ms => {
   let days;
   let hours;
   let minutes;
@@ -36,7 +36,7 @@ const formatTime = (ms) => {
  * @param future {Date} Date in future
  * @returns {int} ms difference between two dates
  */
-const getTimeUntil = (future) =>
+const getTimeUntil = future =>
   future.getTime() > Date.now() ? future.getTime() - Date.now() : null;
 
 /**

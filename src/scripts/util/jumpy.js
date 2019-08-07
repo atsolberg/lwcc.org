@@ -2,8 +2,6 @@
  * Module for screen scrolling behavior.
  */
 
-import { focusFirstElement } from './ui';
-
 function smoothScroll(e) {
   const $target = $(e.currentTarget);
   let offset = 0;
@@ -16,8 +14,6 @@ function smoothScroll(e) {
   if ($el.length > 0) {
     jumpTo($el, offset);
   }
-
-  focusFirstElement(selector);
 }
 
 export function jumpTo(element, offset = 0) {

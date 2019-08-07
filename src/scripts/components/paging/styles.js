@@ -1,15 +1,11 @@
 import { css } from '@emotion/core';
 
 import { tablet } from '../../../styles/breakpoints';
-import {
-  primary,
-  gray,
-  gray_dark,
-} from '../../../styles/variables-export.scss';
+import v from '../../../styles/variables';
 
 const styles = css`
   &.paging {
-    border-top: 1px solid ${gray};
+    border-top: 1px solid ${v.gray};
     padding: 15px 0;
     text-align: center;
   }
@@ -27,14 +23,14 @@ const styles = css`
     &,
     &:hover,
     &:focus {
-      color: ${primary};
+      color: ${v.primary};
       text-transform: uppercase;
     }
     &.disabled,
     &.disabled:hover,
     &.btn-link[disabled] {
       opacity: 1;
-      color: ${gray_dark};
+      color: ${v.darkGray};
       cursor: default;
     }
   }

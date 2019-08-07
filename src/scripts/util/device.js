@@ -3,7 +3,7 @@
  */
 
 export const isMobile = (breakpoint = 768) => {
-  const clientWidth = document.documentElement.clientWidth;
+  const { clientWidth } = document.documentElement;
   return Math.max(clientWidth, window.innerWidth || 0) < breakpoint;
 };
 
@@ -12,7 +12,7 @@ export const isMobile = (breakpoint = 768) => {
  * @param {Boolean} useUserAgent - If true, detection uses navigator.userAgent instead
  *                                 of navigator.platform.
  */
-export const isIos = (useUserAgent) => {
+export const isIos = useUserAgent => {
   let ios = false;
   if (useUserAgent) {
     ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;

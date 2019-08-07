@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { transparentize } from 'polished';
 
-import { primary } from './variables-export.scss';
+import v from './variables';
 import { tablet } from './breakpoints';
 
 /* ============================================================
@@ -126,7 +126,7 @@ export const vCenterBlock = (left, right) => css`
 
 // Translate the block to the center horizontally
 // and set the `top` if provided.
-export const hCenterBlock = (top) => `
+export const hCenterBlock = top => `
   position: absolute;
   ${typeof type !== 'undefined' && `top: ${top}`}
   left: 50%;
@@ -137,15 +137,12 @@ export const hCenterBlock = (top) => `
    BACKGROUNDS
    ============================================================ */
 
-export const bgCenterCover = (img) => `
+export const bgCenterCover = img => `
   background: url(${img}) no-repeat center center scroll;
   background-size: cover;
 `;
 
-export const bgGradient = (
-  bgcolor = primary,
-  transparency = '.50'
-) => `
+export const bgGradient = (bgcolor = v.primary, transparency = '.50') => `
   background-color: ${bgcolor};
   ${gradientHorizontalThreeColors(
     bgcolor,

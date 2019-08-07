@@ -1,6 +1,5 @@
 /** Store all common constants. */
 
-
 // Used in console logging
 export const css = {
   fwb: 'font-weight: bold;',
@@ -106,7 +105,6 @@ export const spacing = {
 };
 
 export const timing = { scroll: 500, expand: 150 };
-
 
 export const mime = {
   app: {

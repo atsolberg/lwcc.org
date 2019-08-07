@@ -8,9 +8,9 @@ import '../util/storage';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '../../styles/styles.scss';
 
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import Main from '../components/main/Main';
+import Header from './header/Header';
+import Footer from './footer/Footer';
+import Main from './main/Main';
 import MessagesPage from '../pages/messages/MessagesPage';
 
 /**

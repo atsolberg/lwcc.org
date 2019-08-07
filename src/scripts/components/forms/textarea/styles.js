@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { gray_dark } from '../../../styles/variables-export.scss';
+import v from '../../../../styles/variables';
 
 const styles = css`
   label + span.help-block {
@@ -18,7 +18,7 @@ const styles = css`
   }
 
   span.secondary-description {
-    color: ${gray_dark};
+    color: ${v.darkGray};
     float: right;
   }
 

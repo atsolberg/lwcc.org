@@ -66,7 +66,7 @@ function TextInput({
               {desc && <div className="control-desc">{desc}</div>}
             </>
           )}
-          <FormControl type="text" required={required} {...dynamicAttrs} />
+          <FormControl type={type} required={required} {...dynamicAttrs} />
           {children}
           <p
             className={cx('error-message', {

@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
 
-import { primary } from '../../../styles/variables-export.scss';
+import v from '../../../styles/variables';
 
 function LoadingBars({
   width = '40',
-  color = primary,
+  color = v.primary,
   className = '',
   ...rest
 }) {

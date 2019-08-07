@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { func, number, string, bool } from 'prop-types';
 import styles from './styles';
-
-const { func, number, string } = PropTypes;
 
 /**
  * Quantity stepper control.
@@ -13,19 +12,19 @@ const { func, number, string } = PropTypes;
  * @param {boolean} [disabled] - if true, both buttons are disabled.
  */
 const Stepper = ({ label, value, onChange, className, disabled, ...rest }) => {
-  const update = (inc) => {
+  const update = inc => {
     const qty = inc ? value + 1 : value - 1;
     onChange(qty);
   };
 
   const decrease = {
     onClick: () => update(false),
-    disabled: value < 2 || disabled
+    disabled: value < 2 || disabled,
   };
 
   const increase = {
     onClick: () => update(true),
-    disabled
+    disabled,
   };
 
   return (
@@ -47,7 +46,8 @@ Stepper.propTypes = {
   label: string,
   value: number.isRequired,
   onChange: func.isRequired,
-  className: string
+  className: string,
+  disabled: bool,
 };
 
 export default Stepper;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { string, bool, any } from 'prop-types';
 import cx from 'classnames';
 import FormGroup from 'react-bootstrap/es/FormGroup';
 import FormCheck from 'react-bootstrap/es/FormCheck';
@@ -19,7 +20,7 @@ function RadioButton({
 }) {
   return (
     <HtmlId id={id}>
-      {(htmlId) => (
+      {htmlId => (
         <FormGroup className={cx({ 'has-error': !!error })} controlId={htmlId}>
           <FormCheck
             type="radio"
@@ -41,5 +42,13 @@ function RadioButton({
     </HtmlId>
   );
 }
+RadioButton.propTypes = {
+  busy: bool,
+  children: any,
+  disabled: bool,
+  id: string,
+  className: any,
+  error: string,
+};
 
 export default RadioButton;

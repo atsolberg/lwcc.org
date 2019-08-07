@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { oneOfType, node, string } from 'prop-types';
+import { oneOfType, node, string, any } from 'prop-types';
 
 /**
  * Renders of form group for a collection of inputs, like a list of
@@ -21,7 +21,10 @@ const ListFormGroup = ({
 );
 ListFormGroup.displayName = 'ListFormGroup';
 ListFormGroup.propTypes = {
-  label: oneOfType([string, node]).isRequired
+  label: oneOfType([string, node]).isRequired,
+  className: any,
+  style: any,
+  children: any,
 };
 
 export default ListFormGroup;

@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { string, bool } from 'prop-types';
+import { string, bool, any } from 'prop-types';
 import RbsCheckbox from 'react-bootstrap/es/FormCheck';
 import FormGroup from 'react-bootstrap/es/FormGroup';
 
@@ -24,7 +24,7 @@ function Checkbox({
 }) {
   return (
     <HtmlId id={id}>
-      {(htmlId) => (
+      {htmlId => (
         <FormGroup
           className={cx({ 'has-error': error, busy }, wrapperClasses)}
           css={styles}
@@ -48,7 +48,9 @@ Checkbox.propTypes = {
   id: string,
   busy: bool,
   disabled: bool,
-  error: bool
+  error: bool,
+  children: any,
+  wrapperClasses: any,
 };
 
 export default Checkbox;

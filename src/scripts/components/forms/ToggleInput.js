@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { bool, func, string } from 'prop-types';
+import { bool, func, string, any } from 'prop-types';
 
 /**
  * Renders a bs btn group with two 'yes', 'no' buttons.
@@ -49,7 +49,8 @@ ToggleInput.propTypes = {
   label: string.isRequired,
   value: bool.isRequired,
   onChange: func.isRequired,
-  name: string
+  name: string,
+  className: any,
 };
 
 export default ToggleInput;

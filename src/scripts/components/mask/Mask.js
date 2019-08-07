@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { bool, string, any } from 'prop-types';
 import cx from 'classnames';
 
 /**
@@ -12,7 +13,7 @@ function Mask({
   copy = 'Continue Reading',
   mobile = false, // excerpt for mobile only
   className = '',
-  children
+  children,
 }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -32,5 +33,12 @@ function Mask({
     </div>
   );
 }
+Mask.propTypes = {
+  excerpt: bool,
+  copy: string,
+  mobile: bool,
+  className: any,
+  children: any,
+};
 
 export default Mask;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, string, number, node, oneOfType } from 'prop-types';
+import { bool, string, number, node, oneOfType, any } from 'prop-types';
 import cx from 'classnames';
 
 import LoadingBars from '../icons/LoadingBars';
@@ -14,7 +14,7 @@ const Loadable = ({
   loading,
   elem,
   copy = 'Loading...',
-  width = '40'
+  width = '40',
 }) => {
   const Elem = elem || 'div';
 
@@ -32,7 +32,9 @@ Loadable.propTypes = {
   loading: bool.isRequired,
   elem: string, // html element wrapper, i.e. 'div' or 'span'.
   copy: node, // content next to loading icon, default: 'Loading...'
-  width: oneOfType([string, number])
+  width: oneOfType([string, number]),
+  className: any,
+  children: any,
 };
 
 export default Loadable;

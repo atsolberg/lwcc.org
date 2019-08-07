@@ -1,6 +1,5 @@
 import React from 'react';
 import { arrayOf, bool, func, number, oneOf, shape, string } from 'prop-types';
-import styles from './styles';
 
 import Dropdown from 'react-bootstrap/es/Dropdown';
 import DropdownToggle from 'react-bootstrap/es/DropdownToggle';
@@ -8,6 +7,7 @@ import DropdownMenu from 'react-bootstrap/es/DropdownMenu';
 import DropdownItem from 'react-bootstrap/es/DropdownItem';
 
 import useHtmlId from '../../hooks/useHtmlId';
+import styles from './styles';
 
 /**
  * Renders a block level paging component showing left aligned
@@ -18,12 +18,12 @@ const PagingHeader = ({
   paging: { page, size, total },
   sorting,
   onSort,
-  type
+  type,
 }) => {
   const htmlId = useHtmlId();
   const end = page * size;
   const start = end - (size - 1);
-  const current = sorting ? sorting.options.find((o) => o.selected) : null;
+  const current = sorting ? sorting.options.find(o => o.selected) : null;
   const label = sorting ? (
     <span className="paging-header-current hidden-xs">{current.label}</span>
   ) : null;
@@ -46,7 +46,6 @@ const PagingHeader = ({
             id={`${htmlId}-label`}
             className="selector-label"
           >
-            {required && <span className="required-label">*</span>}
             Sort by:
           </label>
 
@@ -55,9 +54,11 @@ const PagingHeader = ({
             className="paging-header-sort"
             onSelect={onSort}
           >
-            <DropdownToggle bsStyle="link">{label}</DropdownToggle>
+            <DropdownToggle id={`${htmlId}-toggle`} bsStyle="link">
+              {label}
+            </DropdownToggle>
             <DropdownMenu>
-              {sorting.options.map((o) => (
+              {sorting.options.map(o => (
                 <DropdownItem
                   key={o.value}
                   eventKey={o.value}
@@ -78,7 +79,7 @@ PagingHeader.propTypes = {
   paging: shape({
     page: number.isRequired,
     size: number.isRequired,
-    total: number.isRequired
+    total: number.isRequired,
   }).isRequired,
   sorting: shape({
     dir: oneOf(['asc', 'desc']),
@@ -86,12 +87,12 @@ PagingHeader.propTypes = {
       shape({
         label: string.isRequired,
         value: string.isRequired,
-        selected: bool // only one should be selected
+        selected: bool, // only one should be selected
       }).isRequired
-    ).isRequired
+    ).isRequired,
   }),
   onSort: func,
-  type: string // Type of items being paged, i.e. '1 - 10 of 42 <type>'
+  type: string, // Type of items being paged, i.e. '1 - 10 of 42 <type>'
 };
 
 export default PagingHeader;
