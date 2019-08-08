@@ -1,13 +1,13 @@
 import { css } from '@emotion/core';
 
-import v from '../../../styles/variables';
+import bs from '../../../../postcss_vars';
 
 const styles = css`
   &.sorting-header:hover {
     cursor: pointer;
   }
   &.sorting-header .fa {
-    color: ${v.primary};
+    color: ${bs.primary};
   }
   &.sorting-header:not(.active) .fa {
     visibility: hidden;

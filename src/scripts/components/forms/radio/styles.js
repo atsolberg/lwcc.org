@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import v from '../../../../styles/variables';
+import bs from '../../../../../postcss_vars';
 
 const styles = css`
   label {
@@ -12,7 +12,7 @@ const styles = css`
   input + .radio-button::before {
     background-color: #fff;
     border-radius: 100%;
-    border: 1px solid ${v.darkGray};
+    border: 1px solid ${bs.grayDark};
     content: '';
     cursor: pointer;
     display: inline-block;
@@ -27,24 +27,24 @@ const styles = css`
   }
 
   input:checked + .radio-button::before {
-    background-color: ${v.primary};
-    border-color: ${v.primary};
+    background-color: ${bs.primary};
+    border-color: ${bs.primary};
     box-shadow: inset 0 0 0 4px #fff;
   }
 
   input:focus:checked + .radio-button::before {
-    background-color: ${v.primary};
+    background-color: ${bs.primary};
   }
 
   &.disabled label {
-    color: ${v.black};
+    color: ${bs.dark};
   }
 
   input:disabled + .radio-button::before {
-    background-color: ${v.darkGray};
-    border-color: ${v.darkGray};
+    background-color: ${bs.grayDark};
+    border-color: ${bs.grayDark};
     box-shadow: inset 0 0 0 4px #fff;
-    border: 1px solid ${v.darkGray};
+    border: 1px solid ${bs.grayDark};
     cursor: not-allowed;
   }
 

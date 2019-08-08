@@ -1,12 +1,12 @@
 import { css } from '@emotion/core';
-import v from '../../../styles/variables';
+import bs from '../../../../postcss_vars';
 import { mobile, tablet } from '../../../styles/breakpoints';
 import { clearFix } from '../../../styles/mixins';
 
 const styles = css`
   ${clearFix()};
   padding-bottom: 15px;
-  border-bottom: 1px solid ${v.gray};
+  border-bottom: 1px solid ${bs.gray};
   margin: 20px 0;
 
   .paging-header-count {

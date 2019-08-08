@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import v from '../../../../styles/variables';
+import bs from '../../../../../postcss_vars';
 
 const styles = css`
   label {
@@ -11,11 +11,11 @@ const styles = css`
   }
 
   .error-message {
-    color: ${v.danger};
+    color: ${bs.danger};
   }
 
   span.required-label {
-    color: ${v.danger};
+    color: ${bs.danger};
   }
 
   input {

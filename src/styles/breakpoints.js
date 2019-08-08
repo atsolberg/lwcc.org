@@ -1,5 +1,6 @@
-import v from './variables';
+import bs from '../../postcss_vars';
 
-export const tablet = `@media (min-width: ${v.screen_tablet})`;
-export const desktop = `@media (min-width: ${v.screen_desktop})`;
-export const mobile = `@media (max-width: ${v.screen_mobile})`;
+const mb = Number(bs.breakpointMd.replace('px', ''));
+export const desktop = `@media (min-width: ${bs.breakpointLg})`;
+export const tablet = `@media (min-width: ${bs.breakpointMd})`;
+export const mobile = `@media (max-width: ${mb - 1}px)`;

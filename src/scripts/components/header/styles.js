@@ -1,9 +1,10 @@
 import { css } from '@emotion/core';
-import v from '../../../styles/variables';
+import v from '../../../../exported_scss_vars.json';
 
 const styles = css`
-  color: ${v.black};
-  background-color: #fff;
+  .navbar-topper {
+    background-color: ${v.darkBarBg};
+  }
 `;
 
 export default styles;

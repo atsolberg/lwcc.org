@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
 
-import v from '../../../styles/variables';
+import bs from '../../../../postcss_vars';
 
 function LoadingBars({
   width = '40',
-  color = v.primary,
+  color = bs.primary,
   className = '',
   ...rest
 }) {

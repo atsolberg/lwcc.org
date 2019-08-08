@@ -1,0 +1,13 @@
+/* Override bootstrap variables before importing bootstrap */
+$font-size-base: 1rem; // Not changing, just setting so we can use it on the next line
+$font-size-lg: $font-size-base * 1; // Dropped letters down from 14px tall to 12px tall
+$btn-padding-y-lg: .688em; // Bump vertical padding to get the lg buttons back up to 48px tall
+
+$primary: #64cbc9;
+
+$border-radius-sm: 3px;
+$border-radius: 3px;
+$border-radius-lg: 3px;
+
+/* All our non-bootstrap variables */
+$dark-bar-bg: #4a4f55;

@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { transparentize } from 'polished';
 
-import v from './variables';
+import bs from '../../postcss_vars';
 import { tablet } from './breakpoints';
 
 /* ============================================================
@@ -142,7 +142,7 @@ export const bgCenterCover = img => `
   background-size: cover;
 `;
 
-export const bgGradient = (bgcolor = v.primary, transparency = '.50') => `
+export const bgGradient = (bgcolor = bs.primary, transparency = '.50') => `
   background-color: ${bgcolor};
   ${gradientHorizontalThreeColors(
     bgcolor,

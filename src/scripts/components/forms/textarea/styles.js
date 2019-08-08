@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import v from '../../../../styles/variables';
+import bs from '../../../../../postcss_vars';
 
 const styles = css`
   label + span.help-block {
@@ -18,7 +18,7 @@ const styles = css`
   }
 
   span.secondary-description {
-    color: ${v.darkGray};
+    color: ${bs.grayDark};
     float: right;
   }
 

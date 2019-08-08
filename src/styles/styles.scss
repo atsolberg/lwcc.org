@@ -13,16 +13,13 @@
 /* VARIABLES
 --------------------------------------------------------------- */
 
-/* Import library variables */
+// Import our variables first so we can overwrite bootstraps
+// @see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+@import "variables.scss";
 @import "~bootstrap/scss/bootstrap";
 
-$font-size-base: 14px;
-$border-radius-sm: 2px;
-$border-radius: 2px;
-$border-radius-lg: 2px;
-
 /* Set variables that depend on bootstrap variables */
-$screen-mobile: map-get($grid-breakpoints, "sm");
+$screen-mobile: map-get($grid-breakpoints, "md") - 1;
 $screen-tablet: map-get($grid-breakpoints, "md");
 $screen-desktop: map-get($grid-breakpoints, "lg");
 $gray: map-get($colors, "gray");
@@ -134,7 +131,74 @@ $gray-dark: map-get($colors, "gray-dark");
   border-radius: $border-radius;
 }
 
+// Copy of Bootstrap's ..scss/mixins/_buttons.scss#button-variant mixin.
+// BS smartly chooses a dark (#111) color if the background is too light, this lets you
+// override that and just specify the color in the two spots needed.
+// @see node_modules/bootstrap/scss/mixins/_buttons.scss#button-variant
+@mixin button-variant-with-color($color, $background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  // color: color-yiq($background);
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
 
+  @include hover {
+    // color: color-yiq($hover-background);
+    color: $color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    }
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    // color: color-yiq($background);
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    // color: color-yiq($active-background);
+    color: $color;
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+    border-color: $active-border;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      }
+    }
+  }
+}
+
+
+// Override the primary button with our variant mixin to get the white color back
+.btn-primary {
+  @include button-variant-with-color(#fff, $primary, $primary);
+}
 
 /* APP - our global styles for our app
 --------------------------------------------------------------- */

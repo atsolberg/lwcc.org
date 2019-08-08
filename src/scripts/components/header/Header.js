@@ -5,16 +5,20 @@ import NavDropdown from 'react-bootstrap/es/NavDropdown';
 
 import styles from './styles';
 
+/**
+ * Header component for the site.
+ */
 function Header() {
   return (
     <header css={styles}>
-      <Navbar collapseOnSelect expand="md" fixed="top">
-        <Navbar.Brand href="#home">Leveling Guide</Navbar.Brand>
+      <div className="navbar-topper">top bar</div>
+      <Navbar collapseOnSelect expand="md" sticky="top">
+        <Navbar.Brand href="#home">LWCC</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#">Link</Nav.Link>
+            <Nav.Link href="#">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -28,9 +32,9 @@ function Header() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link href="#">Link</Nav.Link>
+            <Nav.Link eventKey={2} href="#">
+              Link
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

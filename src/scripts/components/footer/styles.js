@@ -1,9 +1,10 @@
 import { css } from '@emotion/core';
-import v from '../../../styles/variables';
+import bs from '../../../../postcss_vars';
+import v from '../../../../exported_scss_vars';
 
 const styles = css`
   color: #fff;
-  background-color: ${v.black};
+  background-color: ${v.darkBarBg};
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -15,7 +16,7 @@ const styles = css`
     text-decoration: none;
     &:hover,
     &:focus {
-      color: ${v.blue};
+      color: ${bs.primary};
     }
   }
 `;

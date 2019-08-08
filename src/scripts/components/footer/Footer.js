@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './styles';
 
+/**
+ * Footer component for the site.
+ */
 function Footer() {
   return (
     <footer css={styles}>

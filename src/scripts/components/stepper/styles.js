@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-import v from '../../../styles/variables';
+import bs from '../../../../postcss_vars';
 
 const styles = css`
   &.stepper {
@@ -17,7 +17,7 @@ const styles = css`
     height: 24px;
 
     &[disabled] {
-      color: ${v.darkGray};
+      color: ${bs.grayDark};
     }
     &.-decrease {
       padding-left: 0;
@@ -25,7 +25,7 @@ const styles = css`
   }
 
   .stepper-text {
-    color: ${v.black};
+    color: ${bs.dark};
     display: inline-block;
     font-size: 14px;
     margin: 0 6px;
