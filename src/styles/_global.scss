@@ -99,6 +99,11 @@ input[type='number']::-webkit-outer-spin-button {
    CONTAINERS
    ============================================================ */
 
+.max-1140 {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .maskable {
   position: relative;
   &:not(.unmasked) {

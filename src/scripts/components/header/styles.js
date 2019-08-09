@@ -28,17 +28,20 @@ const styles = css`
   }
 
   .navbar {
-    height: 100px;
     color: ${bs.dark};
+    width: 100%;
 
     ${desktop} {
       .dropdown-toggle::after {
         display: none;
       }
 
-      .nav-link,
-      .nav-item {
+      .nav-link {
         margin-left: 16px;
+
+        &.here {
+          color: ${bs.primary};
+        }
       }
     }
   }

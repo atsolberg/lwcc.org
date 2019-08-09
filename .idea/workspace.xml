@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5836dfa1-5862-4fc8-9816-45e8e1d3718b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/logo-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/logo-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/logo@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/search@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/hover-nav/HoverNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/hover-nav/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/util/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/asolberg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/asolberg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/heroes/hero-worship.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/hero/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exported_scss_vars.json" beforeDir="false" afterPath="$PROJECT_DIR$/exported_scss_vars.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logo-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icons/logo-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logo-32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icons/logo-32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icons/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/search@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icons/search@2x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/footer/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/footer/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/header/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/header/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/object.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/object.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_global.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,68 +25,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4976415">
+    <splitter split-orientation="horizontal" split-proportion="0.3275952">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/styles/styles.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1275">
-                  <caret line="85" column="29" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="29" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/scripts/components/hover-nav/HoverNav.js">
+            <entry file="file://$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/scripts/components/hover-nav/styles.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="164">
-                  <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/styles/_variables.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -99,71 +49,57 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/scripts/util/api.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="630">
-                    <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/scripts/components/header/styles.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/_navbar.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="539">
-                  <caret line="218" column="39" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="15" column="18" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="horizontal" split-proportion="0.5">
+          <split-first>
+            <leaf>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/scripts/components/header/styles.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="495">
+                      <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/styles.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="75">
+                      <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/styles/_global.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="134">
+                      <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/Hero.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="255">
+                      <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isDevMod</find>
       <find>forbi</find>
       <find>primary</find>
       <find>type</find>
@@ -193,6 +129,7 @@
       <find>.navbar-light .navbar-nav .nav-link</find>
       <find>$gray-800</find>
       <find>nav-link</find>
+      <find>.map</find>
     </findStrings>
     <replaceStrings>
       <replace>lwcc</replace>
@@ -210,8 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scripts/components/stepper/Stepper.js" />
-        <option value="$PROJECT_DIR$/src/scripts/util/counter.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/device.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/jsx.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/forms/text/TextInput.js" />
@@ -219,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/scripts/components/html-id/HtmlId.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/jumpy.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/main/styles.js" />
-        <option value="$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js" />
         <option value="$PROJECT_DIR$/src/styles/js_variable_export.scss" />
         <option value="$PROJECT_DIR$/src/scripts/node_jobs/export_scss_vars.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -231,7 +165,6 @@
         <option value="$PROJECT_DIR$/my_vars.json" />
         <option value="$PROJECT_DIR$/_variables.json" />
         <option value="$PROJECT_DIR$/postcss.config.js" />
-        <option value="$PROJECT_DIR$/src/styles/_global.scss" />
         <option value="$PROJECT_DIR$/export_scss_vars.js" />
         <option value="$PROJECT_DIR$/postcss_vars.json" />
         <option value="$PROJECT_DIR$/exported_scss_vars.json" />
@@ -246,21 +179,25 @@
         <option value="$PROJECT_DIR$/src/scripts/components/stepper/styles.js" />
         <option value="$PROJECT_DIR$/src/styles/breakpoints.js" />
         <option value="$PROJECT_DIR$/src/styles/mixins.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/footer/styles.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/scripts/util/constants.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/api.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/object.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/scripts/components/header/Header.js" />
         <option value="$PROJECT_DIR$/src/styles/styles.scss" />
         <option value="$PROJECT_DIR$/src/styles/_variables.scss" />
         <option value="$PROJECT_DIR$/src/scripts/components/HoverNav.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/hover-nav/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/hover-nav/HoverNav.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/header/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/header/Header.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/scripts/components/footer/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/header/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" />
+        <option value="$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js" />
+        <option value="$PROJECT_DIR$/src/styles/_global.scss" />
+        <option value="$PROJECT_DIR$/src/scripts/components/hero/styles.js" />
       </list>
     </option>
   </component>
@@ -382,11 +319,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/img/icons" />
+      <recent name="$PROJECT_DIR$/src/img/heroes" />
       <recent name="$PROJECT_DIR$/src/scripts/components/hover-nav" />
       <recent name="$PROJECT_DIR$/src/img" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/styles" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -412,7 +349,7 @@
     <frame x="642" y="23" width="1917" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19666146" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19666146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -467,20 +404,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.eslintrc.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/button/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/main/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -499,13 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="803">
           <caret line="107" column="40" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -656,25 +572,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/img/logo@2x.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/img/logo.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4078">
-          <caret line="418" column="6" selection-start-line="418" selection-start-column="1" selection-end-line="418" selection-end-column="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/util/object.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -687,23 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="630">
-            <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -742,10 +627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
+    <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" column="29" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -758,22 +643,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/hover-nav/HoverNav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/pages/messages/MessagesPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/Hero.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Fragment } from 'react';
+import cx from 'classnames';
+
 import Navbar from 'react-bootstrap/es/Navbar';
 import Nav from 'react-bootstrap/es/Nav';
 import NavDropdown from 'react-bootstrap/es/NavDropdown';
@@ -11,6 +13,11 @@ import styles from './styles';
 
 import HoverNav from '../hover-nav/HoverNav';
 import Button from '../button';
+
+function getHere(url) {
+  const here = new URL(url).pathname.replace('/', '');
+  return here;
+}
 
 /**
  * Header component for the site.
@@ -41,6 +48,8 @@ function Header() {
       setMenus({ main, top });
     });
   }, []);
+
+  const where = window.location.pathname.replace('/', '');
 
   return (
     <header css={styles}>
@@ -81,13 +90,9 @@ function Header() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               {(prop(menus, 'main.items') || []).map(m => (
-                <>
+                <Fragment key={m.title}>
                   {prop(m, 'child_items.length') > 0 && (
-                    <HoverNav
-                      key={m.title}
-                      title={m.title}
-                      id="collasible-nav-dropdown"
-                    >
+                    <HoverNav title={m.title} id="collasible-nav-dropdown">
                       {m.child_items.map(c => (
                         <NavDropdown.Item key={c.title} href={c.url}>
                           {c.title}
@@ -96,11 +101,14 @@ function Header() {
                     </HoverNav>
                   )}
                   {!prop(m, 'child_items.length') && (
-                    <Nav.Link href={m.url} key={m.title}>
+                    <Nav.Link
+                      href={m.url}
+                      className={cx({ here: where === getHere(m.url) })}
+                    >
                       {m.title}
                     </Nav.Link>
                   )}
-                </>
+                </Fragment>
               ))}
             </Nav>
           </Navbar.Collapse>
