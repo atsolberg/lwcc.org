@@ -20,6 +20,23 @@ function getHere(url) {
 }
 
 /**
+ * Shorten some titles for mobile
+ * @param {string} title - the title text to adjust
+ */
+function fixTitles(title) {
+  if (title.toLowerCase() === 'member log in') {
+    return (
+      <>
+        <span className="d-none d-sm-inline">{title}</span>
+        <span className="d-sm-none">Login</span>
+      </>
+    );
+  }
+
+  return title;
+}
+
+/**
  * Header component for the site.
  */
 function Header() {
@@ -43,8 +60,6 @@ function Header() {
   // Fetch Menus
   useEffect(() => {
     api.getMenus('main', 'top-bar').then(([{ data: main }, { data: top }]) => {
-      console.log('main: ', main);
-      console.log('top: ', top);
       setMenus({ main, top });
     });
   }, []);
@@ -57,13 +72,16 @@ function Header() {
         <div className="container">
           {broadcast.live && (
             <a className="link-primary" href="/watch/live">
-              Watch {broadcast.title && broadcast.title} &mdash; Live Now →
+              <span className="d-md-none">Watch Live →</span>{' '}
+              <span className="d-none d-md-inline">
+                Watch {broadcast.title && broadcast.title} &mdash; Live Now →
+              </span>
             </a>
           )}
           <div className="float-right">
             {(prop(menus, 'top.items') || []).map(m => (
               <a key={m.title} href={m.url}>
-                {m.title}
+                {fixTitles(m.title)}
               </a>
             ))}
             <Button variant="link" onClick={toggleSearch}>
@@ -86,13 +104,22 @@ function Header() {
           <Navbar.Brand href="#home">
             <img src={logo} />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav">
+            <span className="sr-only">Toggle navigation</span>
+            <span className="icon-bar" />
+            <span className="icon-bar" />
+            <span className="icon-bar" />
+          </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               {(prop(menus, 'main.items') || []).map(m => (
                 <Fragment key={m.title}>
+                  {/* Dropdown Nav Item */}
                   {prop(m, 'child_items.length') > 0 && (
-                    <HoverNav title={m.title} id="collasible-nav-dropdown">
+                    <HoverNav
+                      title={fixTitles(m.title)}
+                      id="collasible-nav-dropdown"
+                    >
                       {m.child_items.map(c => (
                         <NavDropdown.Item key={c.title} href={c.url}>
                           {c.title}
@@ -100,12 +127,13 @@ function Header() {
                       ))}
                     </HoverNav>
                   )}
+                  {/* Link Nav Item */}
                   {!prop(m, 'child_items.length') && (
                     <Nav.Link
                       href={m.url}
                       className={cx({ here: where === getHere(m.url) })}
                     >
-                      {m.title}
+                      {fixTitles(m.title)}
                     </Nav.Link>
                   )}
                 </Fragment>
