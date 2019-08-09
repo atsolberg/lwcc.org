@@ -2,6 +2,9 @@
 React app for the lwcc.org site.
 
 ### Development
+Install [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
+and then use it to install node: `nvm install node`
+then clone repo and start the `dev` script:
 ```shell
 git clone https://github.com/atsolberg/lwcc.org.git
 cd lwcc.org
