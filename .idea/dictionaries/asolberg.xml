@@ -2,12 +2,16 @@
   <dictionary name="asolberg">
     <words>
       <w>autoprefixer</w>
+      <w>axios</w>
       <w>bgcolor</w>
       <w>checkmark</w>
+      <w>collasible</w>
       <w>jscookie</w>
       <w>jumpto</w>
       <w>lwcc</w>
       <w>mixins</w>
+      <w>navbar</w>
+      <w>searchbar</w>
       <w>transparentize</w>
     </words>
   </dictionary>

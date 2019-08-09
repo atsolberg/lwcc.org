@@ -27,8 +27,8 @@ $gray-dark: map-get($colors, "gray-dark");
 
 
 
-/* MIXINS
---------------------------------------------------------------- */
+  /* MIXINS
+  --------------------------------------------------------------- */
 
 @mixin tablet {
   @media (min-width: $screen-tablet) {

@@ -7,15 +7,13 @@ import styles from './styles';
 function Footer() {
   return (
     <footer css={styles}>
-      Built by{' '}
       <a
-        href="https://github.com/atsolberg/"
+        href="https://github.com/atsolberg/lwcc.org"
         target="_blank"
         rel="noopener noreferrer"
       >
-        atsolberg
+        Footer Link
       </a>{' '}
-      with ⚛
     </footer>
   );
 }

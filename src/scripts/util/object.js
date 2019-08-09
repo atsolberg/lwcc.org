@@ -2,16 +2,16 @@
  * OBJECT UTILS
  */
 
-const _identity = (o) => o;
+const _identity = o => o;
 
 /**
  * Namespace function: so we don't have to put all those checks to see if
  * modules exist and either create empty ones or set a reference to one
  * that was previously created.
- * See Zakas, Maintainable JavaScript, pp. 72-73, and
- * Stefanov, Javascript Patterns, pp. 89-90
+ * @param {string} ns - the namespace path to instantiate
+ * @param {*} [o] - optional object to store a the namespace when finished.
  */
-export const namespace = function(ns) {
+export const namespace = function(ns, o) {
   const parts = ns.split('.');
   let object;
   let i;
@@ -28,6 +28,10 @@ export const namespace = function(ns) {
       object[parts[i]] = {};
     }
     object = object[parts[i]];
+  }
+
+  if (o) {
+    object = o;
   }
 
   return object;
@@ -132,9 +136,9 @@ export const setProp = (obj, path, value) => {
  * Returns and array of the values in an object.
  * It only returns the objects own values, not those from the prototype chain.
  */
-export const values = (obj) => {
+export const values = obj => {
   if (Object.values) return Object.values(obj);
-  return Object.keys(obj || {}).map((key) => obj[key]);
+  return Object.keys(obj || {}).map(key => obj[key]);
 };
 
 /** Reverses a simple object containing key - value pairs. */
