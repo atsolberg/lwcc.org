@@ -34,6 +34,7 @@ Header
 - [x] Figure out how to get menu data from wp
 - [ ] Figure out how to get live event data
 - [ ] Figure out 'live' link text when off-air
+- [ ] Figure out 'live' link url
 - [ ] Search bar ui, probably a slide in bar
 - [ ] Search functionality
 - [ ] Shrink top nav content on mobile

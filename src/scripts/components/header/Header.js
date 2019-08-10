@@ -4,7 +4,6 @@ import cx from 'classnames';
 import Navbar from 'react-bootstrap/es/Navbar';
 import Nav from 'react-bootstrap/es/Nav';
 import NavDropdown from 'react-bootstrap/es/NavDropdown';
-import Collapse from 'react-bootstrap/es/Collapse';
 
 import api from '../../util/api';
 import { prop } from '../../util/object';
@@ -13,6 +12,7 @@ import styles from './styles';
 
 import HoverNav from '../hover-nav/HoverNav';
 import Button from '../button';
+import SearchBar from '../searchbar/SearchBar';
 
 function getHere(url) {
   const here = new URL(url).pathname.replace('/', '');
@@ -40,7 +40,6 @@ function fixTitles(title) {
  * Header component for the site.
  */
 function Header() {
-  const searchRef = useRef();
   const [searching, setSearching] = useState(false);
   const [broadcast, setBroadcast] = useState({
     live: true,
@@ -49,15 +48,10 @@ function Header() {
   const [menus, setMenus] = useState({ top: [], main: [] });
 
   function toggleSearch() {
-    if (!searching) {
-      setTimeout(() => {
-        searchRef.current.focus();
-      }, 1);
-    }
     setSearching(!searching);
   }
 
-  // Fetch Menus
+  // Fetch menus on mount
   useEffect(() => {
     api.getMenus('main', 'top-bar').then(([{ data: main }, { data: top }]) => {
       setMenus({ main, top });
@@ -95,20 +89,12 @@ function Header() {
         </div>
       </div>
 
-      <Collapse in={searching}>
-        <div className="row bg-light">
-          <div className="col-12">
-            <div className="container searchbar padded-sm">
-              <input tabIndex={0} ref={searchRef} className="form-control" />
-            </div>
-          </div>
-        </div>
-      </Collapse>
+      <SearchBar searching={searching} />
 
       <Navbar collapseOnSelect expand="md" sticky="top">
         <div className="container">
           <Navbar.Brand href="#home">
-            <img src={logo} />
+            <img src={logo} alt="site logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <span className="sr-only">Toggle navigation</span>
