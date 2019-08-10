@@ -11,7 +11,7 @@ export function lazy(f) {
 }
 
 export const compose = (...fns) => (...args) =>
-  fns.forEach((fn) => fn && fn(...args));
+  fns.forEach(fn => fn && fn(...args));
 
 /** Returns `true` only if the property on the object is a function. */
 export const isFunc = (...args) => {
@@ -27,7 +27,7 @@ export const isFunc = (...args) => {
  *  makeSandwich = (meat = required('meat'), cheese) => { ... };
  *  makeSandwich = ({ meat = required('meat'), cheese } = {}) => { ... };
  */
-export const required = (name) => {
+export const required = name => {
   throw new Error(`${name} is a required parameter.`);
 };
 
@@ -43,7 +43,7 @@ export const required = (name) => {
  * let emitter = pipe(fn1, fn2, fn3);
  * console.log(emitter('Time')); // emit!
  */
-export const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
+export const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 
 /**
  * Returns a function, that, as long as it continues to be invoked, will not
@@ -81,7 +81,7 @@ export const debounce = function debounce(func, wait = 250, immediate) {
 /** Convenient 'do nothing' function that doesn't require an argument like void(0); */
 export const noop = () => {};
 
-export const identity = (o) => o;
+export const identity = o => o;
 
 /**
  * Combine many redux style reducers into one 'root' reducer function.
@@ -105,6 +105,21 @@ export const combineReducers = (...reducers) => (state = {}, action) =>
  * @param {function} fn - the callback to fire on enter key.
  * @returns {Function}
  */
-export const onEnter = (fn) => (e) => {
+export const onEnter = fn => e => {
   if (e.keyCode === 13) fn(e);
+};
+
+/**
+ * Produces an event handler that expects to receive and event and will
+ * only fire the provided callback if the event key code is the 'Escape' key.
+ * Useful for valid a11y handling, i.e. divs with onClick's.
+ *
+ * USAGE:
+ * <div onClick={changeImage} onKeyDown={onEnter(changeImage)}>
+ *
+ * @param {function} fn - the callback to fire on enter key.
+ * @returns {Function}
+ */
+export const onEsc = fn => e => {
+  if (e.keyCode === 27) fn(e);
 };

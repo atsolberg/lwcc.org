@@ -47,10 +47,6 @@ function Header() {
   });
   const [menus, setMenus] = useState({ top: [], main: [] });
 
-  function toggleSearch() {
-    setSearching(!searching);
-  }
-
   // Fetch menus on mount
   useEffect(() => {
     api.getMenus('main', 'top-bar').then(([{ data: main }, { data: top }]) => {
@@ -81,7 +77,7 @@ function Header() {
             <Button
               className="search-btn"
               variant="link"
-              onClick={toggleSearch}
+              onClick={() => setSearching(!searching)}
             >
               <i className="fa fa-search" />
             </Button>
@@ -89,7 +85,7 @@ function Header() {
         </div>
       </div>
 
-      <SearchBar searching={searching} />
+      <SearchBar search={[searching, setSearching]} />
 
       <Navbar collapseOnSelect expand="md" sticky="top">
         <div className="container">

@@ -37,10 +37,6 @@ const styles = css`
     }
   }
 
-  .searchbar {
-    background-color: ${bs.light};
-  }
-
   /* MAIN NAV
   --------------------------------------------------------------- */
 

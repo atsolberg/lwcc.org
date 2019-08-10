@@ -35,15 +35,18 @@ Header
 - [ ] Figure out how to get live event data
 - [ ] Figure out 'live' link text when off-air
 - [ ] Figure out 'live' link url
+- [x] Shrink top nav content on mobile
+
+Search
+- [x] Search functionality
+- [ ] Search bar, close on esc key 
 - [ ] Search bar ui, probably a slide in bar
-- [ ] Search functionality
-- [ ] Shrink top nav content on mobile
-- [ ] Figure out url for live link
 
 Footer
-- [ ] Footer ui desktop
-- [ ] Footer ui mobile, ask about this, maybe do accordian for location data
-- [ ] Figure out how to get footer data from wp 
+- [x] Footer ui desktop
+- [x] Footer ui mobile
+- [ ] Figure out how to get footer data from wp
+- [ ] Get urls for privacy policy and terms of use 
 
 Video Page
 - [ ] Initial ui
