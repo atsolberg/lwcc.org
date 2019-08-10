@@ -7,10 +7,6 @@ const styles = css`
   padding: 4% 0;
   background-color: #fff;
   background-position: center;
-  -webkit-background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: 100%;
-  -moz-background-size: cover;
   background-size: 100%;
   background-size: cover;
   background-repeat: no-repeat;

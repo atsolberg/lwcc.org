@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import bs from '../../../../postcss_vars';
 import v from '../../../../exported_scss_vars';
-import { desktop } from '../../../styles/breakpoints';
+import { desktop, tablet } from '../../../styles/breakpoints';
 
 const styles = css`
   .navbar-topper {
@@ -13,12 +13,26 @@ const styles = css`
 
     a,
     button {
-      margin-left: 30px;
+      margin-left: 15px;
       color: #fff;
 
       &.link-primary {
         color: ${bs.primary};
         margin-left: 0;
+      }
+    }
+
+    .search-btn {
+      margin-left: 10px;
+      @media (min-width: 375px) {
+        margin-left: 30px;
+      }
+    }
+
+    ${tablet} {
+      a,
+      button {
+        margin-left: 30px;
       }
     }
   }

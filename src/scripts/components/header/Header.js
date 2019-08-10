@@ -84,7 +84,11 @@ function Header() {
                 {fixTitles(m.title)}
               </a>
             ))}
-            <Button variant="link" onClick={toggleSearch}>
+            <Button
+              className="search-btn"
+              variant="link"
+              onClick={toggleSearch}
+            >
               <i className="fa fa-search" />
             </Button>
           </div>
@@ -93,8 +97,10 @@ function Header() {
 
       <Collapse in={searching}>
         <div className="row bg-light">
-          <div className="container searchbar padded-sm">
-            <input tabIndex={0} ref={searchRef} className="form-control" />
+          <div className="col-12">
+            <div className="container searchbar padded-sm">
+              <input tabIndex={0} ref={searchRef} className="form-control" />
+            </div>
           </div>
         </div>
       </Collapse>

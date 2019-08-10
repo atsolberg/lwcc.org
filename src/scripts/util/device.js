@@ -1,8 +1,11 @@
 /**
  * Module for mobile/tablet device detection
  */
+import bs from '../../../postcss_vars';
 
-export const isMobile = (breakpoint = 768) => {
+export const isMobile = (
+  breakpoint = Number(bs.breakpointMd.replace('px', ''))
+) => {
   const { clientWidth } = document.documentElement;
   return Math.max(clientWidth, window.innerWidth || 0) < breakpoint;
 };
