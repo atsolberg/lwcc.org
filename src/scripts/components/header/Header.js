@@ -13,6 +13,7 @@ import styles from './styles';
 import HoverNav from '../hover-nav/HoverNav';
 import Button from '../button';
 import SearchBar from '../searchbar/SearchBar';
+import Logo from '../icons/Logo';
 
 function getHere(url) {
   const here = new URL(url).pathname.replace('/', '');
@@ -90,7 +91,7 @@ function Header() {
       <Navbar collapseOnSelect expand="md" sticky="top">
         <div className="container">
           <Navbar.Brand href="#home">
-            <img src={logo} alt="site logo" />
+            <Logo color="#4C4E54" width={180} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <span className="sr-only">Toggle navigation</span>

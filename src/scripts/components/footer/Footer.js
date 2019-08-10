@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles';
 
-import logo from '../../../img/logo-aqua-300x72.png';
+import PhoneEmail from './PhoneEmail';
 import Facebook from '../icons/Facebook';
 import Twitter from '../icons/Twitter';
 import Vimeo from '../icons/Vimeo';
@@ -52,7 +52,8 @@ function Footer() {
               </ul>
               <p>Copyright Living Word 2019</p>
               <p>
-                <a href="/privacy-policy">Privacy Policy</a> |{' '}
+                <a href="/privacy-policy">Privacy Policy</a>
+                <span className="sep"> | </span>
                 <a href="/terms-of-use">Terms of Use</a>
               </p>
             </div>
@@ -65,10 +66,9 @@ function Footer() {
                 <br />
                 Brooklyn Park, MN 55428
               </p>
-              <p>
-                <a href="tel:7633157000">763.315.7000</a> |{' '}
-                <a href="mailto:info@lwcc.org">info@lwcc.org</a>
-              </p>
+
+              <PhoneEmail p="763.315.7000" e="info@lwcc.org" />
+
               <p>
                 <strong>Service Times</strong>
                 <br />
@@ -90,10 +90,9 @@ function Footer() {
                 <br />
                 St Paul, MN 55101
               </p>
-              <p>
-                <a href="tel:7633157000">763.315.7000</a> |{' '}
-                <a href="mailto:saintpaul@lwcc.org">saintpaul@lwcc.org</a>
-              </p>
+
+              <PhoneEmail p="763.315.7000" e="saintpaul@lwcc.org" />
+
               <p>
                 <strong>Service Times</strong>
                 <br />
@@ -117,7 +116,9 @@ function Footer() {
                 <br />
                 Rogers, MN 55374
               </p>
-              <p>763.315.7000 | northwest@lwcc.org</p>
+
+              <PhoneEmail p="763.315.7000" e="northwest@lwcc.org" />
+
               <p>
                 <strong>Service Times</strong>
                 <br />

@@ -2,36 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5836dfa1-5862-4fc8-9816-45e8e1d3718b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/icons/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/facebook@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/ig.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/ig@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/twitter@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/vimeo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/vimeo@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/yt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/icons/yt@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/logo-aqua-300x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Facebook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Instagram.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Logo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Twitter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Vimeo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Youtube.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/searchbar/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/asolberg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/asolberg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/footer/PhoneEmail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss_vars.json" beforeDir="false" afterPath="$PROJECT_DIR$/postcss_vars.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/footer/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/footer/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/header/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/header/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/function.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/breakpoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/breakpoints.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +31,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.42662337">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+                <state relative-caret-position="865">
+                  <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
@@ -93,11 +67,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+                <state relative-caret-position="1014">
+                  <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/PhoneEmail.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="19" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -139,8 +122,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+                <state relative-caret-position="645">
+                  <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -216,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/styles/_bootstrap_variable_overrides.scss" />
         <option value="$PROJECT_DIR$/src/styles/export_scss_vars.scss" />
         <option value="$PROJECT_DIR$/.postcssrc.js" />
         <option value="$PROJECT_DIR$/.postcss.config.js" />
@@ -259,14 +241,15 @@
         <option value="$PROJECT_DIR$/src/scripts/components/icons/Instagram.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/icons/Youtube.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/icons/Logo.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/footer/styles.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/scripts/components/header/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/searchbar/styles.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/header/Header.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/function.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/header/Header.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/footer/PhoneEmail.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" />
       </list>
     </option>
   </component>
@@ -327,6 +310,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="footer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
@@ -460,13 +451,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/export_scss_vars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -749,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -787,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/util/function.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -801,10 +771,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="865">
+          <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state relative-caret-position="645">
+          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/PhoneEmail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
         </state>
       </provider>
     </entry>
