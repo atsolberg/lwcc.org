@@ -4,9 +4,9 @@
   "description": "Repo for the lwcc.org website",
   "main": "index.js",
   "scripts": {
-    "parcel:dev": "parcel ./src/index.html",
-    "parcel:build": "parcel build ./src/index.html",
-    "parcel:build:wp": "parcel build ./src/scripts/index.js",
+    "parcel:dev": "parcel ./src/index.html -d public",
+    "parcel:build": "parcel build ./src/index.html -d public",
+    "parcel:build:wp": "parcel build ./src/scripts/index.js -d public",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
