@@ -1,8 +1,13 @@
 import { css } from '@emotion/core';
 
+import { desktop, max } from '../../../styles/breakpoints';
+
 const styles = css`
   height: auto;
-  min-height: 50%;
+  min-height: 265px;
+  ${desktop} {
+    min-height: 440px;
+  }
 
   padding: 4% 0;
   background-color: #fff;
@@ -11,9 +16,13 @@ const styles = css`
   background-size: cover;
   background-repeat: no-repeat;
 
+  ${max} {
+    border-radius: 4px;
+  }
+
   .hero-content {
     position: relative;
-    min-height: 539px;
+
     color: #fff;
 
     h1 {

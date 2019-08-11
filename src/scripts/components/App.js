@@ -11,7 +11,7 @@ import '../../styles/styles.scss';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import Main from './main/Main';
-import MessagesPage from '../pages/messages/MessagesPage';
+import SermonsPage from '../pages/sermons/SermonsPage';
 
 /**
  * The top level react component for our site.
@@ -22,7 +22,7 @@ function App() {
       <Header />
       <Main>
         {/* Later this might be a SPA with react router routes here */}
-        <MessagesPage />
+        <SermonsPage />
       </Main>
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import bs from '../../../../postcss_vars';
 import v from '../../../../exported_scss_vars';
-import { desktop, tablet } from '../../../styles/breakpoints';
+import { desktop, tablet, md } from '../../../styles/breakpoints';
 
 const styles = css`
   .navbar-topper {
@@ -23,6 +23,7 @@ const styles = css`
     }
 
     .search-btn {
+      min-width: 42px; // search icon is wider than close, stops the jitter
       margin-left: 10px;
       @media (min-width: 375px) {
         margin-left: 30px;
@@ -43,6 +44,13 @@ const styles = css`
   .navbar-light {
     color: ${bs.dark};
     width: 100%;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    ${md} {
+      padding-top: 1.8rem;
+      padding-bottom: 1.8rem;
+    }
 
     /* HAMBURGER TOGGLE
       --------------------------------------------------------------- */

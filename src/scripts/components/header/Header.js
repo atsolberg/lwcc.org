@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import cx from 'classnames';
 
 import Navbar from 'react-bootstrap/es/Navbar';
@@ -7,7 +7,6 @@ import NavDropdown from 'react-bootstrap/es/NavDropdown';
 
 import api from '../../util/api';
 import { prop } from '../../util/object';
-import logo from '../../../img/logo.png';
 import styles from './styles';
 
 import HoverNav from '../hover-nav/HoverNav';
@@ -59,6 +58,7 @@ function Header() {
 
   return (
     <header css={styles}>
+      {/* TOP BAR */}
       <div className="navbar-topper">
         <div className="container">
           {broadcast.live && (
@@ -80,7 +80,7 @@ function Header() {
               variant="link"
               onClick={() => setSearching(!searching)}
             >
-              <i className="fa fa-search" />
+              <i className={`fa fa-${searching ? 'times' : 'search'}`} />
             </Button>
           </div>
         </div>
@@ -88,6 +88,7 @@ function Header() {
 
       <SearchBar search={[searching, setSearching]} />
 
+      {/* MAIN NAV BAR */}
       <Navbar collapseOnSelect expand="md" sticky="top">
         <div className="container">
           <Navbar.Brand href="#home">

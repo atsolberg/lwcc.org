@@ -4,8 +4,9 @@
   "description": "Repo for the lwcc.org website",
   "main": "index.js",
   "scripts": {
-    "parceldev": "parcel ./src/index.html",
-    "parcelbuild": "parcel build ./src/scripts/index.js",
+    "parcel:dev": "parcel ./src/index.html",
+    "parcel:build": "parcel build ./src/index.html",
+    "parcel:build:wp": "parcel build ./src/scripts/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
@@ -17,8 +18,9 @@
     "lint:strict": "eslint src --config .eslintrc.base.js",
     "validate": "npm-run-all -l prettier:check lint:errors test",
     "export:scss:vars": "node export_scss_vars.js",
-    "dev": "npm-run-all -l export:scss:vars parceldev",
-    "build": "npm-run-all -l export:scss:vars parcelbuild"
+    "dev": "npm-run-all -l export:scss:vars parcel:dev",
+    "build": "npm-run-all -l export:scss:vars parcel:build",
+    "build-wp": "npm-run-all -l export:scss:vars parcel:build:wp"
   },
   "repository": {
     "type": "git",

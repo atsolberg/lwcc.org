@@ -116,6 +116,11 @@ export const getParameterByName = (name, url = window.location.href) => {
   return decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
+/** Turns a path into just letters */
+export function getFlatPathName(url = window.location.pathname) {
+  return url.replace(new RegExp('[^\\w]', 'g'), '');
+}
+
 /**
  * Get Element by ID
  * @param id

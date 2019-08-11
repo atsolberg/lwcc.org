@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
+import { array } from 'prop-types';
 import Collapse from 'react-bootstrap/es/Collapse';
-import { onEnter } from '../../util/function';
+
 import { host } from '../../util/constants';
 import Button from '../button';
 
@@ -53,5 +54,9 @@ function SearchBar({ search: [searching, setSearching] }) {
     </Collapse>
   );
 }
+SearchBar.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  search: array.isRequired,
+};
 
 export default SearchBar;

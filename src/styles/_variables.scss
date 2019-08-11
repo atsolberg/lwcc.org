@@ -4,7 +4,9 @@ $font-size-lg: $font-size-base * 1; // Dropped letters down from 14px tall to 12
 $btn-padding-y-lg: .688em; // Bump vertical padding to get the lg buttons back up to 48px tall
 
 $primary: #64cbc9;
-$navbar-light-color: #343a40;
+$body-color: #3a3c3e;
+
+$navbar-light-color: $body-color;
 $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
 
@@ -14,3 +16,5 @@ $border-radius-lg: 3px;
 
 /* All our non-bootstrap variables */
 $dark-bar-bg: #4a4f55;
+$section-bg: #f6f6f6;
+$max-width: 1140px;

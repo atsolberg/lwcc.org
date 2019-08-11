@@ -47,6 +47,7 @@ module.exports = {
 
     // Chill dude.
     'lines-between-class-members': 'off',
+    'no-param-reassign': 'off',
 
     // Play hooky. Probs a part of the main react plugin eventually.
     'react-hooks/rules-of-hooks': 'error',
