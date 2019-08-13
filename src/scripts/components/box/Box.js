@@ -7,7 +7,7 @@ function Box({ children, ...rest }) {
   return (
     <div className="max-1140" {...rest}>
       <div css={styles} className="row box">
-        <div className="box-content">{children}</div>
+        <div className="col-12 box-content">{children}</div>
       </div>
     </div>
   );

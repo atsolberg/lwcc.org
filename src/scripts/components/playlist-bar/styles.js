@@ -4,25 +4,48 @@ import { sm } from '../../../styles/breakpoints';
 import v from '../../../../exported_scss_vars';
 
 const styles = css`
-  font-size: 14px;
-  ${sm} {
-    font-size: 18px;
-  }
-
-  ul {
-    margin-bottom: 0;
-
-    li:not(:last-child) {
-      margin-right: 25px;
+  &.playlist-bar {
+    font-size: 14px;
+    ${sm} {
+      font-size: 18px;
     }
-  }
 
-  a {
-    color: ${v.bodyColor};
-    &.active,
-    &:hover,
-    &:focus {
-      color: ${v.primary};
+    .playlist-list {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    a {
+      color: ${v.bodyColor};
+      &.active,
+      &:hover,
+      &:focus {
+        color: ${v.primary};
+      }
+    }
+
+    ${sm} {
+      display: flex;
+      justify-content: space-between;
+
+      .playlist-list {
+        flex-grow: 1;
+        margin-bottom: 0;
+        margin-right: 15px;
+        overflow-x: inherit;
+        white-space: normal;
+      }
+
+      .playlist-search {
+        // Without setting align-content, the button takes up all vertical space,
+        // Might be a bootstrap bug
+        align-content: center;
+        max-width: 275px;
+
+        .input-group-append {
+          align-self: flex-start;
+        }
+      }
     }
   }
 `;

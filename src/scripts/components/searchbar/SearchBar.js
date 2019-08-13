@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { array } from 'prop-types';
 import Collapse from 'react-bootstrap/es/Collapse';
 
-import { host } from '../../util/constants';
+import { host, keyCodes } from '../../util/constants';
 import Button from '../button';
 
 import styles from './styles';
@@ -23,9 +23,9 @@ function SearchBar({ search: [searching, setSearching] }) {
     window.location.href = `${host}/?s=${inputRef.current.value}`;
   }
   function onKeyDown({ keyCode }) {
-    if (keyCode === 13) {
+    if (keyCode === keyCodes.enter) {
       onSearch();
-    } else if (keyCode === 27) {
+    } else if (keyCode === keyCodes.esc) {
       setSearching(false);
     }
   }

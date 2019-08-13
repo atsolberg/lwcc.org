@@ -56,7 +56,7 @@ const api = {
    * Get play-lists for a media page.
    * This may come from the api later, hardcoded for now.
    * @param {string} page - the page to get playlists for
-   * @return {Promise<any>}
+   * @return {Promise<Object[]>}
    */
   getPlayLists: page => {
     const playlists = new Promise(resolve => {
@@ -90,6 +90,27 @@ const api = {
     });
 
     return playlists;
+  },
+
+  /**
+   * Get the current series playlist name from the cms.
+   * This may come from the api later, hardcoded for now.
+   * @return {Promise<string>}
+   */
+  getCurrentSeriesPlaylistName: () => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve("Paul's Wrestling");
+      }, 500);
+    });
+  },
+
+  getVideosForPlayList: () => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve([{ name: 'some video', author: 'some guy' }]);
+      }, 500);
+    });
   },
 };
 

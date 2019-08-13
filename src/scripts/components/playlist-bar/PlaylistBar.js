@@ -3,18 +3,29 @@ import { string, arrayOf, shape } from 'prop-types';
 
 import styles from './styles';
 import Box from '../box/Box';
+import Button from '../button';
 
-function PlaylistBar({ lists }) {
+function PlaylistBar({ lists, onPlaylist, ...rest }) {
   return (
-    <Box>
-      <div css={styles}>
-        <ul className="list-inline">
+    <Box {...rest}>
+      <div className="playlist-bar" css={styles}>
+        <ul className="playlist-list list-inline">
           {lists.map(list => (
             <li className="list-inline-item" key={list.title}>
-              <a href="#">{list.title}</a>
+              <Button variant="link" value={list.slug} onClick={onPlaylist}>
+                {list.title}
+              </Button>
             </li>
           ))}
         </ul>
+        <div className="input-group input-group-sm playlist-search">
+          <input className="form-control" type="text" placeholder="search" />
+          <div className="input-group-append">
+            <Button variant="primary">
+              <i className="fa fa-search" />
+            </Button>
+          </div>
+        </div>
       </div>
     </Box>
   );

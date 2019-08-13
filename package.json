@@ -27,7 +27,8 @@
     "url": "git+https://github.com/atsolberg/lwcc.org.git"
   },
   "keywords": [
-    "lwcc"
+    "lwcc",
+    "Living World Christian Center"
   ],
   "author": "Aaron Solberg",
   "license": "MIT",

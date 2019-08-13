@@ -14,7 +14,7 @@ const styles = css`
   }
 
   .box-content {
-    padding: 15px 35px;
+    padding: 15px;
 
     ${sm} {
       font-size: 18px;
