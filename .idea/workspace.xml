@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5836dfa1-5862-4fc8-9816-45e8e1d3718b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/heroes/hero-city.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/Envelope.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/icons/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/newsletter-signup/NewletterSignup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/video-section/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/box/Box.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/box/Box.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/box/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/box/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/hero/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/hero/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/sermons/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/sermons/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/breakpoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/breakpoints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +30,20 @@
         <splitter split-orientation="horizontal" split-proportion="0.4768264">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="615">
-                      <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+                    <state relative-caret-position="570">
+                      <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/.gitignore">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="75">
+                      <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
                     </state>
                   </provider>
                 </entry>
@@ -214,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scripts/components/hover-nav/HoverNav.js" />
         <option value="$PROJECT_DIR$/src/scripts/index.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/icons/Vimeo.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/icons/Facebook.js" />
@@ -265,6 +251,7 @@
         <option value="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" />
         <option value="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/hero/styles.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -343,14 +330,6 @@
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="newsletter-signup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
@@ -481,13 +460,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/PhoneEmail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -802,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/Hero.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -820,6 +785,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
