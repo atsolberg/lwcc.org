@@ -16,7 +16,7 @@ import NewsletterSignup from '../../components/newsletter-signup/NewletterSignup
 function SermonsPage() {
   const [pages, setPages] = useState([]);
   const [playlists, setPlaylists] = useState([]);
-  const [currentSeriesName, setCurrentSeriesName] = useState([]);
+  const [currentSeriesName, setCurrentSeriesName] = useState('');
   const [loading, setLoading] = useState(true);
   const [videos, setVideos] = useState([]);
 

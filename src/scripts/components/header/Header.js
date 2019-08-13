@@ -103,7 +103,7 @@ function Header() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
               {(prop(menus, 'main.items') || []).map(m => (
-                <Fragment key={m.title}>
+                <Fragment key={m.ID}>
                   {/* Dropdown Nav Item */}
                   {prop(m, 'child_items.length') > 0 && (
                     <HoverNav
@@ -111,7 +111,7 @@ function Header() {
                       id="collasible-nav-dropdown"
                     >
                       {m.child_items.map(c => (
-                        <NavDropdown.Item key={c.title} href={c.url}>
+                        <NavDropdown.Item key={c.ID} href={c.url}>
                           {c.title}
                         </NavDropdown.Item>
                       ))}

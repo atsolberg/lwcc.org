@@ -36,6 +36,7 @@ Header
 - [ ] Figure out 'live' link text when off-air
 - [ ] Figure out 'live' link url
 - [x] Shrink top nav content on mobile
+- [ ] Collapse some menus to a 'More' menu on tablet
 
 Search
 - [x] Search functionality
@@ -48,14 +49,18 @@ Footer
 - [ ] Figure out how to get footer data from wp
 - [ ] Get urls for privacy policy and terms of use 
 
-Video Page
-- [ ] Initial ui
+Media Pages
+- [ ] Get youtube data fetching working
 
 Sermons Page 
-- [ ] Initial ui
+- [x] Initial ui
 
 Stories Page
 - [ ] Initial ui
 
 Resources Page
 - [ ] Initial ui
+
+Video Page
+- [ ] Initial ui
+

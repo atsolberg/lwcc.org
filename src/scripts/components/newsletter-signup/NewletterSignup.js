@@ -16,7 +16,7 @@ function NewsletterSignup() {
   });
 
   return (
-    <Hero bg="city" variant="centered-v" faded>
+    <Hero bg="city" layout="normal" faded>
       <h3>Connect with Living Word</h3>
       <label>Sign up for our email newsletter</label>
       <form className={cx({ 'form-inline': !mobile })}>
