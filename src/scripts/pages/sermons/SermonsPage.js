@@ -47,71 +47,67 @@ function approach1() {
   gapi.load('client:auth2', initClient);
 }
 
-function approach2() {
-  function authenticate() {
-    return gapi.auth2
-      .getAuthInstance()
-      .signIn({ scope: 'https://www.googleapis.com/auth/youtube.force-ssl' })
-      .then(
-        () => {
-          logger.log('Sign-in successful');
-        },
-        err => {
-          logger.error('Error signing in', err);
-        }
-      );
-  }
-
-  function loadClient() {
-    gapi.client.setApiKey(g_creds.api_key);
-    return gapi.client
-      .load('https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest')
-      .then(
-        () => {
-          logger.log('GAPI client loaded for API');
-        },
-        err => {
-          logger.error('Error loading GAPI client for API', err);
-        }
-      );
-  }
-
-  function execute() {
-    // return gapi.client.youtube.search.list({}).then(
-    //   response => {
-    //     // Handle the results here (response.result has the parsed body).
-    //     logger.log('Response', response);
-    //   },
-    //   err => {
-    //     logger.error('Execute error', err);
-    //   }
-    // );
-    gapi.client.youtube.channels
-      .list({
-        part: 'snippet,contentDetails,statistics',
-        forUsername: 'UCqFli9wWwqO3TLknsrAbibw',
-      })
-      .then(resp => {
-        console.log('got channels.list resp', resp);
-      })
-      .catch(err => {
-        console.log('got error', err);
-      });
-  }
-
-  gapi.load('client:auth2', () => {
-    logger.log('Loading gapi client...');
-    gapi.auth2
-      .init({
-        client_id: g_creds.client_id,
-      })
-      .then(() => {
-        logger.log('Load complete');
-      });
-  });
-
-  authenticate().then(loadClient);
+function authenticate() {
+  return gapi.auth2
+    .getAuthInstance()
+    .signIn({ scope: 'https://www.googleapis.com/auth/youtube.force-ssl' })
+    .then(
+      () => {
+        logger.log('Sign-in successful');
+      },
+      err => {
+        logger.error('Error signing in', err);
+      }
+    );
 }
+
+function loadClient() {
+  gapi.client.setApiKey(g_creds.api_key);
+  return gapi.client
+    .load('https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest')
+    .then(
+      () => {
+        logger.log('GAPI client loaded for API');
+      },
+      err => {
+        logger.error('Error loading GAPI client for API', err);
+      }
+    );
+}
+
+function execute() {
+  // return gapi.client.youtube.search.list({}).then(
+  //   response => {
+  //     // Handle the results here (response.result has the parsed body).
+  //     logger.log('Response', response);
+  //   },
+  //   err => {
+  //     logger.error('Execute error', err);
+  //   }
+  // );
+  gapi.client.youtube.channels
+    .list({
+      part: 'snippet,contentDetails,statistics',
+      forUsername: 'UCqFli9wWwqO3TLknsrAbibw',
+    })
+    .then(resp => {
+      console.log('got channels.list resp', resp);
+    })
+    .catch(err => {
+      console.log('got error', err);
+    });
+}
+
+gapi.load('client:auth2', () => {
+  logger.log('Loading gapi client...');
+  gapi.auth2
+    .init({
+      client_id: g_creds.client_id,
+    })
+    .then(() => {
+      logger.log('Load complete');
+    });
+});
 
 function SermonsPage() {
   const [pages, setPages] = useState([]);
@@ -122,7 +118,7 @@ function SermonsPage() {
 
   useEffect(() => {
     // Authenticate for Youtube data
-    approach2();
+    authenticate().then(loadClient);
 
     api.getMediaPages().then(data => setPages(data));
     api.getPlayLists('sermons').then(data => setPlaylists(data));
