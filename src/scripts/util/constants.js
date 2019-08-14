@@ -119,3 +119,9 @@ export const headers = {
   accept: 'Accept',
   content: 'Content-Type',
 };
+
+export const g_creds = {
+  api_key: 'AIzaSyD1-k7lDXIhpjyHZiL7aeExXlrqboV9cKE',
+  client_id:
+    '270265825575-mo560kra42i9es2gi7gshsbudbtmtchv.apps.googleusercontent.com',
+};
