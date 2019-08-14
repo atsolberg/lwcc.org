@@ -38,6 +38,13 @@ export const formats = {
         year: 'numeric',
       }),
 
+    MM_DD_YY: date =>
+      date.toLocaleDateString('en-US', {
+        month: 'numeric',
+        day: 'numeric',
+        year: 'numeric',
+      }),
+
     MONTH_DAY_YEAR: date => date.toLocaleDateString('en-US'),
 
     /* eslint-disable prefer-template */
@@ -93,8 +100,7 @@ export const format = {
    * @param {Function} [formatter] - The format to use. Defaults to 'MMM D, YYYY'.
    */
   date: (date = new Date(), formatter = formats.date.MONTH_ABR_DAY_YEAR) =>
-    // TODO: Remove this new Date() and validate usages
-    formatter(new Date(date)),
+    formatter(date),
 };
 
 /** Returns the browser locale. Defaults to `en-US`. */

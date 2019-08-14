@@ -7,6 +7,7 @@ import axios from 'axios';
 import { namespace } from './object';
 import { g_creds, host } from './constants';
 import { isDevMode } from './misc';
+import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_pauls_wrestling';
 import TEST_PL_DATA from '../__tests__/data/pl_pauls_wrestling';
 
 const TEST_PL_ID = 'PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K';
@@ -113,7 +114,7 @@ const api = {
   getVideosForPlayList: id => {
     if (isDevMode()) {
       return new Promise(resolve => {
-        resolve(TEST_PL_DATA);
+        resolve(TEST_PL_ITEMS_DATA);
       });
     }
 
@@ -128,6 +129,12 @@ const api = {
   },
 
   getPlayList: id => {
+    if (isDevMode()) {
+      return new Promise(resolve => {
+        resolve(TEST_PL_DATA);
+      });
+    }
+
     return axios.get(`${YT_API}/playlists`, {
       params: {
         key: g_creds.api_key,

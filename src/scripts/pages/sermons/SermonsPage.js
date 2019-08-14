@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/core';
 
+import { prop } from '../../util/object';
 import logger from '../../util/logger';
 import api from '../../util/api';
 import logo from '../../../img/icons/logo-192.png';
@@ -17,7 +18,7 @@ import styles from './styles';
 function SermonsPage() {
   const [pages, setPages] = useState([]);
   const [playlists, setPlaylists] = useState([]);
-  const [currentSeriesName, setCurrentSeriesName] = useState('');
+  const [currentSeries, setCurrentSeries] = useState(null);
   const [loading, setLoading] = useState(true);
   const [videos, setVideos] = useState([]);
 
@@ -25,8 +26,8 @@ function SermonsPage() {
     api.getMediaPages().then(data => setPages(data));
     api.getPlayLists('sermons').then(data => setPlaylists(data));
     api.getCurrentSeriesPlaylistName().then(id => {
-      api.getPlayList(id).then(currentSeriesData => {
-        setCurrentSeriesName(currentSeriesData);
+      api.getPlayList(id).then(data => {
+        setCurrentSeries(data.items[0]);
       });
       api.getVideosForPlayList(id).then(resp => {
         setLoading(false);
@@ -38,6 +39,8 @@ function SermonsPage() {
   function onPlaylist({ target: { value } }) {
     logger.log('playlist clicked', value);
   }
+
+  const title = prop(currentSeries, 'snippet.localized.title') || '';
 
   return (
     <MessagesProvider>
@@ -61,11 +64,7 @@ function SermonsPage() {
           onPlaylist={onPlaylist}
         />
 
-        <VideoSection
-          loading={loading}
-          title={currentSeriesName}
-          videos={videos}
-        />
+        <VideoSection loading={loading} title={title} videos={videos} />
       </div>
 
       <NewsletterSignup />
