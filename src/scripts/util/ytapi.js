@@ -104,6 +104,6 @@ gapi.load('client:auth2', () => {
 
 export function simple() {
   return axios.get(
-    `https://www.googleapis.com/youtube/v3/playlistItems?key=${g_creds.api_key}&part=snippet&maxResults=20&playlistId=${PLAYLIST_ID}`
+    `https://www.googleapis.com/youtube/v3/playlistItems?key=${g_creds.api_key}&part=snippet,contentDetails&maxResults=20&playlistId=${PLAYLIST_ID}`
   );
 }
