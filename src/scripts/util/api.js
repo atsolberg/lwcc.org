@@ -143,6 +143,17 @@ const api = {
       },
     });
   },
+
+  getVideoDetails: id => {
+    return axios.get(`${YT_API}/videos`, {
+      params: {
+        key: g_creds.api_key,
+        part: 'snippet',
+        id,
+        fields: 'items(snippet(title,description,tags))',
+      },
+    });
+  },
 };
 
 namespace('lwcc.api', api);
