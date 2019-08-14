@@ -118,18 +118,22 @@ const api = {
     }
 
     return axios.get(`${YT_API}/playlistItems`, {
-      key: g_creds.api_key,
-      part: 'snippet,contentDetails',
-      maxResults: '20',
-      playlistId: id,
+      params: {
+        key: g_creds.api_key,
+        part: 'snippet,contentDetails',
+        maxResults: '20',
+        playlistId: id,
+      },
     });
   },
 
   getPlayList: id => {
     return axios.get(`${YT_API}/playlists`, {
-      key: g_creds.api_key,
-      part: 'snippet',
-      id,
+      params: {
+        key: g_creds.api_key,
+        part: 'snippet',
+        id,
+      },
     });
   },
 };
