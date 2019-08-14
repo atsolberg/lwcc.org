@@ -1,47 +1,80 @@
 {
-  "kind": "youtube#playlistListResponse",
-  "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/2i5kNe2z2adhPqX2I2P8dLW89Nw\"",
-  "pageInfo": { "totalResults": 1, "resultsPerPage": 5 },
-  "items": [
-    {
-      "kind": "youtube#playlist",
-      "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/7WFS-XzmYEER2hr5i6gxNP7_1ck\"",
-      "id": "PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K",
-      "snippet": {
-        "publishedAt": "2018-12-10T16:49:53.000Z",
-        "channelId": "UCqFli9wWwqO3TLknsrAbibw",
-        "title": "Paul's Wrestling",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/3zraYwajLFA/default.jpg",
-            "width": 120,
-            "height": 90
+  "data": {
+    "kind": "youtube#playlistListResponse",
+    "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/2i5kNe2z2adhPqX2I2P8dLW89Nw\"",
+    "pageInfo": {
+      "totalResults": 1,
+      "resultsPerPage": 5
+    },
+    "items": [
+      {
+        "kind": "youtube#playlist",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/7WFS-XzmYEER2hr5i6gxNP7_1ck\"",
+        "id": "PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K",
+        "snippet": {
+          "publishedAt": "2018-12-10T16:49:53.000Z",
+          "channelId": "UCqFli9wWwqO3TLknsrAbibw",
+          "title": "Paul's Wrestling",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/3zraYwajLFA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/3zraYwajLFA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/3zraYwajLFA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/3zraYwajLFA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/3zraYwajLFA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
           },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/3zraYwajLFA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/3zraYwajLFA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/3zraYwajLFA/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/3zraYwajLFA/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
+          "channelTitle": "Aaron Solberg",
+          "localized": {
+            "title": "Paul's Wrestling",
+            "description": ""
           }
-        },
-        "channelTitle": "Aaron Solberg",
-        "localized": { "title": "Paul's Wrestling", "description": "" }
+        }
       }
-    }
-  ]
+    ]
+  },
+  "status": 200,
+  "statusText": "",
+  "headers": {
+    "date": "Wed, 14 Aug 2019 02:48:58 GMT",
+    "content-encoding": "gzip",
+    "content-length": "2841",
+    "expires": "Wed, 14 Aug 2019 02:48:58 GMT",
+    "server": "GSE",
+    "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/jR-lTyDFHPpmFeMsSdW1FlcL8_0\"",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform"
+  },
+  "config": {
+    "url": "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyD1-k7lDXIhpjyHZiL7aeExXlrqboV9cKE&part=snippet,contentDetails&maxResults=20&playlistId=PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K",
+    "method": "get",
+    "headers": { "Accept": "application/json, text/plain, */*" },
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1
+  },
+  "request": {}
 }

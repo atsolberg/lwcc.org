@@ -26,8 +26,8 @@ function SermonsPage() {
     api.getMediaPages().then(data => setPages(data));
     api.getPlayLists('sermons').then(data => setPlaylists(data));
     api.getCurrentSeriesPlaylistName().then(id => {
-      api.getPlayList(id).then(data => {
-        setCurrentSeries(data.items[0]);
+      api.getPlayList(id).then(resp => {
+        setCurrentSeries(resp.data.items[0]);
       });
       api.getVideosForPlayList(id).then(resp => {
         setLoading(false);
