@@ -5,7 +5,12 @@
 import axios from 'axios';
 
 import { namespace } from './object';
-import { host } from './constants';
+import { g_creds, host } from './constants';
+import { isDevMode } from './misc';
+import TEST_PL_DATA from '../__tests__/data/pl_pauls_wrestling';
+
+const TEST_PL_ID = 'PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K';
+const YT_API = 'https://www.googleapis.com/youtube/v3';
 
 const api = {
   /**
@@ -64,27 +69,27 @@ const api = {
         resolve([
           {
             title: 'Weekend Services',
-            slug: 'weekend-services',
+            slug: TEST_PL_ID,
           },
           {
             title: 'Wednesdays',
-            slug: 'wednesdays',
+            slug: TEST_PL_ID,
           },
           {
             title: 'Guest',
-            slug: 'guest',
+            slug: TEST_PL_ID,
           },
           {
             title: 'St. Paul',
-            slug: 'st-paul',
+            slug: TEST_PL_ID,
           },
           {
             title: 'Northwest',
-            slug: 'northwest',
+            slug: TEST_PL_ID,
           },
           {
             title: 'Iglesia Espanol',
-            slug: 'spanish',
+            slug: TEST_PL_ID,
           },
         ]);
     });
@@ -100,16 +105,31 @@ const api = {
   getCurrentSeriesPlaylistName: () => {
     return new Promise(resolve => {
       setTimeout(() => {
-        resolve("Paul's Wrestling");
+        resolve(TEST_PL_ID);
       }, 500);
     });
   },
 
-  getVideosForPlayList: () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve([{ name: 'some video', author: 'some guy' }]);
-      }, 500);
+  getVideosForPlayList: id => {
+    if (isDevMode()) {
+      return new Promise(resolve => {
+        resolve(TEST_PL_DATA);
+      });
+    }
+
+    return axios.get(`${YT_API}/playlistItems`, {
+      key: g_creds.api_key,
+      part: 'snippet,contentDetails',
+      maxResults: '20',
+      playlistId: id,
+    });
+  },
+
+  getPlayList: id => {
+    return axios.get(`${YT_API}/playlists`, {
+      key: g_creds.api_key,
+      part: 'snippet',
+      id,
     });
   },
 };

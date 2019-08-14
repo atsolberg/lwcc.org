@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 
 import logger from '../../util/logger';
 import api from '../../util/api';
-import { simple } from '../../util/ytapi';
 import logo from '../../../img/icons/logo-192.png';
 
 import MessagesProvider from '../../state-providers/messages/MessagesProvider';
@@ -23,18 +22,15 @@ function SermonsPage() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    // Authenticate for Youtube data
-    simple()
-      .then(data => console.log('youtube data', data))
-      .catch(err => console.log('youtube error', err));
-
     api.getMediaPages().then(data => setPages(data));
     api.getPlayLists('sermons').then(data => setPlaylists(data));
-    api.getCurrentSeriesPlaylistName().then(name => {
-      setCurrentSeriesName(name);
-      api.getVideosForPlayList(name).then(data => {
+    api.getCurrentSeriesPlaylistName().then(id => {
+      api.getPlayList(id).then(currentSeriesData => {
+        setCurrentSeriesName(currentSeriesData);
+      });
+      api.getVideosForPlayList(id).then(resp => {
         setLoading(false);
-        setVideos(data);
+        setVideos(resp.data.items);
       });
     });
   }, []);

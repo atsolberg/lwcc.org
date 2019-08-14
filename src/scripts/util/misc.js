@@ -130,3 +130,5 @@ export const gebi = id => document.getElementById(id);
 
 debugMode = getParameterByName('debug') !== null;
 export const isDebugMode = () => debugMode;
+
+export const isDevMode = () => window.location.hostname === 'localhost';
