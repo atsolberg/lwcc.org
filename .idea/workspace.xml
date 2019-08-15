@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5836dfa1-5862-4fc8-9816-45e8e1d3718b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,11 @@
         <splitter split-orientation="horizontal" split-proportion="0.4992163">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/styles.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="675">
-                      <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+                      <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
                     </state>
                   </provider>
                 </entry>
@@ -57,11 +57,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="510">
-                      <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+                    <state relative-caret-position="60">
+                      <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
                     </state>
                   </provider>
                 </entry>
@@ -100,8 +100,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -216,12 +216,12 @@
         <option value="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" />
         <option value="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/api.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" />
       </list>
     </option>
   </component>
@@ -696,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/__tests__/data/pl_items_the_simple_life.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
@@ -714,13 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="120" column="24" lean-forward="true" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -744,7 +730,21 @@
     <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>

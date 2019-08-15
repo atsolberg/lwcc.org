@@ -14,6 +14,10 @@ const styles = css`
     .playlist-list {
       overflow-x: auto;
       white-space: nowrap;
+
+      .btn:not(.active) {
+        color: ${bs.dark};
+      }
     }
 
     a {
@@ -35,10 +39,6 @@ const styles = css`
         margin-right: 15px;
         overflow-x: inherit;
         white-space: normal;
-
-        .btn:not(.active) {
-          color: ${bs.dark};
-        }
       }
 
       .playlist-search {
