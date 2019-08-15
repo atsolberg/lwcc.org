@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { md } from '../../../styles/breakpoints';
 
 const styles = css`
   &.video-tile {
@@ -26,7 +27,12 @@ const styles = css`
     }
 
     .portrait {
-      width: 89px;
+      width: 65px;
+      height: 65px;
+      ${md} {
+        width: 89px;
+        height: 89px;
+      }
       border-radius: 50%;
       margin-right: 15px;
     }

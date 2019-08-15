@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5836dfa1-5862-4fc8-9816-45e8e1d3718b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/__tests__/data/pl_items_the_simple_life.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/asolberg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/asolberg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/__tests__/data/pl_items_pauls_wrestling.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/__tests__/data/pl_pauls_wrestling.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/__tests__/data/pl_the_simple_life.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/newsletter-signup/NewletterSignup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/newsletter-signup/NewletterSignup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/util/ytapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/ytapi.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,20 +30,20 @@
         <splitter split-orientation="horizontal" split-proportion="0.4992163">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/styles.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="180">
-                      <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+                    <state relative-caret-position="15">
+                      <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="345">
-                      <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+                    <state relative-caret-position="90">
+                      <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
                     </state>
                   </provider>
                 </entry>
@@ -99,8 +83,8 @@
                 <entry file="file://$PROJECT_DIR$/README.md">
                   <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                     <state split_layout="FIRST">
-                      <first_editor relative-caret-position="420">
-                        <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+                      <first_editor relative-caret-position="300">
+                        <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
                       </first_editor>
                       <second_editor />
                     </state>
@@ -116,8 +100,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+                <state relative-caret-position="255">
+                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                 </state>
               </provider>
             </entry>
@@ -234,10 +218,10 @@
         <option value="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/api.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" />
       </list>
     </option>
   </component>
@@ -719,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/__tests__/data/pl_items_the_simple_life.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
@@ -742,25 +719,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="420">
-            <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
