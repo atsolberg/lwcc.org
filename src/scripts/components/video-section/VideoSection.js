@@ -16,7 +16,11 @@ function VideoSection({ title, videos, loading }) {
         {title && <h2 className="title">{title}</h2>}
         <div className="row">
           {prop(videos, 'length') &&
-            videos.map(v => <VideoTile key={v.id} data={v} />)}
+            videos.map(v => (
+              <div className="col-12 col-lg-6">
+                <VideoTile key={v.id} data={v} speaker="Mac Hammond" />
+              </div>
+            ))}
         </div>
       </Loadable>
     </Box>

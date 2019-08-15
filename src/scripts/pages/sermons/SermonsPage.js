@@ -50,7 +50,7 @@ function SermonsPage() {
             alt="logo"
             src={logo}
             css={css`
-              max-width: 50px;
+              width: 50px;
             `}
           />
           <h1>Ministry Media</h1>

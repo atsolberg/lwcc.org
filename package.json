@@ -18,6 +18,7 @@
     "lint:strict": "eslint src --config .eslintrc.base.js",
     "validate": "npm-run-all -l prettier:check lint:errors test",
     "export:scss:vars": "node export_scss_vars.js",
+    "start": "npm-run-all -l export:scss:vars parcel:dev",
     "dev": "npm-run-all -l export:scss:vars parcel:dev",
     "build": "npm-run-all -l export:scss:vars parcel:build",
     "build-wp": "npm-run-all -l export:scss:vars parcel:build:wp"

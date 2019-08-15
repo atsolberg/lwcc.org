@@ -101,6 +101,34 @@ export const format = {
    */
   date: (date = new Date(), formatter = formats.date.MONTH_ABR_DAY_YEAR) =>
     formatter(date),
+
+  /**
+   * Reduce a numerator and denominator to it's smallest,
+   * integer ratio using Euclid's Algorithm.
+   */
+  ratio(numerator, denominator) {
+    let flip = false;
+    const gcd = (a, b) => {
+      if (b === 0) return a;
+      return gcd(b, a % b);
+    };
+
+    if (numerator === denominator) return '1 : 1';
+
+    // Make sure numerator is always the larger number
+    if (+numerator < +denominator) {
+      flip = true;
+      const temp = numerator;
+      numerator = denominator;
+      denominator = temp;
+    }
+
+    const divisor = gcd(+numerator, +denominator);
+
+    return flip
+      ? `${denominator / divisor} : ${numerator / divisor}`
+      : `${numerator / divisor} : ${denominator / divisor}`;
+  },
 };
 
 /** Returns the browser locale. Defaults to `en-US`. */

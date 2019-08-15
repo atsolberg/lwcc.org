@@ -15,6 +15,7 @@
 
 // Import our variables first so we can overwrite bootstraps
 // @see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+// @see https://parceljs.org/recipes.html#customizing-bootstrap-styles
 @import "variables.scss";
 @import "~bootstrap/scss/bootstrap";
 

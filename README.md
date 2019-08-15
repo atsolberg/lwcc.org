@@ -40,8 +40,8 @@ Header
 
 Search
 - [x] Search functionality
-- [ ] Search bar, close on esc key 
-- [ ] Search bar ui, probably a slide in bar
+- [x] Search bar, close on esc key 
+- [x] Search bar ui, probably a slide in bar
 
 Footer
 - [x] Footer ui desktop
@@ -50,7 +50,7 @@ Footer
 - [ ] Get urls for privacy policy and terms of use 
 
 Media Pages
-- [ ] Get youtube data fetching working
+- [x] Get youtube data fetching working
 
 Sermons Page 
 - [x] Initial ui
