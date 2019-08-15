@@ -1,18 +1,24 @@
 import React from 'react';
-import { string, arrayOf, shape } from 'prop-types';
+import cx from 'classnames';
+import { string, arrayOf, shape, func } from 'prop-types';
 
 import styles from './styles';
 import Box from '../box/Box';
 import Button from '../button';
 
-function PlaylistBar({ lists, onPlaylist, ...rest }) {
+function PlaylistBar({ lists, active, onSelect, ...rest }) {
   return (
     <Box {...rest}>
       <div className="playlist-bar" css={styles}>
         <ul className="playlist-list list-inline">
           {lists.map(list => (
             <li className="list-inline-item" key={list.title}>
-              <Button variant="link" value={list.slug} onClick={onPlaylist}>
+              <Button
+                variant="link"
+                value={list.id}
+                onClick={onSelect}
+                className={cx({ active: list.id === active })}
+              >
                 {list.title}
               </Button>
             </li>
@@ -33,10 +39,13 @@ function PlaylistBar({ lists, onPlaylist, ...rest }) {
 PlaylistBar.propTypes = {
   lists: arrayOf(
     shape({
+      id: string.isRequired,
       title: string.isRequired,
-      slug: string.isRequired,
+      pl_id: string.isRequired,
     })
   ).isRequired,
+  active: string.isRequired,
+  onSelect: func.isRequired,
 };
 
 export default PlaylistBar;

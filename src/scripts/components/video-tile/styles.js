@@ -4,6 +4,7 @@ const styles = css`
   &.video-tile {
     display: block;
     color: #fff;
+    text-shadow: 1px 1px 1px black;
 
     figure {
       position: relative;

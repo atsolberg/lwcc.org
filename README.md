@@ -24,9 +24,9 @@ Builds the index.js file for the app
 
 ### TODO
 Misc
-- [ ] Figure out youtube api
-- [ ] Figure out how to get youtube playlists for series
-
+- [x] Figure out youtube api
+- [ ] Get current series playlist id
+- [ ] Get form submission endpoint for newsletter signup
 
 Header
 - [x] Header top nav ui
@@ -51,6 +51,7 @@ Footer
 
 Media Pages
 - [x] Get youtube data fetching working
+- [ ] Search
 
 Sermons Page 
 - [x] Initial ui

@@ -1,0 +1,674 @@
+{
+  "data": {
+    "kind": "youtube#playlistItemListResponse",
+    "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/YxmSK0wxCtbF5mBJ4OQbrdeCTxI\"",
+    "pageInfo": {
+      "totalResults": 13,
+      "resultsPerPage": 20
+    },
+    "items": [
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/ggqNHY7G0LgsuzGBjG6ZtE-lyag\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci41NkI0NEY2RDEwNTU3Q0M2",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:24:46.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life I - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/maDw7ZLRmAw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/maDw7ZLRmAw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/maDw7ZLRmAw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/maDw7ZLRmAw/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/maDw7ZLRmAw/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 0,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "maDw7ZLRmAw"
+          }
+        },
+        "contentDetails": {
+          "videoId": "maDw7ZLRmAw",
+          "videoPublishedAt": "2019-01-17T15:05:00.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/aZ6mHKmycvXrEF25LJ4crRyQxX4\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci4yODlGNEE0NkRGMEEzMEQy",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:24:46.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life II- Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 1,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "ifgw5zuABVU"
+          }
+        },
+        "contentDetails": {
+          "videoId": "ifgw5zuABVU",
+          "videoPublishedAt": "2019-01-22T21:33:28.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/sRB3-fYzVelhQeL0irJIiuuwK3Y\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci4wMTcyMDhGQUE4NTIzM0Y5",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:24:46.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life III: The Power of Christ - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/k0Z-eojqn3I/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/k0Z-eojqn3I/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/k0Z-eojqn3I/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/k0Z-eojqn3I/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/k0Z-eojqn3I/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 2,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "k0Z-eojqn3I"
+          }
+        },
+        "contentDetails": {
+          "videoId": "k0Z-eojqn3I",
+          "videoPublishedAt": "2019-02-04T22:54:22.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/MHFQpwtik0DoK-5Mh64HAV5iIL4\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci41MjE1MkI0OTQ2QzJGNzNG",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:25:16.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life IV -  Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/nMjBGNfCL0s/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/nMjBGNfCL0s/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/nMjBGNfCL0s/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/nMjBGNfCL0s/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/nMjBGNfCL0s/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 3,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "nMjBGNfCL0s"
+          }
+        },
+        "contentDetails": {
+          "videoId": "nMjBGNfCL0s",
+          "videoPublishedAt": "2019-02-11T19:53:02.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/UynRZTZla5ujOAhW8KD-HrUW2F8\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci4wOTA3OTZBNzVEMTUzOTMy",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:26:18.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life VI: Cease Not Praying - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/JjxUrwgoIIg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/JjxUrwgoIIg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/JjxUrwgoIIg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/JjxUrwgoIIg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/JjxUrwgoIIg/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 4,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "JjxUrwgoIIg"
+          }
+        },
+        "contentDetails": {
+          "videoId": "JjxUrwgoIIg",
+          "videoPublishedAt": "2019-02-25T21:21:36.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/01WfUkS95wnk_eMlioyebk-ls5s\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci4xMkVGQjNCMUM1N0RFNEUx",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:26:18.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life VII: Time Management - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/At9oFG3VqxA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/At9oFG3VqxA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/At9oFG3VqxA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/At9oFG3VqxA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/At9oFG3VqxA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 5,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "At9oFG3VqxA"
+          }
+        },
+        "contentDetails": {
+          "videoId": "At9oFG3VqxA",
+          "videoPublishedAt": "2019-03-04T23:01:28.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/ECfu8iqxwtTO-sbLTZjvjZD7Ux8\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci41MzJCQjBCNDIyRkJDN0VD",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:26:56.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life VIII: Time Management II - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/_gqiYLwQuvc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/_gqiYLwQuvc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/_gqiYLwQuvc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/_gqiYLwQuvc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/_gqiYLwQuvc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 6,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "_gqiYLwQuvc"
+          }
+        },
+        "contentDetails": {
+          "videoId": "_gqiYLwQuvc",
+          "videoPublishedAt": "2019-03-11T19:13:29.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/lSF_r-o8xxNi3hewsctyCu9dmwA\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci5DQUNERDQ2NkIzRUQxNTY1",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:27:19.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life IX - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/QGVt8l1YSkg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/QGVt8l1YSkg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/QGVt8l1YSkg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/QGVt8l1YSkg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/QGVt8l1YSkg/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 7,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "QGVt8l1YSkg"
+          }
+        },
+        "contentDetails": {
+          "videoId": "QGVt8l1YSkg",
+          "videoPublishedAt": "2019-04-01T17:54:48.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/0-E3s9URgetpM07zdUJU7C4YM-4\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci45NDk1REZENzhEMzU5MDQz",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:27:37.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life X: Love - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/VVrq49iYPOI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/VVrq49iYPOI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/VVrq49iYPOI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/VVrq49iYPOI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/VVrq49iYPOI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 8,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "VVrq49iYPOI"
+          }
+        },
+        "contentDetails": {
+          "videoId": "VVrq49iYPOI",
+          "videoPublishedAt": "2019-04-16T18:03:17.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/AtXrHl1YYCpv6uh08OsgHFeBCeU\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci5GNjNDRDREMDQxOThCMDQ2",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:27:53.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life XI: Resurrection Power - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/ZxEpAkwfw34/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/ZxEpAkwfw34/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/ZxEpAkwfw34/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/ZxEpAkwfw34/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/ZxEpAkwfw34/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 9,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "ZxEpAkwfw34"
+          }
+        },
+        "contentDetails": {
+          "videoId": "ZxEpAkwfw34",
+          "videoPublishedAt": "2019-04-23T21:33:26.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/GPjgpbF7D0bDCNPPFYlpEcj1EJc\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci40NzZCMERDMjVEN0RFRThB",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:28:08.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life XII: Miracles - Mac Hammond",
+          "description": "",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/YHGdbx3grLk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/YHGdbx3grLk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/YHGdbx3grLk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/YHGdbx3grLk/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/YHGdbx3grLk/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 10,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "YHGdbx3grLk"
+          }
+        },
+        "contentDetails": {
+          "videoId": "YHGdbx3grLk",
+          "videoPublishedAt": "2019-05-01T13:01:24.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/4DeINDRXWqJGN0OcqoD2OxthwbI\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci5EMEEwRUY5M0RDRTU3NDJC",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:28:33.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life XIII - Mac Hammond",
+          "description": "We will never be mature in love until we first understand and accept how much He loves us. Perfect love casts out fear, thus there is no fear in our lives no matter what. The degree to which we are perfected in love will be demonstrated by the degree to which torment or fear is abated in the lives of those around us. Everything we do in other people’s lives either magnifies their fear or reduces it and lets them know that they are worth it. Kindness always, not envying what they have, not being arrogant or proud, being interested in them and listening to them, not being easily provoked and not thinking evil about them, not rejoicing in evil but in Truth are the Agape qualities we are to have towards others. Love believes the best for and of others, continues to endure, takes no account of a wrong suffered and never fails. When we serve other and help them find Him in their lives, we open their heart to hear what we have to say. The result will be His Resurrection Power. Promotion from Him comes only when we serve others.",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/atbKSL8IyMg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/atbKSL8IyMg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/atbKSL8IyMg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/atbKSL8IyMg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/atbKSL8IyMg/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 11,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "atbKSL8IyMg"
+          }
+        },
+        "contentDetails": {
+          "videoId": "atbKSL8IyMg",
+          "videoPublishedAt": "2019-05-13T20:05:23.000Z"
+        }
+      },
+      {
+        "kind": "youtube#playlistItem",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/wjcN67k9aXYJScZ6RQSHruQ7BnM\"",
+        "id": "UEw3TEU2am1fcHQ3eWc1WHctejFIUzhULXdFYWNmWXkyci45ODRDNTg0QjA4NkFBNkQy",
+        "snippet": {
+          "publishedAt": "2019-07-16T19:28:55.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life XIV - Mac Hammond",
+          "description": "There is no fear or torment in love. The root of any torment is fear. We are to bring our interpersonal relationships to the Lord and shine His light onto our behavior. Are we conforming to His Word? We need to forgive others first, then listen to them and only speak with a soft answer. The other person has a right to choose, so love them by respecting their rights. We are to have no ulterior motives, be free from conflict and be willing to yield to reason. We need to bridle our tongue and communicate without offending anyone. Be a lover of people.",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/H1o5gnPFrU4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/H1o5gnPFrU4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/H1o5gnPFrU4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/H1o5gnPFrU4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/H1o5gnPFrU4/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "channelTitle": "Living Word Christian Center",
+          "playlistId": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
+          "position": 12,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "H1o5gnPFrU4"
+          }
+        },
+        "contentDetails": {
+          "videoId": "H1o5gnPFrU4",
+          "videoPublishedAt": "2019-05-21T14:08:58.000Z"
+        }
+      }
+    ]
+  },
+  "status": 200,
+  "statusText": "",
+  "headers": {
+    "date": "Wed, 14 Aug 2019 02:48:58 GMT",
+    "content-encoding": "gzip",
+    "content-length": "2841",
+    "expires": "Wed, 14 Aug 2019 02:48:58 GMT",
+    "server": "GSE",
+    "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/jR-lTyDFHPpmFeMsSdW1FlcL8_0\"",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform"
+  },
+  "config": {
+    "url": "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyD1-k7lDXIhpjyHZiL7aeExXlrqboV9cKE&part=snippet,contentDetails&maxResults=20&playlistId=PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K",
+    "method": "get",
+    "headers": { "Accept": "application/json, text/plain, */*" },
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1
+  },
+  "request": {}
+}

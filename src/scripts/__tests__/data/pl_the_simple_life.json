@@ -1,52 +1,49 @@
 {
   "data": {
     "kind": "youtube#playlistListResponse",
-    "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/2i5kNe2z2adhPqX2I2P8dLW89Nw\"",
-    "pageInfo": {
-      "totalResults": 1,
-      "resultsPerPage": 5
-    },
+    "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/8EhFnwEZJF0t7J-jRq0ejZ9cIHk\"",
+    "pageInfo": { "totalResults": 1, "resultsPerPage": 5 },
     "items": [
       {
         "kind": "youtube#playlist",
-        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/7WFS-XzmYEER2hr5i6gxNP7_1ck\"",
-        "id": "PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K",
+        "etag": "\"nlUZBA6NbTS7q9G8D1GljyfTIWI/p68-DvBs-oD_ohxPJKWirg8sAfc\"",
+        "id": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r",
         "snippet": {
-          "publishedAt": "2018-12-10T16:49:53.000Z",
-          "channelId": "UCqFli9wWwqO3TLknsrAbibw",
-          "title": "Paul's Wrestling",
-          "description": "",
+          "publishedAt": "2019-07-16T19:23:49.000Z",
+          "channelId": "UC6OtG9IPpnEoVpXwaxsXR4g",
+          "title": "The Simple Life",
+          "description": "Pastor Mac preaches about how the Bible teaches us to live a simple life through the grace of Jesus",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/3zraYwajLFA/default.jpg",
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/3zraYwajLFA/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/3zraYwajLFA/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/3zraYwajLFA/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/3zraYwajLFA/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/ifgw5zuABVU/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
           },
-          "channelTitle": "Aaron Solberg",
+          "channelTitle": "Living Word Christian Center",
           "localized": {
-            "title": "Paul's Wrestling",
-            "description": ""
+            "title": "The Simple Life",
+            "description": "Pastor Mac preaches about how the Bible teaches us to live a simple life through the grace of Jesus"
           }
         }
       }

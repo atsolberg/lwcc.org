@@ -7,10 +7,12 @@ import axios from 'axios';
 import { namespace } from './object';
 import { g_creds, host } from './constants';
 import { isDevMode } from './misc';
-import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_pauls_wrestling';
-import TEST_PL_DATA from '../__tests__/data/pl_pauls_wrestling';
+import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
+import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
 
-const TEST_PL_ID = 'PL-p9HX8OT1Y5KjmIVdoM7S8vDr81-TU6K';
+const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
+const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
+
 const YT_API = 'https://www.googleapis.com/youtube/v3';
 
 const api = {
@@ -69,28 +71,39 @@ const api = {
       if (page === 'sermons')
         resolve([
           {
+            id: 'series',
+            title: 'Current Series',
+            pl_id: TEST_PL_ID,
+          },
+          {
+            id: 'weekend',
             title: 'Weekend Services',
-            slug: TEST_PL_ID,
+            pl_id: TEST_PL_ID,
           },
           {
+            id: 'wednesdays',
             title: 'Wednesdays',
-            slug: TEST_PL_ID,
+            pl_id: TEST_PL_ID,
           },
           {
+            id: 'guest',
             title: 'Guest',
-            slug: TEST_PL_ID,
+            pl_id: 'PL7LE6jm_pt7yXaIukwACfPn8GWamj7NGO',
           },
           {
+            id: 'st-paul',
             title: 'St. Paul',
-            slug: TEST_PL_ID,
+            pl_id: TEST_PL_ID,
           },
           {
+            id: 'northwest',
             title: 'Northwest',
-            slug: TEST_PL_ID,
+            pl_id: TEST_PL_ID,
           },
           {
+            id: 'spanish',
             title: 'Iglesia Espanol',
-            slug: TEST_PL_ID,
+            pl_id: TEST_PL_ID,
           },
         ]);
     });
@@ -103,7 +116,7 @@ const api = {
    * This may come from the api later, hardcoded for now.
    * @return {Promise<string>}
    */
-  getCurrentSeriesPlaylistName: () => {
+  getCurrentSeriesId: () => {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(TEST_PL_ID);
@@ -122,7 +135,6 @@ const api = {
       params: {
         key: g_creds.api_key,
         part: 'snippet,contentDetails',
-        maxResults: '20',
         playlistId: id,
       },
     });

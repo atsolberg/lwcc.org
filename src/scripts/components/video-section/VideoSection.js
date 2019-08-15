@@ -17,8 +17,8 @@ function VideoSection({ title, videos, loading }) {
         <div className="row">
           {prop(videos, 'length') &&
             videos.map(v => (
-              <div className="col-12 col-lg-6">
-                <VideoTile key={v.id} data={v} speaker="Mac Hammond" />
+              <div key={v.id} className="col-12 col-lg-6">
+                <VideoTile data={v} />
               </div>
             ))}
         </div>

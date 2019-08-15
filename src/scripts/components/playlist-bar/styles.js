@@ -2,6 +2,7 @@ import { css } from '@emotion/core';
 
 import { sm } from '../../../styles/breakpoints';
 import v from '../../../../exported_scss_vars';
+import bs from '../../../../postcss_vars';
 
 const styles = css`
   &.playlist-bar {
@@ -34,6 +35,10 @@ const styles = css`
         margin-right: 15px;
         overflow-x: inherit;
         white-space: normal;
+
+        .btn:not(.active) {
+          color: ${bs.dark};
+        }
       }
 
       .playlist-search {

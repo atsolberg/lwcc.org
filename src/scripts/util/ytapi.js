@@ -1,6 +1,6 @@
 import gapi from '../non-npm-vendors/gapi';
 
-import { g_creds } from './constants';
+import { ats_g_creds } from './constants';
 
 const DISCOVERY_DOCS =
   'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest';

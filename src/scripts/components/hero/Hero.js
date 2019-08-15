@@ -34,7 +34,7 @@ function Hero({
 Hero.propTypes = {
   bg: oneOf(['worship', 'city']).isRequired,
   variant: oneOf(['contained', 'full-width']),
-  layout: oneOf(['centered', 'normal']),
+  layout: oneOf(['centered', 'centered-v']),
   faded: bool,
   className: any,
   children: node,
