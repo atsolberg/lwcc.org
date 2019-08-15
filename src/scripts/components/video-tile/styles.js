@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { md } from '../../../styles/breakpoints';
+import { sm, md } from '../../../styles/breakpoints';
 
 const styles = css`
   &.video-tile {
@@ -43,7 +43,10 @@ const styles = css`
       align-self: center;
     }
     .title {
-      font-size: 24px;
+      font-size: 20px;
+      ${sm} {
+        font-size: 24px;
+      }
       margin-bottom: 0;
     }
   }
