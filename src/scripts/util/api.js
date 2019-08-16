@@ -5,7 +5,7 @@
 import axios from 'axios';
 
 import logger from './logger';
-import { isDevMode } from './misc';
+import { isTestMode } from './misc';
 import { namespace } from './object';
 import { g_creds, host } from './constants';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
@@ -133,7 +133,7 @@ const api = {
   },
 
   getVideosForPlayList: id => {
-    if (isDevMode()) {
+    if (isTestMode()) {
       return new Promise(resolve => {
         resolve(TEST_PL_ITEMS_DATA);
       });
@@ -149,7 +149,7 @@ const api = {
   },
 
   getPlayList: id => {
-    if (isDevMode()) {
+    if (isTestMode()) {
       return new Promise(resolve => {
         resolve(TEST_PL_DATA);
       });

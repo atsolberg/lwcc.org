@@ -18,6 +18,7 @@ function PlaylistBar({ lists, active, onSelect, onSearch, ...rest }) {
                 variant="link"
                 value={list.id}
                 onClick={onSelect}
+                data-title={list.title}
                 className={cx({ active: list.id === active })}
               >
                 {list.title}

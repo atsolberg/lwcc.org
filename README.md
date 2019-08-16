@@ -57,18 +57,18 @@ Misc
 - [ ] Get a valid cert on the dev environment
 - [ ] Verify we can just drop the public folder into wp
 - [ ] Newsletter signup - finish styling
-- [ ] Newsletter signup - Figure out form submission endpoint
+- [ ] Newsletter signup - Get mail chimp form submission endpoint
 - [ ] Figure out how to get speaker images from wp
 
 Header
 - [x] Header top nav ui
 - [x] Header main nav ui
 - [x] Figure out how to get menu data from wp
-- [ ] Figure out how to get live event data
-- [ ] Figure out 'live' link text when off-air
-- [ ] Figure out 'live' link url
+- [ ] Figure out how to get live streaming status from Youtube
+- [ ] Set 'live' link to hidden when off-air
+- [ ] Set 'live' link url to churchonline.org
 - [x] Shrink top nav content on mobile
-- [ ] Collapse some menus to a 'More' menu on tablet
+- [ ] Shrink navs on desktop so they don't wrap
 
 Search
 - [x] Search functionality
@@ -78,9 +78,10 @@ Search
 Footer
 - [x] Footer ui desktop
 - [x] Footer ui mobile
-- [ ] Get urls for privacy policy and terms of use 
+- [x] Get urls for privacy policy and terms of use
+- [x] Set st paul link to http://lwcc.org/sainttpaul 
 
-Media Pages
+Media Page
 - [x] Get youtube data fetching working
 - [x] Search
 - [x] Speaker portraits on video tiles
@@ -88,12 +89,15 @@ Media Pages
 Sermons Page 
 - [x] Initial ui
 
+Video Page
+- [ ] Initial ui
+- [ ] Figure out how to get related videos for a video on a channel
+- [ ] Just use video description as details content under title
+
 Stories Page
 - [ ] Initial ui
 
 Resources Page
 - [ ] Initial ui
 
-Video Page
-- [ ] Initial ui
 

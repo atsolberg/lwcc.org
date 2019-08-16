@@ -4,9 +4,6 @@
 
 import { pad } from './string';
 
-// Is the browser in debug mode
-let debugMode = false;
-
 export const timezone =
   'Intl' in window
     ? Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -162,7 +159,8 @@ export function getFlatPathName(url = window.location.pathname) {
  */
 export const gebi = id => document.getElementById(id);
 
-debugMode = getParameterByName('debug') !== null;
-export const isDebugMode = () => debugMode;
+const debugMode = getParameterByName('debug') !== null;
+const testMode = getParameterByName('test') !== null;
 
-export const isDevMode = () => window.location.hostname === 'localhost';
+export const isDebugMode = () => debugMode;
+export const isTestMode = () => testMode;

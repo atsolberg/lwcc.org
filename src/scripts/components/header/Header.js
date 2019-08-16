@@ -42,8 +42,8 @@ function fixTitles(title) {
 function Header() {
   const [searching, setSearching] = useState(false);
   const [broadcast, setBroadcast] = useState({
-    live: true,
-    title: 'Pastor Lynn on Healing',
+    live: false,
+    title: '',
   });
   const [menus, setMenus] = useState({ top: [], main: [] });
 
@@ -62,7 +62,7 @@ function Header() {
       <div className="navbar-topper">
         <div className="container">
           {broadcast.live && (
-            <a className="link-primary" href="/watch/live">
+            <a className="link-primary" href="https://lwcc.churchonline.org/">
               <span className="d-md-none">Watch Live →</span>{' '}
               <span className="d-none d-md-inline">
                 Watch {broadcast.title && broadcast.title} &mdash; Live Now →

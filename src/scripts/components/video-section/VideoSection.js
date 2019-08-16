@@ -8,6 +8,7 @@ import VideoTile from '../video-tile/VideoTile';
 import Box from '../box/Box';
 
 import styles from './styles';
+import { rif } from '../../util/jsx';
 
 function VideoSection({ title, videos, loading }) {
   return (
@@ -15,7 +16,8 @@ function VideoSection({ title, videos, loading }) {
       <Loadable loading={loading}>
         {title && <h2 className="title">{title}</h2>}
         <div className="row">
-          {prop(videos, 'length') &&
+          {rif(
+            prop(videos, 'length'),
             videos.map(v => (
               <div
                 key={prop(v, 'id.videoId') || v.id}
@@ -23,7 +25,9 @@ function VideoSection({ title, videos, loading }) {
               >
                 <VideoTile data={v} />
               </div>
-            ))}
+            )),
+            <small className="font-italic">No videos found</small>
+          )}
         </div>
       </Loadable>
     </Box>

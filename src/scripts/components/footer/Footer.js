@@ -81,7 +81,13 @@ function Footer() {
             </div>
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
-                <strong>Saint Paul</strong>
+                <a
+                  href="https://lwcc.org/saintpaul"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <strong>Saint Paul</strong>
+                </a>
               </p>
               <p>
                 Union Depot

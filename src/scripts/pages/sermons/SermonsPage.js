@@ -21,12 +21,12 @@ function SermonsPage() {
   const [playlists, setPlaylists] = useState([]);
   const [activePlaylist, setActivePlaylist] = useState('series');
 
-  const [currentSeries, setCurrentSeries] = useState(null);
   const [currentSeriesId, setCurrentSeriesId] = useState(null);
+  const [currentSeriesTitle, setCurrentSeriesTitle] = useState(null);
 
   const [loading, setLoading] = useState(true);
   const [videos, setVideos] = useState([]);
-  const [title, setTitle] = useState('');
+  const [header, setHeader] = useState('');
 
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
@@ -34,11 +34,14 @@ function SermonsPage() {
 
     api.getCurrentSeriesId().then(id => {
       setCurrentSeriesId(id);
+
       api.getPlayList(id).then(({ data }) => {
         const pl = data.items[0];
-        setCurrentSeries(pl);
-        setTitle(prop(pl, 'snippet.localized.title') || '');
+        const title = prop(pl, 'snippet.localized.title') || '';
+        setCurrentSeriesTitle(title);
+        setHeader(title);
       });
+
       api.getVideosForPlayList(id).then(({ data }) => {
         setLoading(false);
         setVideos(data.items);
@@ -46,12 +49,24 @@ function SermonsPage() {
     });
   }, []);
 
-  function onPlaylist({ target: { value } }) {
+  function onPlaylist({
+    target: {
+      value,
+      dataset: { title },
+    },
+  }) {
     setActivePlaylist(value);
-    const id =
-      value === 'series'
-        ? currentSeriesId
-        : playlists.find(pl => pl.id === value).pl_id;
+    const isCurrentSeries = value === 'series';
+    if (isCurrentSeries) {
+      setHeader(currentSeriesTitle);
+    } else {
+      setHeader(title);
+    }
+
+    const id = isCurrentSeries
+      ? currentSeriesId
+      : playlists.find(pl => pl.id === value).pl_id;
+
     api.getVideosForPlayList(id).then(resp => {
       setVideos(resp.data.items);
     });
@@ -63,7 +78,7 @@ function SermonsPage() {
       .then(({ data }) => {
         setActivePlaylist(null);
         setVideos(data.items);
-        setTitle(`'Results: ${q}`);
+        setHeader(`Search results for: "${q}"`);
       })
       .catch(err => logger.error('search error: ', err));
   }
@@ -92,7 +107,7 @@ function SermonsPage() {
           onSearch={onSearch}
         />
 
-        <VideoSection loading={loading} title={title} videos={videos} />
+        <VideoSection loading={loading} title={header} videos={videos} />
       </div>
 
       <NewsletterSignup />
