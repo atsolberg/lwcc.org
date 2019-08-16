@@ -4,12 +4,14 @@
  */
 import axios from 'axios';
 
+import logger from './logger';
+import { isDevMode } from './misc';
 import { namespace } from './object';
 import { g_creds, host } from './constants';
-import { isDevMode } from './misc';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
 
+const YT_CHANNEL_ID = 'UC6OtG9IPpnEoVpXwaxsXR4g';
 const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
 const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
 
@@ -118,9 +120,15 @@ const api = {
    */
   getCurrentSeriesId: () => {
     return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(TEST_PL_ID);
-      }, 500);
+      axios
+        .get(`${host}/wp-json/wp/v2/playlists/2669`)
+        .then(({ data }) => {
+          resolve(data.acf.id);
+        })
+        .catch(err => {
+          logger.error('Failed to fetch current series id from wp api:', err);
+          resolve(TEST_PL_ID);
+        });
     });
   },
 
@@ -163,6 +171,17 @@ const api = {
         part: 'snippet',
         id,
         fields: 'items(snippet(title,description,tags))',
+      },
+    });
+  },
+
+  searchVideos: q => {
+    return axios.get(`${YT_API}/search`, {
+      params: {
+        key: g_creds.api_key,
+        part: 'snippet',
+        channelId: YT_CHANNEL_ID,
+        q,
       },
     });
   },

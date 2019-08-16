@@ -5,8 +5,9 @@ import { string, arrayOf, shape, func } from 'prop-types';
 import styles from './styles';
 import Box from '../box/Box';
 import Button from '../button';
+import { onEnter } from '../../util/function';
 
-function PlaylistBar({ lists, active, onSelect, ...rest }) {
+function PlaylistBar({ lists, active, onSelect, onSearch, ...rest }) {
   return (
     <Box {...rest}>
       <div className="playlist-bar" css={styles}>
@@ -25,7 +26,12 @@ function PlaylistBar({ lists, active, onSelect, ...rest }) {
           ))}
         </ul>
         <div className="input-group input-group-sm playlist-search">
-          <input className="form-control" type="text" placeholder="search" />
+          <input
+            className="form-control"
+            type="text"
+            placeholder="search"
+            onKeyDown={onEnter(onSearch)}
+          />
           <div className="input-group-append">
             <Button variant="primary">
               <i className="fa fa-search" />
@@ -44,8 +50,9 @@ PlaylistBar.propTypes = {
       pl_id: string.isRequired,
     })
   ).isRequired,
-  active: string.isRequired,
+  active: string,
   onSelect: func.isRequired,
+  onSearch: func.isRequired,
 };
 
 export default PlaylistBar;

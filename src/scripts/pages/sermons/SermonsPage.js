@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/core';
 
+import logger from '../../util/logger';
 import { prop } from '../../util/object';
 import api from '../../util/api';
 import logo from '../../../img/icons/logo-192.png';
@@ -16,12 +17,16 @@ import styles from './styles';
 
 function SermonsPage() {
   const [pages, setPages] = useState([]);
+
   const [playlists, setPlaylists] = useState([]);
   const [activePlaylist, setActivePlaylist] = useState('series');
+
   const [currentSeries, setCurrentSeries] = useState(null);
   const [currentSeriesId, setCurrentSeriesId] = useState(null);
+
   const [loading, setLoading] = useState(true);
   const [videos, setVideos] = useState([]);
+  const [title, setTitle] = useState('');
 
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
@@ -29,12 +34,14 @@ function SermonsPage() {
 
     api.getCurrentSeriesId().then(id => {
       setCurrentSeriesId(id);
-      api.getPlayList(id).then(resp => {
-        setCurrentSeries(resp.data.items[0]);
+      api.getPlayList(id).then(({ data }) => {
+        const pl = data.items[0];
+        setCurrentSeries(pl);
+        setTitle(prop(pl, 'snippet.localized.title') || '');
       });
-      api.getVideosForPlayList(id).then(resp => {
+      api.getVideosForPlayList(id).then(({ data }) => {
         setLoading(false);
-        setVideos(resp.data.items);
+        setVideos(data.items);
       });
     });
   }, []);
@@ -50,7 +57,16 @@ function SermonsPage() {
     });
   }
 
-  const title = prop(currentSeries, 'snippet.localized.title') || '';
+  function onSearch({ target: { value: q } }) {
+    api
+      .searchVideos(q)
+      .then(({ data }) => {
+        setActivePlaylist(null);
+        setVideos(data.items);
+        setTitle(`'Results: ${q}`);
+      })
+      .catch(err => logger.error('search error: ', err));
+  }
 
   return (
     <MessagesProvider>
@@ -73,6 +89,7 @@ function SermonsPage() {
           lists={playlists}
           active={activePlaylist}
           onSelect={onPlaylist}
+          onSearch={onSearch}
         />
 
         <VideoSection loading={loading} title={title} videos={videos} />

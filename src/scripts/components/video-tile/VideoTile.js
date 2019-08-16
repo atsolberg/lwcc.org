@@ -51,7 +51,10 @@ function VideoTile({ data }) {
               {format.date(new Date(data.snippet.publishedAt))}
             </time>
             {speaker.name && <> | {speaker.name} </>}
-            <h3 className="title">{speaker.title}</h3>
+            <h3
+              className="title"
+              dangerouslySetInnerHTML={{ __html: speaker.title }}
+            />
           </div>
         </figcaption>
       </figure>
