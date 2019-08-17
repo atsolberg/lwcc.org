@@ -137,7 +137,7 @@ export const locale = () =>
 
 /** Retrieve a request parameter by name. */
 export const getParameterByName = (name, url = window.location.href) => {
-  const sanitizedName = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  const sanitizedName = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
   const regexS = `[\\?&]${sanitizedName}=([^&#]*)`;
   const results = new RegExp(regexS, 'i').exec(url);
 

@@ -27,7 +27,6 @@ const tolerantRuleGroupings = [
     ruleNames: [
       'import/no-mutable-exports',
       'prefer-const',
-      'no-param-reassign',
     ],
     level: 'warn',
   },

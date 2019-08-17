@@ -12,8 +12,9 @@ import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
 
 const YT_CHANNEL_ID = 'UC6OtG9IPpnEoVpXwaxsXR4g';
+const MAX_RESULTS = 50; // 50 is the largest valid value for Youtube search results
 const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
-const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
+// const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
 
 const YT_API = 'https://www.googleapis.com/youtube/v3';
 
@@ -142,6 +143,7 @@ const api = {
     return axios.get(`${YT_API}/playlistItems`, {
       params: {
         key: g_creds.api_key,
+        maxResults: MAX_RESULTS,
         part: 'snippet,contentDetails',
         playlistId: id,
       },
@@ -158,7 +160,7 @@ const api = {
     return axios.get(`${YT_API}/playlists`, {
       params: {
         key: g_creds.api_key,
-        part: 'snippet',
+        part: 'snippet,contentDetails',
         id,
       },
     });
@@ -168,7 +170,7 @@ const api = {
     return axios.get(`${YT_API}/videos`, {
       params: {
         key: g_creds.api_key,
-        part: 'snippet',
+        part: 'snippet,contentDetails',
         id,
         fields: 'items(snippet(title,description,tags))',
       },
@@ -180,6 +182,8 @@ const api = {
       params: {
         key: g_creds.api_key,
         part: 'snippet',
+        type: 'video',
+        maxResults: MAX_RESULTS,
         channelId: YT_CHANNEL_ID,
         q,
       },

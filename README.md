@@ -44,8 +44,7 @@ Response:
   "acf": {
     "name": "Current Series",
     "id": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r"
-  },
-  ...
+  }
 }
 ```
 
@@ -65,10 +64,10 @@ Header
 - [x] Header main nav ui
 - [x] Figure out how to get menu data from wp
 - [ ] Figure out how to get live streaming status from Youtube
-- [ ] Set 'live' link to hidden when off-air
-- [ ] Set 'live' link url to churchonline.org
+- [x] Set 'live' link to hidden when off-air
+- [x] Set 'live' link url to churchonline.org
 - [x] Shrink top nav content on mobile
-- [ ] Shrink navs on desktop so they don't wrap
+- [x] Shrink navs on desktop so they don't wrap
 
 Search
 - [x] Search functionality
@@ -85,11 +84,13 @@ Media Page
 - [x] Get youtube data fetching working
 - [x] Search
 - [x] Speaker portraits on video tiles
+- [x] Implement 'load more' feature
 
 Sermons Page 
 - [x] Initial ui
 
 Video Page
+- [ ] Figure out url strategy
 - [ ] Initial ui
 - [ ] Figure out how to get related videos for a video on a channel
 - [ ] Just use video description as details content under title

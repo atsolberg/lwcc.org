@@ -23,19 +23,19 @@ function findSpeaker(data) {
     speaker.title = title;
   }
 
-  speaker.thumb =
-    prop(data, 'snippet.thumbnails.maxres.url') ||
-    prop(data, 'snippet.thumbnails.standard.url') ||
-    prop(data, 'snippet.thumbnails.high.url');
+  speaker.thumb = prop(data, 'snippet.thumbnails.high.url');
+  prop(data, 'snippet.thumbnails.standard.url');
 
   return speaker;
 }
 
 function VideoTile({ data }) {
+  const { snippet } = data;
   const speaker = findSpeaker(data);
+  const id = prop(data, 'id.videoId') || prop(snippet, 'resourceId.videoId');
 
   return (
-    <a href="#" className="video-tile" css={styles}>
+    <a href={`/media/${id}`} className="video-tile" css={styles}>
       <figure>
         <img className="thumb img-fluid" src={speaker.thumb} alt="thumbnail" />
         <figcaption className="meta">

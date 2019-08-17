@@ -5,17 +5,21 @@ import Navbar from 'react-bootstrap/es/Navbar';
 import Nav from 'react-bootstrap/es/Nav';
 import NavDropdown from 'react-bootstrap/es/NavDropdown';
 
+import '../../util/ytapi';
 import api from '../../util/api';
 import { prop } from '../../util/object';
-import styles from './styles';
+import nav_top from '../../__tests__/data/nav_top';
+import nav_main from '../../__tests__/data/nav_main';
 
 import HoverNav from '../hover-nav/HoverNav';
 import Button from '../button';
 import SearchBar from '../searchbar/SearchBar';
 import Logo from '../icons/Logo';
 
+import styles from './styles';
+
 function getHere(url) {
-  const here = new URL(url).pathname.replace('/', '');
+  const here = new URL(url).pathname.replace(new RegExp('/', 'g'), '');
   return here;
 }
 
@@ -49,9 +53,15 @@ function Header() {
 
   // Fetch menus on mount
   useEffect(() => {
-    api.getMenus('main', 'top-bar').then(([{ data: main }, { data: top }]) => {
-      setMenus({ main, top });
-    });
+    api
+      .getMenus('main', 'top-bar')
+      .then(([{ data: main }, { data: top }]) => {
+        setMenus({ main, top });
+      })
+      .catch(() => {
+        // Fall back to our test data nav payloads
+        setMenus({ main: nav_main, top: nav_top });
+      });
   }, []);
 
   const where = window.location.pathname.replace('/', '');
@@ -60,7 +70,7 @@ function Header() {
     <header css={styles}>
       {/* TOP BAR */}
       <div className="navbar-topper">
-        <div className="container">
+        <div className="max-1140">
           {broadcast.live && (
             <a className="link-primary" href="https://lwcc.churchonline.org/">
               <span className="d-md-none">Watch Live →</span>{' '}
@@ -89,8 +99,8 @@ function Header() {
       <SearchBar search={[searching, setSearching]} />
 
       {/* MAIN NAV BAR */}
-      <Navbar collapseOnSelect expand="md" sticky="top">
-        <div className="container">
+      <div className="max-1140">
+        <Navbar collapseOnSelect expand="md" sticky="top">
           <Navbar.Brand href="#home">
             <Logo color="#4C4E54" width={180} />
           </Navbar.Brand>
@@ -121,7 +131,11 @@ function Header() {
                   {!prop(m, 'child_items.length') && (
                     <Nav.Link
                       href={m.url}
-                      className={cx({ here: where === getHere(m.url) })}
+                      className={cx({
+                        here: where === getHere(m.url),
+                      })}
+                      data-where={where}
+                      data-here={getHere(m.url)}
                     >
                       {fixTitles(m.title)}
                     </Nav.Link>
@@ -130,8 +144,8 @@ function Header() {
               ))}
             </Nav>
           </Navbar.Collapse>
-        </div>
-      </Navbar>
+        </Navbar>
+      </div>
     </header>
   );
 }

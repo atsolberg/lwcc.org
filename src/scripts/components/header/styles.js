@@ -10,6 +10,8 @@ const styles = css`
     background-color: ${v.darkBarBg};
     color: #fff;
     font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     a,
     button {
@@ -52,7 +54,7 @@ const styles = css`
       padding-bottom: 1.8rem;
     }
 
-    /* HAMBURGER TOGGLE
+    /* HAMBURGER MENU
       --------------------------------------------------------------- */
 
     .navbar-toggler {
@@ -94,33 +96,32 @@ const styles = css`
       transform: rotate(-45deg);
     }
 
-    ${desktop} {
-      .dropdown-toggle::after {
-        display: none;
-      }
-
-      .nav-link {
-        margin-left: 16px;
-
-        &.here {
-          color: ${bs.primary};
-        }
-      }
-    }
-
     /* MENU ITEMS
     --------------------------------------------------------------- */
-    ${desktop} {
-      .dropdown-toggle::after {
-        display: none;
-      }
+    .nav-link.here {
+      color: ${bs.primary};
+    }
 
+    ${md} {
       .nav-link {
-        margin-left: 16px;
+        // Use smaller font between 768 and 840 since we don't have room,
+        // bump it back up after 840.
+        font-size: 14px;
 
+        @media (min-width: 840px) {
+          font-size: inherit;
+          margin-left: 16px;
+        }
+
+        // Green color when on that page
         &.here {
           color: ${bs.primary};
         }
+      }
+
+      // Hide dropdown arrows
+      .dropdown-toggle::after {
+        display: none;
       }
     }
   }

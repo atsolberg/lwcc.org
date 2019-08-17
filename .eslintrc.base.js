@@ -29,13 +29,6 @@ module.exports = {
 
     'arrow-body-style': 'off',
 
-    // Allow modifying `draft` state. This is idiomatic in immer.
-    // See https://github.com/mweststrate/immer
-    'no-param-reassign': [
-      'error',
-      { ignorePropertyModificationsFor: ['draft'] },
-    ],
-
     // Allow html
     'react/no-danger': 'off',
 

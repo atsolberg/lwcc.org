@@ -30,7 +30,7 @@ function PlaylistBar({ lists, active, onSelect, onSearch, ...rest }) {
           <input
             className="form-control"
             type="text"
-            placeholder="search"
+            placeholder="search all videos"
             onKeyDown={onEnter(onSearch)}
           />
           <div className="input-group-append">

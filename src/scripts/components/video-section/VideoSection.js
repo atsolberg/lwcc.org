@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import cx from 'classnames';
 import { string, arrayOf, shape, bool } from 'prop-types';
 
 import { prop } from '../../util/object';
@@ -9,8 +10,22 @@ import Box from '../box/Box';
 
 import styles from './styles';
 import { rif } from '../../util/jsx';
+import Button from '../button';
+
+function sort(a, b) {
+  return b.snippet.publishedAt.localeCompare(a.snippet.publishedAt);
+}
 
 function VideoSection({ title, videos, loading }) {
+  const [visible, setVisible] = useState(6);
+  useEffect(() => {
+    setVisible(6);
+  }, [videos]);
+
+  function loadMore() {
+    setVisible(visible + 6);
+  }
+
   return (
     <Box className="videos-section" css={styles}>
       <Loadable loading={loading}>
@@ -18,16 +33,32 @@ function VideoSection({ title, videos, loading }) {
         <div className="row">
           {rif(
             prop(videos, 'length'),
-            videos.map(v => (
-              <div
-                key={prop(v, 'id.videoId') || v.id}
-                className="col-12 col-lg-6"
-              >
-                <VideoTile data={v} />
-              </div>
-            )),
+            [...videos]
+              .sort(sort)
+              .slice(0, visible)
+              .map(v => (
+                <div
+                  key={prop(v, 'id.videoId') || v.id}
+                  className="col-12 col-lg-6"
+                >
+                  <VideoTile data={v} />
+                </div>
+              )),
             <small className="font-italic">No videos found</small>
           )}
+        </div>
+        <div
+          className={cx('tac bump-down-md', {
+            'd-none': visible >= videos.length,
+          })}
+        >
+          <Button
+            onClick={loadMore}
+            variant="primary"
+            style={{ minWidth: '224px' }}
+          >
+            Load More
+          </Button>
         </div>
       </Loadable>
     </Box>

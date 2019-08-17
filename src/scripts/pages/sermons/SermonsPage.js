@@ -49,6 +49,7 @@ function SermonsPage() {
     });
   }, []);
 
+  /** Select Playlist */
   function onPlaylist({
     target: {
       value,
@@ -72,15 +73,18 @@ function SermonsPage() {
     });
   }
 
-  function onSearch({ target: { value: q } }) {
-    api
-      .searchVideos(q)
-      .then(({ data }) => {
-        setActivePlaylist(null);
-        setVideos(data.items);
-        setHeader(`Search results for: "${q}"`);
-      })
-      .catch(err => logger.error('search error: ', err));
+  /** Search all videos */
+  function onSearch({ target: { value: q = '' } }) {
+    if (q.trim().length > 0) {
+      api
+        .searchVideos(q)
+        .then(({ data }) => {
+          setActivePlaylist(null);
+          setVideos(data.items);
+          setHeader(`Search results for: "${q}"`);
+        })
+        .catch(err => logger.error('search error: ', err));
+    }
   }
 
   return (
