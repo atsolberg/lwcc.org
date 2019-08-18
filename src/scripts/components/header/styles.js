@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import bs from '../../../../postcss_vars';
 import v from '../../../../exported_scss_vars';
-import { desktop, tablet, md } from '../../../styles/breakpoints';
+import { tablet, md } from '../../../styles/breakpoints';
 
 const styles = css`
   .navbar-topper {
@@ -108,11 +108,6 @@ const styles = css`
         // bump it back up after 840.
         font-size: 14px;
 
-        @media (min-width: 840px) {
-          font-size: inherit;
-          margin-left: 16px;
-        }
-
         // Green color when on that page
         &.here {
           color: ${bs.primary};
@@ -122,6 +117,13 @@ const styles = css`
       // Hide dropdown arrows
       .dropdown-toggle::after {
         display: none;
+      }
+    }
+
+    @media (min-width: 840px) {
+      .nav-link {
+        font-size: inherit;
+        margin-left: 16px;
       }
     }
   }

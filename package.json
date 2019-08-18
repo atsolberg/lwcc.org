@@ -6,7 +6,8 @@
   "scripts": {
     "parcel:dev": "parcel ./src/index.html -d public",
     "parcel:build": "parcel build ./src/index.html -d public",
-    "parcel:build:wp": "parcel build ./src/scripts/index.js -d public",
+    "parcel:build:wp": "parcel build ./src/scripts/index.js -d public --public-url /public/",
+    "parcel:build:wphtml": "parcel build ./src/index.html -d public --public-url /public/",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
@@ -21,7 +22,8 @@
     "start": "npm-run-all -l export:scss:vars parcel:dev",
     "dev": "npm-run-all -l export:scss:vars parcel:dev",
     "build": "npm-run-all -l export:scss:vars parcel:build",
-    "build-wp": "npm-run-all -l export:scss:vars parcel:build:wp"
+    "build:wp": "npm-run-all -l export:scss:vars parcel:build:wp",
+    "build:wphtml": "npm-run-all -l export:scss:vars parcel:build:wphtml"
   },
   "repository": {
     "type": "git",
@@ -63,7 +65,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-async-script": "^1.1.1",
-    "react-bootstrap": "^1.0.0-beta.10",
+    "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.8.6",
     "react-transition-group": "^4.2.2",
     "sass": "^1.22.9",

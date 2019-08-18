@@ -204,3 +204,8 @@ $gray-dark: map-get($colors, "gray-dark");
 /* APP - our global styles for our app
 --------------------------------------------------------------- */
 @import "_global";
+
+
+/* Wordpress site overrides
+--------------------------------------------------------------- */
+#bitnami-banner { display: none !important; }

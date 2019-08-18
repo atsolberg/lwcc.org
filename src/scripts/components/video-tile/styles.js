@@ -9,6 +9,9 @@ const styles = css`
 
     figure {
       position: relative;
+      // Keeps the tile from looking bad while image is loading on slow
+      // connections. 217 is the img height on an iphone 5.
+      min-height: 217px;
     }
 
     .thumb {

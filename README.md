@@ -55,9 +55,8 @@ Misc
 - [x] Get current series playlist id
 - [ ] Get a valid cert on the dev environment
 - [ ] Verify we can just drop the public folder into wp
-- [ ] Newsletter signup - finish styling
+- [x] Newsletter signup - finish styling
 - [ ] Newsletter signup - Get mail chimp form submission endpoint
-- [ ] Figure out how to get speaker images from wp
 
 Header
 - [x] Header top nav ui

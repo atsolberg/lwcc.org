@@ -6,7 +6,7 @@ import '../util/cookie';
 import '../util/storage';
 
 import '@fortawesome/fontawesome-free/css/all.css';
-import '../../styles/styles.scss';
+import '../../styles/main.scss';
 
 import Header from './header/Header';
 import Footer from './footer/Footer';

@@ -28,7 +28,7 @@ function PlaylistBar({ lists, active, onSelect, onSearch, ...rest }) {
         </ul>
         <div className="input-group input-group-sm playlist-search">
           <input
-            className="form-control"
+            className="form-control border-primary"
             type="text"
             placeholder="search all videos"
             onKeyDown={onEnter(onSearch)}
