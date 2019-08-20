@@ -27,29 +27,17 @@ module.exports = {
 
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
+    'jsx-a11y/label-has-for': 'off',
     'arrow-body-style': 'off',
-
-    // Allow html
     'react/no-danger': 'off',
-
-    // Allow multiple components per file
     'react/no-multi-comp': 'off',
-
-    // Allow returning assignments when parens are used.
     'no-return-assign': ['error', 'except-parens'],
-
-    // Chill dude.
     'lines-between-class-members': 'off',
     'no-param-reassign': 'off',
+    'no-shadow': 'off',
 
-    // Play hooky. Probs a part of the main react plugin eventually.
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-
-    // Deprecated rule
-    'jsx-a11y/label-has-for': 'off',
-
-    // Allow 'any'
     'react/forbid-prop-types': ['warn', { forbid: ['object', 'array'] }],
   },
   overrides: [

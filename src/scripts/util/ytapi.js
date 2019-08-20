@@ -62,7 +62,7 @@ function execute() {
 }
 
 gapi.load('client:auth2', () => {
-  gapi.auth2.init({ client_id: ATS_CLIENT_ID });
+  // gapi.auth2.init({ client_id: ATS_CLIENT_ID });
 });
 
 window.ytapi = {

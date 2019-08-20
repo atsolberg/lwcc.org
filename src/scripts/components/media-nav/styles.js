@@ -3,23 +3,14 @@ import v from '../../../../exported_scss_vars';
 import { sm, md } from '../../../styles/breakpoints';
 
 const styles = css`
+  // Sizes below are in 'em's so the component will scale up and down with
+  // the font size of the list.
   &.media-nav {
-    position: relative;
-    font-size: 16px;
-    padding: 15px 26px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 0;
-
-    ${sm} {
-      font-size: 22px;
-    }
-
-    ${md} {
-      font-size: 30px;
-    }
+    padding: 0.5em 0.8em;
 
     li {
+      position: relative;
       a {
         color: ${v.bodyColor};
         &:hover,
@@ -33,7 +24,7 @@ const styles = css`
     }
 
     li:not(:last-child) {
-      margin-right: 36px;
+      margin-right: 1.2em;
     }
 
     li:not(:last-child)::after {
@@ -42,7 +33,27 @@ const styles = css`
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-left: 15px;
+      margin-left: 0.65em;
+    }
+
+    // Variants - normal, mini, centered
+    &.-normal {
+      font-size: 16px;
+      ${sm} {
+        font-size: 22px;
+      }
+      ${md} {
+        font-size: 30px;
+      }
+    }
+
+    &.-mini {
+      font-size: 14px;
+    }
+
+    &.-centered {
+      display: flex;
+      justify-content: center;
     }
   }
 `;

@@ -2,24 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5836dfa1-5862-4fc8-9816-45e8e1d3718b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-stuff/react-template.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/video-description/VideoDescription.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/video-description/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/video/Video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/components/video/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/pages/video-details/VideoPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/pages/video-details/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss_vars.json" beforeDir="false" afterPath="$PROJECT_DIR$/postcss_vars.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/forms/text/TextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/forms/text/TextInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/forms/text/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/forms/text/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/header/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/header/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/newsletter-signup/NewletterSignup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/newsletter-signup/NewletterSignup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/hero/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/hero/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/media-nav/MediaNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/media-nav/MediaNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/media-nav/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/media-nav/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/util/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/util/ytapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/util/ytapi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-stuff/react-template.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-stuff/react-template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,59 +52,87 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-stuff/react-template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/_global.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scripts/components/header/styles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="110" selection-start-line="110" selection-end-line="110" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/components/App.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/scripts/pages/video-details/VideoPage.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="675">
+                  <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/components/video/Video.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/components/video/styles.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/scripts/components/video-description/VideoDescription.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/pages/video-details/styles.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-line="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/components/video-description/styles.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scripts/util/api.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="894">
+                  <caret line="174" column="26" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>client_id</find>
-      <find>Gues</find>
-      <find>slug:</find>
       <find>slug</find>
       <find>active</find>
       <find>${host}/wp-json</find>
@@ -127,6 +160,9 @@
       <find>inputGroup-sizing-lg</find>
       <find>styles.scss</find>
       <find>84</find>
+      <find>ytapi</find>
+      <find>ministry</find>
+      <find>SermonsPage</find>
     </findStrings>
     <replaceStrings>
       <replace>lwcc</replace>
@@ -149,6 +185,7 @@
       <replace>TEST_PL_DAT</replace>
       <replace>pl_id:</replace>
       <replace>logger.</replace>
+      <replace>VideoPage</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -157,18 +194,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scripts/components/media-nav/styles.js" />
-        <option value="$PROJECT_DIR$/exported_scss_vars.json" />
-        <option value="$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/box/Box.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/box/styles.js" />
-        <option value="$PROJECT_DIR$/src/styles/breakpoints.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/video-section/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/pages/sermons/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/icons/User.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/icons/Envelope.js" />
         <option value="$PROJECT_DIR$/src/styles/_variables.scss" />
-        <option value="$PROJECT_DIR$/src/scripts/components/hero/styles.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/scripts/util/polyfill.js" />
         <option value="$PROJECT_DIR$/src/scripts/non-npm-vendors/gapi.js" />
@@ -177,37 +206,45 @@
         <option value="$PROJECT_DIR$/src/scripts/util/constants.js" />
         <option value="$PROJECT_DIR$/src/scripts/__tests__/data/pl_pauls_wrestling.json" />
         <option value="$PROJECT_DIR$/src/scripts/__tests__/data/pl_items_pauls_wrestling.json" />
-        <option value="$PROJECT_DIR$/src/scripts/components/media-nav/MediaNav.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/styles.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/footer/Footer.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/logger.js" />
-        <option value="$PROJECT_DIR$/.eslintrc.base.js" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
         <option value="$PROJECT_DIR$/src/scripts/util/misc.js" />
         <option value="$PROJECT_DIR$/src/scripts/__tests__/data/nav_main.json" />
         <option value="$PROJECT_DIR$/src/scripts/__tests__/data/nav_top.json" />
-        <option value="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" />
-        <option value="$PROJECT_DIR$/src/scripts/util/api.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" />
-        <option value="$PROJECT_DIR$/src/scripts/util/ytapi.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/forms/text/TextInput.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/forms/text/styles.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/scripts/components/newsletter-signup/NewletterSignup.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/video-tile/styles.js" />
-        <option value="$PROJECT_DIR$/src/scripts/components/App.js" />
         <option value="$PROJECT_DIR$/src/scripts/components/playlist-bar/PlaylistBar.js" />
         <option value="$PROJECT_DIR$/src/styles/_global.scss" />
         <option value="$PROJECT_DIR$/src/scripts/index.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/scripts/components/header/Header.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/wp-stuff/react-template.php" />
         <option value="$PROJECT_DIR$/src/styles/main.scss" />
         <option value="$PROJECT_DIR$/src/scripts/components/header/styles.js" />
+        <option value="$PROJECT_DIR$/wp-stuff/react-template.php" />
+        <option value="$PROJECT_DIR$/src/scripts/components/header/Header.js" />
+        <option value="$PROJECT_DIR$/src/scripts/util/ytapi.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js" />
+        <option value="$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/hero/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/hero/Hero.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/media-nav/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/media-nav/MediaNav.js" />
+        <option value="$PROJECT_DIR$/src/scripts/pages/video-details/VideoDetails.js" />
+        <option value="$PROJECT_DIR$/.eslintrc.base.js" />
+        <option value="$PROJECT_DIR$/src/scripts/pages/video-details/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/video-description/styles.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/App.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/video/Video.js" />
+        <option value="$PROJECT_DIR$/src/scripts/util/api.js" />
+        <option value="$PROJECT_DIR$/src/scripts/components/video-description/VideoDescription.js" />
+        <option value="$PROJECT_DIR$/src/scripts/pages/video-details/VideoPage.js" />
       </list>
     </option>
   </component>
@@ -231,14 +268,70 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
               <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="video" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="sermons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="video-details" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwcc.org" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lwcc.org" type="b2602c69:ProjectViewProjectNode" />
@@ -271,7 +364,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -362,55 +455,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/searchbar/SearchBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/box/Box.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/box/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/icons/Vimeo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/icons/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="397" column="23" selection-start-line="397" selection-end-line="397" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/icons/Envelope.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -474,27 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/media-nav/MediaNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/Hero.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
@@ -506,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -530,20 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/breakpoints.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/__tests__/data/nav_main.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -558,24 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/util/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/__tests__/data/pl_items_the_simple_life.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3225">
           <caret line="215" column="24" lean-forward="true" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/util/ytapi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -600,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/button/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -628,41 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1056">
-            <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-bootstrap/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -687,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-stuff/react-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="758">
@@ -701,24 +644,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/_global.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-stuff/react-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="964">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-tile/VideoTile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-section/VideoSection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="351">
+            <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/util/ytapi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/breakpoints.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video/styles.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/media-nav/MediaNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/Hero.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/components/header/styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="152">
+          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/hero/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/media-nav/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" lean-forward="true" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/pages/video-details/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/pages/sermons/SermonsPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-description/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video/Video.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/util/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="174" column="26" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/components/video-description/VideoDescription.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/pages/video-details/VideoPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
         </state>
       </provider>
     </entry>

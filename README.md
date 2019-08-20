@@ -57,6 +57,8 @@ Misc
 - [ ] Verify we can just drop the public folder into wp
 - [x] Newsletter signup - finish styling
 - [ ] Newsletter signup - Get mail chimp form submission endpoint
+- [ ] Use or remove <MessagesProvider>
+- [ ] Move ytapi to node app
 
 Header
 - [x] Header top nav ui

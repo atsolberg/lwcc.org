@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/es/Navbar';
 import Nav from 'react-bootstrap/es/Nav';
 import NavDropdown from 'react-bootstrap/es/NavDropdown';
 
-import '../../util/ytapi';
 import api from '../../util/api';
 import { prop } from '../../util/object';
 import nav_top from '../../__tests__/data/nav_top';

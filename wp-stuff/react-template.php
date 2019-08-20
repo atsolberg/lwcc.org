@@ -5,7 +5,7 @@
  *
  * DEV NOTES: after running `npm run build:wphtml`, copy/paste the html from `/public/index.html`
  * below.
- */?>
+ */ ?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -16,7 +16,7 @@ function sort(a, b) {
   return b.snippet.publishedAt.localeCompare(a.snippet.publishedAt);
 }
 
-function VideoSection({ title, videos, loading }) {
+function VideoSection({ title, videos, loading, prefix }) {
   const [visible, setVisible] = useState(6);
   useEffect(() => {
     setVisible(6);
@@ -41,7 +41,7 @@ function VideoSection({ title, videos, loading }) {
                   key={prop(v, 'id.videoId') || v.id}
                   className="col-12 col-lg-6"
                 >
-                  <VideoTile data={v} />
+                  <VideoTile data={v} prefix={prefix} />
                 </div>
               )),
             <small className="font-italic">No videos found</small>
@@ -73,6 +73,7 @@ VideoSection.propTypes = {
     })
   ),
   loading: bool,
+  prefix: string.isRequired,
 };
 
 export default VideoSection;

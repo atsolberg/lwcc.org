@@ -11,6 +11,7 @@ function Hero({
   variant = 'contained',
   layout = 'normal',
   faded = false,
+  short = false,
   ...rest
 }) {
   return (
@@ -23,7 +24,7 @@ function Hero({
         `-${layout}`,
         `-${variant}`,
         `-${bg}`,
-        { '-faded': faded }
+        { '-short': short, '-faded': faded }
       )}
       {...rest}
     >
@@ -32,10 +33,11 @@ function Hero({
   );
 }
 Hero.propTypes = {
-  bg: oneOf(['worship', 'city']).isRequired,
+  bg: oneOf(['worship', 'city', 'bible']).isRequired,
   variant: oneOf(['contained', 'full-width']),
   layout: oneOf(['centered', 'centered-v']),
   faded: bool,
+  short: bool,
   className: any,
   children: node,
 };

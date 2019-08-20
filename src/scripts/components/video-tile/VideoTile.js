@@ -1,5 +1,5 @@
 import React from 'react';
-import { any } from 'prop-types';
+import { any, string } from 'prop-types';
 
 import { prop } from '../../util/object';
 import { format } from '../../util/misc';
@@ -29,13 +29,13 @@ function findSpeaker(data) {
   return speaker;
 }
 
-function VideoTile({ data }) {
+function VideoTile({ data, prefix = '' }) {
   const { snippet } = data;
   const speaker = findSpeaker(data);
   const id = prop(data, 'id.videoId') || prop(snippet, 'resourceId.videoId');
 
   return (
-    <a href={`/media/${id}`} className="video-tile" css={styles}>
+    <a href={`${prefix}/?id=${id}`} className="video-tile" css={styles}>
       <figure>
         <img className="thumb img-fluid" src={speaker.thumb} alt="thumbnail" />
         <figcaption className="meta">
@@ -63,6 +63,7 @@ function VideoTile({ data }) {
 }
 VideoTile.propTypes = {
   data: any.isRequired,
+  prefix: string,
 };
 
 export default VideoTile;

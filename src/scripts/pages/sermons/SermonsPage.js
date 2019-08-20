@@ -111,7 +111,12 @@ function SermonsPage() {
           onSearch={onSearch}
         />
 
-        <VideoSection loading={loading} title={header} videos={videos} />
+        <VideoSection
+          loading={loading}
+          title={header}
+          videos={videos}
+          prefix="/media-sermons/sermon"
+        />
       </div>
 
       <NewsletterSignup />

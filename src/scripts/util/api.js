@@ -47,15 +47,15 @@ const api = {
       resolve([
         {
           title: 'Sermons',
-          url: '/ministry-media-sermons',
+          url: '/media-sermons',
         },
         {
           title: 'Stories',
-          url: '/ministry-media-stories',
+          url: '/media-stories',
         },
         {
           title: 'Resources',
-          url: '/ministry-media-resources',
+          url: '/media-resources',
         },
       ]);
     });
@@ -170,9 +170,9 @@ const api = {
     return axios.get(`${YT_API}/videos`, {
       params: {
         key: g_creds.api_key,
-        part: 'snippet,contentDetails',
+        part: 'snippet,contentDetails,id',
         id,
-        fields: 'items(snippet(title,description,tags))',
+        fields: 'items(id,snippet(title,description,tags, publishedAt))',
       },
     });
   },

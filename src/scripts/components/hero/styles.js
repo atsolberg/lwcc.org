@@ -1,8 +1,21 @@
 import { css } from '@emotion/core';
 
-import { desktop, max } from '../../../styles/breakpoints';
+import { lg, max } from '../../../styles/breakpoints';
 import imgWorship from '../../../img/heroes/hero-worship.jpg';
 import imgCity from '../../../img/heroes/hero-city.jpg';
+import imgBible from '../../../img/heroes/hero-bible.jpg';
+
+function faded(img) {
+  return css`
+    &.-faded {
+      background-image: linear-gradient(
+          rgba(101, 203, 201, 0.7),
+          rgba(101, 203, 201, 0.7)
+        ),
+        url(${img});
+    }
+  `;
+}
 
 const styles = css`
   background-color: #fff;
@@ -12,12 +25,20 @@ const styles = css`
   background-repeat: no-repeat;
 
   height: auto;
+  padding: 4% 0;
+  
+  // Sizes - normal, short
   min-height: 265px;
-  ${desktop} {
+  ${lg} {
     min-height: 440px;
   }
+  &.-short {
+    min-height: 200px;
+    ${lg} {
+      min-height: 220px;
+    }
+  }
 
-  padding: 4% 0;
 
   .hero-content {
     position: relative;
@@ -52,24 +73,18 @@ const styles = css`
   // Backgrounds
   &.-worship {
     background-image: url(${imgWorship});
-    &.-faded {
-      background-image: linear-gradient(
-          rgba(101, 203, 201, 0.7),
-          rgba(101, 203, 201, 0.7)
-        ),
-        url(${imgWorship});
+    ${faded(imgWorship)};
     }
   }
 
   &.-city {
     background-image: url(${imgCity});
-    &.-faded {
-      background-image: linear-gradient(
-          rgba(101, 203, 201, 0.7),
-          rgba(101, 203, 201, 0.7)
-        ),
-        url(${imgCity});
-    }
+    ${faded(imgCity)};
+  }
+
+  &.-bible {
+    background-image: url(${imgBible});
+    ${faded(imgBible)};
   }
 `;
 
