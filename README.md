@@ -91,10 +91,13 @@ Sermons Page
 - [x] Initial ui
 
 Video Page
-- [ ] Figure out url strategy
 - [ ] Initial ui
-- [ ] Figure out how to get related videos for a video on a channel
-- [ ] Just use video description as details content under title
+- [ ] Figure out url strategy
+- [x] Figure out how to get related videos for a video on a channel
+- [x] Just use video description as details content under title
+- [ ] Finish mobile styling on related videos
+- [ ] Set link (prefix) correctly on related videos, might have to make
+      a generic video page.
 
 Stories Page
 - [ ] Initial ui

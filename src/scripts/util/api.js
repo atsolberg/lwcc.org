@@ -10,6 +10,7 @@ import { namespace } from './object';
 import { g_creds, host } from './constants';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
+import MicroCache from './cache';
 
 const YT_CHANNEL_ID = 'UC6OtG9IPpnEoVpXwaxsXR4g';
 const MAX_RESULTS = 50; // 50 is the largest valid value for Youtube search results
@@ -17,6 +18,8 @@ const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
 // const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
 
 const YT_API = 'https://www.googleapis.com/youtube/v3';
+
+const cache = new MicroCache();
 
 const api = {
   /**
@@ -140,14 +143,26 @@ const api = {
       });
     }
 
-    return axios.get(`${YT_API}/playlistItems`, {
-      params: {
-        key: g_creds.api_key,
-        maxResults: MAX_RESULTS,
-        part: 'snippet,contentDetails',
-        playlistId: id,
-      },
-    });
+    const key = `playlist-items-${id}`;
+    if (cache.has(key)) {
+      return new Promise(resolve => {
+        resolve(cache.get(key));
+      });
+    }
+
+    return axios
+      .get(`${YT_API}/playlistItems`, {
+        params: {
+          key: g_creds.api_key,
+          maxResults: MAX_RESULTS,
+          part: 'snippet,contentDetails',
+          playlistId: id,
+        },
+      })
+      .then(({ data: { items } }) => {
+        cache.put(key, items);
+        return items;
+      });
   },
 
   getPlayList: id => {
@@ -157,37 +172,99 @@ const api = {
       });
     }
 
-    return axios.get(`${YT_API}/playlists`, {
-      params: {
-        key: g_creds.api_key,
-        part: 'snippet,contentDetails',
-        id,
-      },
-    });
+    const key = `playlist-${id}`;
+    if (cache.has(key)) {
+      return new Promise(resolve => {
+        resolve(cache.get(key));
+      });
+    }
+
+    return axios
+      .get(`${YT_API}/playlists`, {
+        params: {
+          key: g_creds.api_key,
+          part: 'snippet,contentDetails',
+          id,
+        },
+      })
+      .then(({ data: { items: [pl] } }) => {
+        cache.put(key, pl);
+        return pl;
+      });
   },
 
   getVideoDetails: id => {
-    return axios.get(`${YT_API}/videos`, {
-      params: {
-        key: g_creds.api_key,
-        part: 'snippet,contentDetails,id',
-        id,
-        fields: 'items(id,snippet(title,description,tags, publishedAt))',
-      },
-    });
+    const key = `details-${id}`;
+    if (cache.has(key)) {
+      return new Promise(resolve => {
+        resolve(cache.get(key));
+      });
+    }
+
+    return axios
+      .get(`${YT_API}/videos`, {
+        params: {
+          key: g_creds.api_key,
+          part: 'id,snippet',
+          id,
+        },
+      })
+      .then(({ data: { items: [details] } }) => {
+        cache.put(key, details);
+        return details;
+      });
   },
 
   searchVideos: q => {
-    return axios.get(`${YT_API}/search`, {
-      params: {
-        key: g_creds.api_key,
-        part: 'snippet',
-        type: 'video',
-        maxResults: MAX_RESULTS,
-        channelId: YT_CHANNEL_ID,
-        q,
-      },
-    });
+    const key = `search-${q}`;
+    if (cache.has(key)) {
+      return new Promise(resolve => {
+        resolve(cache.get(key));
+      });
+    }
+
+    return axios
+      .get(`${YT_API}/search`, {
+        params: {
+          key: g_creds.api_key,
+          part: 'id,snippet',
+          type: 'video',
+          maxResults: MAX_RESULTS,
+          channelId: YT_CHANNEL_ID,
+          q,
+        },
+      })
+      .then(({ data: { items: videos } }) => {
+        cache.put(key, videos);
+        return videos;
+      });
+  },
+
+  getRelatedVideos: id => {
+    const key = `related-${id}`;
+    if (cache.has(key)) {
+      return new Promise(resolve => {
+        resolve(cache.get(key));
+      });
+    }
+
+    return axios
+      .get(`${YT_API}/search`, {
+        params: {
+          key: g_creds.api_key,
+          part: 'id,snippet',
+          type: 'video',
+          maxResults: MAX_RESULTS,
+          relatedToVideoId: id,
+        },
+      })
+      .then(({ data: { items } }) => {
+        const videos = items.filter(
+          item => item.snippet.channelId === YT_CHANNEL_ID
+        );
+        cache.put(key, videos);
+        return videos;
+      });
   },
 };
 

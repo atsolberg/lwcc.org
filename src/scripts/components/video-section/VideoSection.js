@@ -39,7 +39,7 @@ function VideoSection({ title, videos, loading, prefix }) {
               .map(v => (
                 <div
                   key={prop(v, 'id.videoId') || v.id}
-                  className="col-12 col-lg-6"
+                  className="col-12 col-md-6"
                 >
                   <VideoTile data={v} prefix={prefix} />
                 </div>

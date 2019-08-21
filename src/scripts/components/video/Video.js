@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
+import { videoType } from '../../types/youtube';
 import styles from './styles';
 
 function Video({ data }) {
@@ -9,17 +10,21 @@ function Video({ data }) {
   return (
     <div css={styles} className={cx({ loading })}>
       {!loading && (
-        <iframe
-          width="560"
-          height="315"
-          src={`https://www.youtube.com/embed/${data.id}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="youtube-wrapper">
+          <iframe
+            className="rounded"
+            src={`https://www.youtube.com/embed/${data.id}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       )}
     </div>
   );
 }
+Video.propTypes = {
+  data: videoType,
+};
 
 export default Video;

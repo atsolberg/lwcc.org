@@ -3,6 +3,7 @@ import { css } from '@emotion/core';
 
 import api from '../../util/api';
 import logo from '../../../img/icons/logo-192.png';
+import { getParameterByName } from '../../util/misc';
 
 import Hero from '../../components/hero/Hero';
 import MediaNav from '../../components/media-nav/MediaNav';
@@ -11,7 +12,7 @@ import Video from '../../components/video/Video';
 import VideoDescription from '../../components/video-description/VideoDescription';
 
 import styles from './styles';
-import { getParameterByName } from '../../util/misc';
+import RelatedVideos from '../../components/related-videos/RelatedVideos';
 
 function VideoPage() {
   const [pages, setPages] = useState([]);
@@ -20,8 +21,8 @@ function VideoPage() {
 
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
-    api.getVideoDetails(id).then(({ data: { items: [data] } }) => {
-      setData(data);
+    api.getVideoDetails(id).then((details) => {
+      setData(details);
     });
   }, [id]);
 
@@ -39,9 +40,9 @@ function VideoPage() {
           <h1>Sermons</h1>
         </Hero>
 
-        <MediaNav items={pages} variant="mini" />
+        <MediaNav className="mb-4" items={pages} variant="mini" />
 
-        <div className="row">
+        <div className="row mb-5">
           <div className="col-12 col-sm-6">
             <Video data={data} />
           </div>
@@ -51,6 +52,7 @@ function VideoPage() {
         </div>
       </div>
 
+      <RelatedVideos videoId={id} />
       <NewsletterSignup />
     </div>
   );

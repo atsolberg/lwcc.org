@@ -7,11 +7,11 @@ import { getFlatPathName } from '../../util/misc';
 
 const here = getFlatPathName();
 
-function MediaNav({ items, variant = 'normal', centered = false }) {
+function MediaNav({ items, variant = 'normal', centered = false, className }) {
   return (
     <ul
       css={styles}
-      className={cx(`media-nav list-inline -${variant}`, {
+      className={cx(className, `media-nav list-inline -${variant}`, {
         '-centered': centered,
       })}
     >

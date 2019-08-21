@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { sm, md } from '../../../styles/breakpoints';
+import { sm } from '../../../styles/breakpoints';
 
 const styles = css`
   &.video-tile {
@@ -25,17 +25,12 @@ const styles = css`
       position: absolute;
       bottom: 0;
       left: 0;
-      padding-left: 15px;
-      padding-bottom: 15px;
+      padding: 15px;
     }
 
     .portrait {
-      width: 65px;
-      height: 65px;
-      ${md} {
-        width: 89px;
-        height: 89px;
-      }
+      width: 18%;
+      height: 18%;
       border-radius: 50%;
       margin-right: 15px;
     }

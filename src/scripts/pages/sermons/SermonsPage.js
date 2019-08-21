@@ -35,16 +35,15 @@ function SermonsPage() {
     api.getCurrentSeriesId().then(id => {
       setCurrentSeriesId(id);
 
-      api.getPlayList(id).then(({ data }) => {
-        const pl = data.items[0];
+      api.getPlayList(id).then((pl) => {
         const title = prop(pl, 'snippet.localized.title') || '';
         setCurrentSeriesTitle(title);
         setHeader(title);
       });
 
-      api.getVideosForPlayList(id).then(({ data }) => {
+      api.getVideosForPlayList(id).then((videos) => {
         setLoading(false);
-        setVideos(data.items);
+        setVideos(videos);
       });
     });
   }, []);
@@ -68,8 +67,8 @@ function SermonsPage() {
       ? currentSeriesId
       : playlists.find(pl => pl.id === value).pl_id;
 
-    api.getVideosForPlayList(id).then(resp => {
-      setVideos(resp.data.items);
+    api.getVideosForPlayList(id).then(videos => {
+      setVideos(videos);
     });
   }
 
@@ -78,9 +77,9 @@ function SermonsPage() {
     if (q.trim().length > 0) {
       api
         .searchVideos(q)
-        .then(({ data }) => {
+        .then((videos) => {
           setActivePlaylist(null);
-          setVideos(data.items);
+          setVideos(videos);
           setHeader(`Search results for: "${q}"`);
         })
         .catch(err => logger.error('search error: ', err));
@@ -101,7 +100,7 @@ function SermonsPage() {
           <h1>Ministry Media</h1>
         </Hero>
 
-        <MediaNav items={pages} />
+        <MediaNav items={pages} centered />
 
         <PlaylistBar
           className="playlist-section"

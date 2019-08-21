@@ -8,7 +8,6 @@ function Hero({
   bg,
   children,
   className,
-  variant = 'contained',
   layout = 'normal',
   faded = false,
   short = false,
@@ -17,15 +16,10 @@ function Hero({
   return (
     <div
       css={styles}
-      className={cx(
-        className,
-        'row',
-        'hero',
-        `-${layout}`,
-        `-${variant}`,
-        `-${bg}`,
-        { '-short': short, '-faded': faded }
-      )}
+      className={cx(className, 'row', 'hero', `-${layout}`, `-${bg}`, {
+        '-short': short,
+        '-faded': faded,
+      })}
       {...rest}
     >
       <div className="container hero-content">{children}</div>
@@ -34,7 +28,6 @@ function Hero({
 }
 Hero.propTypes = {
   bg: oneOf(['worship', 'city', 'bible']).isRequired,
-  variant: oneOf(['contained', 'full-width']),
   layout: oneOf(['centered', 'centered-v']),
   faded: bool,
   short: bool,

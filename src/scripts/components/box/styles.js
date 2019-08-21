@@ -1,14 +1,14 @@
 import { css } from '@emotion/core';
 
 import v from '../../../../exported_scss_vars';
-import { sm, max } from '../../../styles/breakpoints';
+import { sm, maxWithGutters } from '../../../styles/breakpoints';
 
 const styles = css`
   &.box {
     background-color: ${v.sectionBg};
     font-size: 14px;
 
-    ${max} {
+    ${maxWithGutters} {
       border-radius: 4px;
     }
   }
