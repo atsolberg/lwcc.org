@@ -62,28 +62,28 @@ function CountdownClock({ endTime }) {
     <div className="counter">
       <div className="counter-part">
         <span className="counter-value">{pad(days, 2)}</span>
-        <div className="padded-down-xs type-text">Days</div>
+        <div className="pb-xs type-text">Days</div>
       </div>
       <div className="counter-separator">
         <span>:</span>
       </div>
       <div className="counter-part">
         <span className="counter-value">{pad(hours, 2)}</span>
-        <div className="padded-down-xs type-text">Hours</div>
+        <div className="pb-xs type-text">Hours</div>
       </div>
       <div className="counter-separator">
         <span>:</span>
       </div>
       <div className="counter-part">
         <span className="counter-value">{pad(minutes, 2)}</span>
-        <div className="padded-down-xs type-text">Minutes</div>
+        <div className="pb-xs type-text">Minutes</div>
       </div>
       <div className="counter-separator">
         <span>:</span>
       </div>
       <div className="counter-part">
         <span className="counter-value">{pad(seconds, 2)}</span>
-        <div className="padded-down-xs type-text">Seconds</div>
+        <div className="pb-xs type-text">Seconds</div>
       </div>
     </div>
   );

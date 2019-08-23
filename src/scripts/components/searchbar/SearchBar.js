@@ -34,7 +34,7 @@ function SearchBar({ search: [searching, setSearching] }) {
     <Collapse in={searching}>
       <div className="row" css={styles}>
         <div className="col-12">
-          <div className="container searchbar padded-sm">
+          <div className="container searchbar p-sm">
             <div className="input-group">
               <input
                 tabIndex={0}

@@ -20,7 +20,7 @@ const Loadable = ({
 
   if (loading) {
     return (
-      <Elem className={cx(className, 'tac padded-lg')}>
+      <Elem className={cx(className, 'tac p-lg')}>
         <LoadingBars width={width} /> <em>{copy}</em>
       </Elem>
     );
