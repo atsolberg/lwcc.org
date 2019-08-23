@@ -13,14 +13,13 @@ npm run dev
 ```
 Runs parcel in dev mode with the app running at localhost:1234
 
-### Build for production
-```shell
-git clone https://github.com/atsolberg/lwcc.org.git
-cd lwcc.org
-npm i
-npm run build
-```
-Builds the index.js file for the app
+### Build and Deploy to Product
+1. delete the contents of `/public`
+1. run `npm run build:wphtml`
+1. copy the contents of `/public/index.html` and replace the html in `/wp-stuff/react-template.php` with it.
+1. delete `bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs/public` folder
+1. ftp or scp the `public` folder to `bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs`
+1. ftp or scp the `/wp-stuff/react-template.php` to `bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/LWCC/`
 
 ### WordPress Shenanigans
 Menu data was accessed form the wp rest api by adding the `WP-REST-API V2 Menus` plugin

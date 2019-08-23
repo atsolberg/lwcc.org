@@ -18,10 +18,10 @@
   <link rel="shortcut icon" href="/public/logo-32.a5419fc4.png" sizes="32x32">
   <link rel="shortcut icon" href="/public/logo-192.5c0a6e4f.png" sizes="192x192">
   <meta name="theme-color" content="#64cbc9">
-  <link rel="stylesheet" href="/public/scripts.4ad1bb9e.css">
+  <link rel="stylesheet" href="/public/scripts.909011f8.css">
 </head>
 <body>
 <div id="page-container">loading</div>
-<script src="/public/scripts.24318913.js"></script>
+<script src="/public/scripts.37e52119.js"></script>
 </body>
 </html>
