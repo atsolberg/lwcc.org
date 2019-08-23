@@ -100,9 +100,15 @@ input[type='number']::-webkit-outer-spin-button {
    CONTAINERS
    ============================================================ */
 
-.max-1140 {
-  max-width: 1140px;
-  margin: 0 auto;
+// A container just like bootstrap's `container-fluid` class
+// but it stops at 1140px. Use instead of `container-fluid`.
+.container-xl {
+  max-width: map_get($container-max-widths, xl);
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .rounded {

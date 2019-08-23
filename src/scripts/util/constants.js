@@ -1,6 +1,6 @@
 /** Store all common constants. */
 
-export const host = 'https://52.26.12.22';
+export const host = 'https://lwcc.partandpixel.com';
 
 // Used in console logging
 export const css = {

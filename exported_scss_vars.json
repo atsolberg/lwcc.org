@@ -1,16 +1,1 @@
-{
-  "fontSizeBase": "1rem",
-  "fontSizeLg": "1rem * 1",
-  "inputBtnPaddingYLg": ".688em",
-  "primary": "#64cbc9",
-  "bodyColor": "#3a3c3e",
-  "navbarLightColor": "#3a3c3e",
-  "navbarLightHoverColor": "#64cbc9",
-  "navbarLightActiveColor": "#64cbc9",
-  "borderRadiusSm": "3px",
-  "borderRadius": "3px",
-  "borderRadiusLg": "3px",
-  "darkBarBg": "#4a4f55",
-  "sectionBg": "#f6f6f6",
-  "maxWidth": "1140px"
-}
+{"fontSizeBase":"1rem","fontSizeLg":"1rem * 1","inputBtnPaddingYLg":".688em","primary":"#64cbc9","bodyColor":"#3a3c3e","navbarLightColor":"#3a3c3e","navbarLightHoverColor":"#64cbc9","navbarLightActiveColor":"#64cbc9","borderRadiusSm":"3px","borderRadius":"3px","borderRadiusLg":"3px","darkBarBg":"#4a4f55","sectionBg":"#f6f6f6","maxWidth":"1140px"}

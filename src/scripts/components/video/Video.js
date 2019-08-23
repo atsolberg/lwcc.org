@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import { videoType } from '../../types/youtube';
+import { ytVideoType } from '../../types/youtube';
 import styles from './styles';
 
 function Video({ data }) {
@@ -24,7 +24,7 @@ function Video({ data }) {
   );
 }
 Video.propTypes = {
-  data: videoType,
+  data: ytVideoType,
 };
 
 export default Video;

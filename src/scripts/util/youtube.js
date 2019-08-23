@@ -23,8 +23,13 @@ import speakers from '../../img/speakers/*.jpg';
 export function parseVideo(data) {
   const video = {};
   const { title, publishedAt, description } = data.snippet;
-  const sepIdx = title.indexOf('-');
 
+  video.id =
+    prop(data, 'id.videoId') ||
+    prop(data.snippet, 'resourceId.videoId') ||
+    data.id;
+
+  const sepIdx = title.indexOf('-');
   if (sepIdx !== -1) {
     const speaker = title.substring(sepIdx + 1).trim();
     video.speaker = speaker;

@@ -69,7 +69,7 @@ function Header() {
     <header css={styles}>
       {/* TOP BAR */}
       <div className="navbar-topper">
-        <div className="max-1140">
+        <div className="container-xl">
           {broadcast.live && (
             <a className="link-primary" href="https://lwcc.churchonline.org/">
               <span className="d-md-none">Watch Live →</span>{' '}
@@ -98,7 +98,7 @@ function Header() {
       <SearchBar search={[searching, setSearching]} />
 
       {/* MAIN NAV BAR */}
-      <div className="max-1140">
+      <div className="container-xl">
         <Navbar collapseOnSelect expand="md" sticky="top">
           <Navbar.Brand href="#home">
             <Logo color="#4C4E54" width={180} />

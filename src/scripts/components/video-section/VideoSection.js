@@ -13,7 +13,7 @@ import { rif } from '../../util/jsx';
 import Button from '../button';
 
 function sort(a, b) {
-  return b.snippet.publishedAt.localeCompare(a.snippet.publishedAt);
+  return b.date.getTime() - a.date.getTime();
 }
 
 function VideoSection({ title, videos, loading, prefix }) {
@@ -37,11 +37,8 @@ function VideoSection({ title, videos, loading, prefix }) {
               .sort(sort)
               .slice(0, visible)
               .map(v => (
-                <div
-                  key={prop(v, 'id.videoId') || v.id}
-                  className="col-12 col-md-6"
-                >
-                  <VideoTile data={v} prefix={prefix} />
+                <div key={v.id} className="col-12 col-md-6">
+                  <VideoTile video={v} prefix={prefix} />
                 </div>
               )),
             <small className="font-italic">No videos found</small>

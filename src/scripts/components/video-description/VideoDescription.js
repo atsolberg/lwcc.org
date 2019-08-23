@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import styles from './styles';
-import { videoType } from '../../types/youtube';
+import { ytVideoType } from '../../types/youtube';
 import { parseVideo } from '../../util/youtube';
 
 function VideoDescription({ data }) {
@@ -21,7 +21,7 @@ function VideoDescription({ data }) {
   );
 }
 VideoDescription.propTypes = {
-  data: videoType,
+  data: ytVideoType,
 };
 
 export default VideoDescription;

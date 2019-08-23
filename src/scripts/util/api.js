@@ -15,7 +15,7 @@ import MicroCache from './cache';
 const YT_CHANNEL_ID = 'UC6OtG9IPpnEoVpXwaxsXR4g';
 const MAX_RESULTS = 50; // 50 is the largest valid value for Youtube search results
 const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
-// const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
+const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
 
 const YT_API = 'https://www.googleapis.com/youtube/v3';
 
@@ -74,7 +74,7 @@ const api = {
    */
   getPlayLists: page => {
     const playlists = new Promise(resolve => {
-      if (page === 'sermons')
+      if (page === 'sermons') {
         resolve([
           {
             id: 'series',
@@ -112,6 +112,37 @@ const api = {
             pl_id: TEST_PL_ID,
           },
         ]);
+      }
+
+      if (page === 'stories') {
+        resolve([
+          {
+            id: 'testimonies',
+            title: 'Testimonies',
+            pl_id: TEST_PL_ID,
+          },
+          {
+            id: 'church',
+            title: 'Church',
+            pl_id: TEST_PL_ID,
+          },
+          {
+            id: 'outreach',
+            title: 'Outreach',
+            pl_id: TEST_PL_ID,
+          },
+          {
+            id: 'creative',
+            title: 'Creative',
+            pl_id: TEST_PL_ID,
+          },
+          {
+            id: 'worship',
+            title: 'Worship',
+            pl_id: WORSHIP_PL_ID,
+          },
+        ]);
+      }
     });
 
     return playlists;

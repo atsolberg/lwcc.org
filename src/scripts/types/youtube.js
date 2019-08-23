@@ -1,6 +1,6 @@
 import { shape, string, oneOfType } from 'prop-types';
 
-export const videoType = shape({
+export const ytVideoType = shape({
   id: oneOfType([string, shape({ videoId: string.isRequired })]).isRequired,
   snippet: shape({
     publishedAt: string.isRequired,

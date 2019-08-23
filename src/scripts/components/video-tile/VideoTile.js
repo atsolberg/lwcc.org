@@ -1,20 +1,15 @@
 import React from 'react';
 import { string } from 'prop-types';
+import { Link } from '@reach/router';
 
-import { prop } from '../../util/object';
 import { format } from '../../util/misc';
-import { parseVideo } from '../../util/youtube';
-import { videoType } from '../../types/youtube';
+import { videoType } from '../../types/video';
 
 import styles from './styles';
 
-function VideoTile({ data, prefix = '' }) {
-  const { snippet } = data;
-  const video = parseVideo(data);
-  const id = prop(data, 'id.videoId') || prop(snippet, 'resourceId.videoId');
-
+function VideoTile({ video, prefix = '' }) {
   return (
-    <a href={`${prefix}/?id=${id}`} className="video-tile" css={styles}>
+    <Link to={`${prefix}/?id=${video.id}`} className="video-tile" css={styles}>
       <figure>
         <img className="thumb img-fluid" src={video.thumb} alt="thumbnail" />
         <figcaption className="meta">
@@ -35,11 +30,11 @@ function VideoTile({ data, prefix = '' }) {
           </div>
         </figcaption>
       </figure>
-    </a>
+    </Link>
   );
 }
 VideoTile.propTypes = {
-  data: videoType.isRequired,
+  video: videoType.isRequired,
   prefix: string,
 };
 

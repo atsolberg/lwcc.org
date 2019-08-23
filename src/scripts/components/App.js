@@ -14,6 +14,7 @@ import Footer from './footer/Footer';
 import Main from './main/Main';
 
 import SermonsPage from '../pages/sermons/SermonsPage';
+import StoriesPage from '../pages/stories/StoriesPage';
 import VideoPage from '../pages/video-details/VideoPage';
 
 /**
@@ -26,6 +27,7 @@ function App() {
       <Main>
         <Router>
           <SermonsPage path="/media-sermons" />
+          <StoriesPage path="/media-stories" />
           <VideoPage path="/media-sermons/sermon" />
         </Router>
       </Main>

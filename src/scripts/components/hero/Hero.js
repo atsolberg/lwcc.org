@@ -28,7 +28,7 @@ function Hero({
 }
 Hero.propTypes = {
   bg: oneOf(['worship', 'city', 'bible']).isRequired,
-  layout: oneOf(['centered', 'centered-v']),
+  layout: oneOf(['normal', 'centered', 'centered-v']),
   faded: bool,
   short: bool,
   className: any,

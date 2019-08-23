@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-import { lg, maxWithGutters } from '../../../styles/breakpoints';
+import { lg, max } from '../../../styles/breakpoints';
 import imgWorship from '../../../img/heroes/hero-worship.jpg';
 import imgCity from '../../../img/heroes/hero-city.jpg';
 import imgBible from '../../../img/heroes/hero-bible.jpg';
@@ -51,9 +51,11 @@ const styles = css`
   }
 
   // Variants - contained, full width
-  .max-1140 & {
-    ${maxWithGutters} {
+  .container-xl & {
+    ${max} {
       border-radius: 4px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 

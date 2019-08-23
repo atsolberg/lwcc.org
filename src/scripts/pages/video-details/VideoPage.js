@@ -21,14 +21,14 @@ function VideoPage() {
 
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
-    api.getVideoDetails(id).then((details) => {
+    api.getVideoDetails(id).then(details => {
       setData(details);
     });
   }, [id]);
 
   return (
-    <div>
-      <div className="max-1140" css={styles}>
+    <div className="row">
+      <div className="container-xl" css={styles}>
         <Hero bg="bible" layout="centered" variant="contained" short>
           <img
             alt="logo"
@@ -52,8 +52,12 @@ function VideoPage() {
         </div>
       </div>
 
-      <RelatedVideos videoId={id} />
-      <NewsletterSignup />
+      <div className="container-fluid">
+        <RelatedVideos videoId={id} />
+      </div>
+      <div className="container-fluid">
+        <NewsletterSignup />
+      </div>
     </div>
   );
 }

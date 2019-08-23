@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/core';
 
 import logger from '../../util/logger';
-import { prop } from '../../util/object';
 import api from '../../util/api';
 import logo from '../../../img/icons/logo-192.png';
 
@@ -15,31 +14,25 @@ import NewsletterSignup from '../../components/newsletter-signup/NewletterSignup
 import styles from './styles';
 import { parseVideo } from '../../util/youtube';
 
-function SermonsPage() {
+function StoriesPage() {
   const [pages, setPages] = useState([]);
   const [videos, setVideos] = useState([]);
   const [header, setHeader] = useState('');
-  const [currentSeriesTitle, setCurrentSeriesTitle] = useState(null);
 
   const [playlists, setPlaylists] = useState([]);
-  const [activePlaylist, setActivePlaylist] = useState('series');
-  const [currentSeriesId, setCurrentSeriesId] = useState(null);
+  const [activePlaylist, setActivePlaylist] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
-    api.getPlayLists('sermons').then(data => setPlaylists(data));
 
-    api.getCurrentSeriesId().then(id => {
-      setCurrentSeriesId(id);
+    api.getPlayLists('stories').then(data => {
+      setPlaylists(data);
 
-      api.getPlayList(id).then(pl => {
-        const title = prop(pl, 'snippet.localized.title') || '';
-        setCurrentSeriesTitle(title);
-        setHeader(title);
-      });
-
-      api.getVideosForPlayList(id).then(videos => {
+      const [first] = data;
+      setHeader(first.title);
+      setActivePlaylist(first.id);
+      api.getVideosForPlayList(first.pl_id).then(videos => {
         setLoading(false);
         setVideos(videos.map(v => parseVideo(v)));
       });
@@ -54,16 +47,9 @@ function SermonsPage() {
     },
   }) {
     setActivePlaylist(value);
-    const isCurrentSeries = value === 'series';
-    if (isCurrentSeries) {
-      setHeader(currentSeriesTitle);
-    } else {
-      setHeader(title);
-    }
+    setHeader(title);
 
-    const id = isCurrentSeries
-      ? currentSeriesId
-      : playlists.find(pl => pl.id === value).pl_id;
+    const id = playlists.find(pl => pl.id === value).pl_id;
 
     api.getVideosForPlayList(id).then(videos => {
       setVideos(videos.map(v => parseVideo(v)));
@@ -112,7 +98,7 @@ function SermonsPage() {
           loading={loading}
           title={header}
           videos={videos}
-          prefix="/media-sermons/sermon"
+          prefix="/media-stories/story"
         />
       </div>
 
@@ -123,4 +109,4 @@ function SermonsPage() {
   );
 }
 
-export default SermonsPage;
+export default StoriesPage;
