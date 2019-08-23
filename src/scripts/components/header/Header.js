@@ -110,8 +110,10 @@ function Header() {
             <span className="icon-bar" />
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* `navbar` prop should be set to true by <Navbar> but it's not  */}
-            <Nav className="ml-auto">
+            {/* `navbar` prop should be set to true by <Navbar> but it's not
+             * when doing a production build
+             */}
+            <Nav className="ml-auto" navbar>
               {(prop(menus, 'main.items') || []).map(m => (
                 <Fragment key={m.ID}>
                   {/* Dropdown Nav Item */}

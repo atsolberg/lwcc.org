@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { node, any, oneOf, bool } from 'prop-types';
 
-import styles from './styles';
+import styles, { bgs } from './styles';
 
 function Hero({
   bg,
@@ -15,8 +15,8 @@ function Hero({
 }) {
   return (
     <div
-      css={styles}
-      className={cx(className, 'row', 'hero', `-${layout}`, `-${bg}`, {
+      css={[styles, bgs[bg]]}
+      className={cx(className, 'row', 'hero', `-${layout}`, {
         '-short': short,
         '-faded': faded,
       })}

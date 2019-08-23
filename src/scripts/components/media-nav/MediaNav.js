@@ -1,13 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
-import { string, arrayOf, shape, oneOf, bool } from 'prop-types';
+import { string, arrayOf, shape, oneOf, bool, any } from 'prop-types';
+import { Link } from '@reach/router';
 
-import styles from './styles';
 import { getFlatPathName } from '../../util/misc';
-
-const here = getFlatPathName();
+import styles from './styles';
 
 function MediaNav({ items, variant = 'normal', centered = false, className }) {
+  const here = getFlatPathName();
   return (
     <ul
       css={styles}
@@ -22,7 +22,7 @@ function MediaNav({ items, variant = 'normal', centered = false, className }) {
             active: here.startsWith(getFlatPathName(item.url)),
           })}
         >
-          <a href={item.url}>{item.title}</a>
+          <Link to={item.url}>{item.title}</Link>
         </li>
       ))}
     </ul>
@@ -37,6 +37,7 @@ MediaNav.propTypes = {
   ).isRequired,
   variant: oneOf(['normal', 'mini']),
   centered: bool,
+  className: any,
 };
 
 export default MediaNav;

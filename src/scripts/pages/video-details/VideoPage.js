@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import api from '../../util/api';
 import logo from '../../../img/icons/logo-192.png';
-import { getParameterByName } from '../../util/misc';
+import { getFlatPathName, getParameterByName } from '../../util/misc';
 
 import Hero from '../../components/hero/Hero';
 import MediaNav from '../../components/media-nav/MediaNav';
@@ -19,6 +19,10 @@ function VideoPage() {
   const [data, setData] = useState(null);
   const id = getParameterByName('id');
 
+  const isSermonPage = getFlatPathName().startsWith('mediasermons');
+  const heroTitle = isSermonPage ? 'Sermons' : 'Stories';
+  const heroBg = isSermonPage ? 'bible' : 'connected';
+
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
     api.getVideoDetails(id).then(details => {
@@ -29,7 +33,7 @@ function VideoPage() {
   return (
     <div className="row">
       <div className="container-xl" css={styles}>
-        <Hero bg="bible" layout="centered" variant="contained" short>
+        <Hero bg={heroBg} layout="centered" variant="contained" short>
           <img
             alt="logo"
             src={logo}
@@ -37,7 +41,7 @@ function VideoPage() {
               width: 50px;
             `}
           />
-          <h1>Sermons</h1>
+          <h1>{heroTitle}</h1>
         </Hero>
 
         <MediaNav className="mb-4" items={pages} variant="mini" />

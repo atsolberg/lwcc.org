@@ -1,9 +1,7 @@
 import { css } from '@emotion/core';
 
 import { lg, max } from '../../../styles/breakpoints';
-import imgWorship from '../../../img/heroes/hero-worship.jpg';
-import imgCity from '../../../img/heroes/hero-city.jpg';
-import imgBible from '../../../img/heroes/hero-bible.jpg';
+import imgs from '../../../img/heroes/*.jpg';
 
 function faded(img) {
   return css`
@@ -26,7 +24,7 @@ const styles = css`
 
   height: auto;
   padding: 4% 0;
-  
+
   // Sizes - normal, short
   min-height: 265px;
   ${lg} {
@@ -38,7 +36,6 @@ const styles = css`
       min-height: 220px;
     }
   }
-
 
   .hero-content {
     position: relative;
@@ -71,23 +68,15 @@ const styles = css`
     flex-direction: column;
     justify-content: center;
   }
-
-  // Backgrounds
-  &.-worship {
-    background-image: url(${imgWorship});
-    ${faded(imgWorship)};
-    }
-  }
-
-  &.-city {
-    background-image: url(${imgCity});
-    ${faded(imgCity)};
-  }
-
-  &.-bible {
-    background-image: url(${imgBible});
-    ${faded(imgBible)};
-  }
 `;
+
+export const bgs = Object.keys(imgs).reduce((result, name) => {
+  const img = imgs[name];
+  result[name.replace('hero-', '')] = css`
+    background-image: url(${img});
+    ${faded(img)};
+  `;
+  return result;
+}, {});
 
 export default styles;

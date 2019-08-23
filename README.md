@@ -52,18 +52,17 @@ Response:
 Misc
 - [x] Figure out youtube api
 - [x] Get current series playlist id
-- [ ] Get a valid cert on the dev environment
-- [ ] Verify we can just drop the public folder into wp
+- [x] Get a valid cert on the dev environment
+- [x] Verify we can just drop the public folder into wp
 - [x] Newsletter signup - finish styling
 - [ ] Newsletter signup - Get mail chimp form submission endpoint
-- [ ] Use or remove <MessagesProvider>
-- [ ] Move ytapi to node app
+- [ ] Move ytapi to wp, see youtube php example
 
 Header
 - [x] Header top nav ui
 - [x] Header main nav ui
 - [x] Figure out how to get menu data from wp
-- [ ] Figure out how to get live streaming status from Youtube
+- [x] Figure out how to get live streaming status from Youtube
 - [x] Set 'live' link to hidden when off-air
 - [x] Set 'live' link url to churchonline.org
 - [x] Shrink top nav content on mobile
@@ -90,8 +89,9 @@ Sermons Page
 - [x] Initial ui
 
 Video Page
-- [ ] Initial ui
+- [x] Initial ui
 - [ ] Figure out url strategy
+- [ ] Figure out how to get download content for video
 - [x] Figure out how to get related videos for a video on a channel
 - [x] Just use video description as details content under title
 - [ ] Finish mobile styling on related videos
@@ -99,7 +99,7 @@ Video Page
       a generic video page.
 
 Stories Page
-- [ ] Initial ui
+- [x] Initial ui
 
 Resources Page
 - [ ] Initial ui
