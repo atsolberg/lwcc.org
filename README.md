@@ -13,7 +13,7 @@ npm run dev
 ```
 Runs parcel in dev mode with the app running at localhost:1234
 
-### Build and Deploy to Product
+### Build and Deploy to Production
 1. delete the contents of `/public`
 1. run `npm run build:wphtml`
 1. copy the contents of `/public/index.html` and replace the html in `/wp-stuff/react-template.php` with it.
