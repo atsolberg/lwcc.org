@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { node, any, oneOf, bool } from 'prop-types';
+import { string, node, any, oneOf, bool } from 'prop-types';
 
 import styles, { bgs } from './styles';
 
@@ -27,7 +27,7 @@ function Hero({
   );
 }
 Hero.propTypes = {
-  bg: oneOf(['worship', 'city', 'bible']).isRequired,
+  bg: string.isRequired,
   layout: oneOf(['normal', 'centered', 'centered-v']),
   faded: bool,
   short: bool,

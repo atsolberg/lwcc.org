@@ -10,6 +10,14 @@ export const isMobile = (
   return Math.max(clientWidth, window.innerWidth || 0) < breakpoint;
 };
 
+export const viewport = () => {
+  const doc = document.documentElement;
+  return {
+    w: Math.max(doc.clientWidth, window.innerWidth || 0),
+    h: Math.max(doc.clientHeight, window.innerHeight || 0),
+  };
+};
+
 /**
  * Returns true is device is an ios device, false otherwise.
  * @param {Boolean} useUserAgent - If true, detection uses navigator.userAgent instead

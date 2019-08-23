@@ -28,6 +28,15 @@ export const formats = {
         year: 'numeric',
       }),
 
+    SIMPLE_DOTTED: date =>
+      date
+        .toLocaleDateString('en-US', {
+          month: 'numeric',
+          day: 'numeric',
+          year: 'numeric',
+        })
+        .replace(new RegExp('/', 'g'), '.'),
+
     MONTH_ABR_DAY_YEAR: date =>
       date.toLocaleDateString('en-US', {
         month: 'short',
@@ -96,8 +105,10 @@ export const format = {
    * @param {Date} [date] - Unix timestamp to format as a readable date-time. Defaults to now.
    * @param {Function} [formatter] - The format to use. Defaults to 'MMM D, YYYY'.
    */
-  date: (date = new Date(), formatter = formats.date.MONTH_ABR_DAY_YEAR) =>
-    formatter(date),
+  date: (date, formatter = formats.date.MONTH_ABR_DAY_YEAR) => {
+    const formatted = formatter(date);
+    return formatted;
+  },
 
   /**
    * Reduce a numerator and denominator to it's smallest,

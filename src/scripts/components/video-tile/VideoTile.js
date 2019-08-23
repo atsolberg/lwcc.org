@@ -2,7 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import { Link } from '@reach/router';
 
-import { format } from '../../util/misc';
+import { format, formats } from '../../util/misc';
 import { videoType } from '../../types/video';
 
 import styles from './styles';
@@ -21,7 +21,9 @@ function VideoTile({ video, prefix = '' }) {
             />
           )}
           <div className="details">
-            <time className="date">{format.date(video.date)}</time>
+            <time className="date">
+              {format.date(video.date, formats.date.SIMPLE_DOTTED)}
+            </time>
             {video.speaker && <> | {video.speaker} </>}
             <h3
               className="title"

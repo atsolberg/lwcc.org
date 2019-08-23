@@ -47,10 +47,10 @@ function VideoPage() {
         <MediaNav className="mb-4" items={pages} variant="mini" />
 
         <div className="row mb-5">
-          <div className="col-12 col-sm-6">
+          <div className="col-12 col-sm-6 mt-3">
             <Video data={data} />
           </div>
-          <div className="col-12 col-sm-6">
+          <div className="col-12 col-sm-6 mt-3">
             <VideoDescription data={data} />
           </div>
         </div>

@@ -57,6 +57,7 @@ Misc
 - [x] Newsletter signup - finish styling
 - [ ] Newsletter signup - Get mail chimp form submission endpoint
 - [ ] Move ytapi to wp, see youtube php example
+- [ ] Get all the playlists setup correctly in wp
 
 Header
 - [x] Header top nav ui
