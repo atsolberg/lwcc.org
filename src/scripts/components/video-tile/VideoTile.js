@@ -7,7 +7,7 @@ import { videoType } from '../../types/video';
 
 import styles from './styles';
 
-function VideoTile({ video, prefix = '' }) {
+function VideoTile({ video, prefix = '/media/video' }) {
   return (
     <Link to={`${prefix}/?id=${video.id}`} className="video-tile" css={styles}>
       <figure>
