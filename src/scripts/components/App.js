@@ -30,6 +30,7 @@ function App() {
           <StoriesPage path="/media-stories" />
           <VideoPage path="/media-sermons/sermon" />
           <VideoPage path="/media-stories/story" />
+          <VideoPage path="/media-video" />
         </Router>
       </Main>
       <Footer />

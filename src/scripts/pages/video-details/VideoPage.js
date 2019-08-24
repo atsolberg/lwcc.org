@@ -14,14 +14,30 @@ import VideoDescription from '../../components/video-description/VideoDescriptio
 import styles from './styles';
 import RelatedVideos from '../../components/related-videos/RelatedVideos';
 
+function getHeroData() {
+  const path = getFlatPathName();
+  const data = {
+    title: 'Ministry Media',
+    bg: 'connected',
+  };
+
+  if (path.startsWith('mediasermons')) {
+    data.title = 'Sermons';
+    data.bg = 'bible';
+  }
+  if (path.startsWith('mediastories')) {
+    data.title = 'Stories';
+    data.bg = 'connected';
+  }
+
+  return data;
+}
+
 function VideoPage() {
   const [pages, setPages] = useState([]);
   const [data, setData] = useState(null);
   const id = getParameterByName('id');
-
-  const isSermonPage = getFlatPathName().startsWith('mediasermons');
-  const heroTitle = isSermonPage ? 'Sermons' : 'Stories';
-  const heroBg = isSermonPage ? 'bible' : 'connected';
+  const heroData = getHeroData();
 
   useEffect(() => {
     api.getMediaPages().then(data => setPages(data));
@@ -33,7 +49,7 @@ function VideoPage() {
   return (
     <div className="row">
       <div className="container-xl" css={styles}>
-        <Hero bg={heroBg} layout="centered" variant="contained" short>
+        <Hero bg={heroData.bg} layout="centered" variant="contained" short>
           <img
             alt="logo"
             src={logo}
@@ -41,7 +57,7 @@ function VideoPage() {
               width: 50px;
             `}
           />
-          <h1>{heroTitle}</h1>
+          <h1>{heroData.title}</h1>
         </Hero>
 
         <MediaNav className="mb-4" items={pages} variant="mini" />

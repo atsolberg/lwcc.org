@@ -22,6 +22,10 @@ function getHere(url) {
   return here;
 }
 
+function getPath(url) {
+  return new URL(url).pathname;
+}
+
 /**
  * Shorten some titles for mobile
  * @param {string} title - the title text to adjust
@@ -44,7 +48,7 @@ function fixTitles(title) {
  */
 function Header() {
   const [searching, setSearching] = useState(false);
-  const [broadcast, setBroadcast] = useState({
+  const [broadcast] = useState({
     live: false,
     title: '',
   });
@@ -113,7 +117,7 @@ function Header() {
             {/* `navbar` prop should be set to true by <Navbar> but it's not
              * when doing a production build
              */}
-            <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto navbar-nav" navbar>
               {(prop(menus, 'main.items') || []).map(m => (
                 <Fragment key={m.ID}>
                   {/* Dropdown Nav Item */}
@@ -123,7 +127,7 @@ function Header() {
                       id="collasible-nav-dropdown"
                     >
                       {m.child_items.map(c => (
-                        <NavDropdown.Item key={c.ID} href={c.url}>
+                        <NavDropdown.Item key={c.ID} href={getPath(c.url)}>
                           {c.title}
                         </NavDropdown.Item>
                       ))}
@@ -132,7 +136,7 @@ function Header() {
                   {/* Link Nav Item */}
                   {!prop(m, 'child_items.length') && (
                     <Nav.Link
-                      href={m.url}
+                      href={getPath(m.url)}
                       className={cx({
                         here: where === getHere(m.url),
                       })}

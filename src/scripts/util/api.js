@@ -21,6 +21,17 @@ const YT_API = 'https://www.googleapis.com/youtube/v3';
 
 const cache = new MicroCache();
 
+/**
+ * Make sure we only include videos from our channel.
+ * Even when specifying our chanel, sometimes yt search
+ * includes non-lwcc videos.
+ * @param {YoutubeVideo[]} items - array of youtube video search results.
+ * @return {YoutubeVideo[]} the filtered array of videos
+ */
+function filterForOurs(items) {
+  return items.filter(item => item.snippet.channelId === YT_CHANNEL_ID);
+}
+
 const api = {
   /**
    * Fetch all menus for the site, or particular menus if specified.
@@ -265,7 +276,8 @@ const api = {
           q,
         },
       })
-      .then(({ data: { items: videos } }) => {
+      .then(({ data: { items } }) => {
+        const videos = filterForOurs(items);
         cache.put(key, videos);
         return videos;
       });
@@ -290,9 +302,7 @@ const api = {
         },
       })
       .then(({ data: { items } }) => {
-        const videos = items.filter(
-          item => item.snippet.channelId === YT_CHANNEL_ID
-        );
+        const videos = filterForOurs(items);
         cache.put(key, videos);
         return videos;
       });
