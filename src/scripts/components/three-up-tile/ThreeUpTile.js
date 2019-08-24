@@ -9,8 +9,8 @@ import styles from './styles';
 function ThreeUpTile({ bg, url, cta, title, className, ...rest }) {
   return (
     <div css={styles} className={cx(className, 'three-up-tile')} {...rest}>
-      <img src={tiles[bg]} />
-      <div className="cta">
+      <img src={tiles[bg]} className="rounded-top" />
+      <div className="cta rounded-bottom">
         <h3 className="title">{title}</h3>
         <Button className="btn-block" variant="primary" href={url}>
           {cta}
