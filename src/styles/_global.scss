@@ -100,6 +100,10 @@ input[type='number']::-webkit-outer-spin-button {
    CONTAINERS
    ============================================================ */
 
+.bg-section {
+  background-color: $section-bg !important;
+}
+
 // A container just like bootstrap's `container-fluid` class
 // but it stops at 1140px. Use instead of `container-fluid`.
 .container-xl {
@@ -109,6 +113,17 @@ input[type='number']::-webkit-outer-spin-button {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+// Max Width Containers
+// Used to keep copy from using the entire block on larger screens
+// Example:
+// <div class="mw-480 mr-auto">Text with lots of words</div>
+.mw-650 {
+  max-width: 650px;
+}
+.mw-480 {
+  max-width: 480px;
 }
 
 .rounded {

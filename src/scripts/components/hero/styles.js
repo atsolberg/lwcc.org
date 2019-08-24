@@ -1,7 +1,10 @@
 import { css } from '@emotion/core';
 
 import { lg, max } from '../../../styles/breakpoints';
-import imgs from '../../../img/heroes/*.jpg';
+import jpegs from '../../../img/heroes/*.jpg';
+import pngs from '../../../img/heroes/*.png';
+
+const imgs = { ...jpegs, ...pngs };
 
 function faded(img) {
   return css`
@@ -30,7 +33,13 @@ const styles = css`
   ${lg} {
     min-height: 440px;
   }
-  &.-short {
+  &.-md {
+    min-height: 265px;
+    ${lg} {
+      min-height: 340px;
+    }
+  }
+  &.-sm {
     min-height: 200px;
     ${lg} {
       min-height: 220px;
@@ -39,8 +48,8 @@ const styles = css`
 
   .hero-content {
     position: relative;
-
-    color: #fff;
+    padding-left: 10%;
+    padding-right: 10%;
 
     h1 {
       font-size: 38px;

@@ -15,7 +15,8 @@ import Main from './main/Main';
 
 import SermonsPage from '../pages/sermons/SermonsPage';
 import StoriesPage from '../pages/stories/StoriesPage';
-import VideoPage from '../pages/video-details/VideoPage';
+import ResourcesPage from '../pages/resources/ResourcesPage';
+import VideoPage from '../pages/video/VideoPage';
 
 /**
  * The top level react component for our site.
@@ -28,6 +29,7 @@ function App() {
         <Router>
           <SermonsPage path="/media-sermons" />
           <StoriesPage path="/media-stories" />
+          <ResourcesPage path="/media-resources" />
           <VideoPage path="/media-sermons/sermon" />
           <VideoPage path="/media-stories/story" />
           <VideoPage path="/media-video" />

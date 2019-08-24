@@ -92,7 +92,7 @@ Sermons Page
 Video Page
 - [x] Initial ui
 - [ ] Figure out url strategy
-- [ ] Figure out how to get download content for video
+- [ ] Figure out how to get download content (backgrounds/quotes) for video
 - [x] Figure out how to get related videos for a video on a channel
 - [x] Just use video description as details content under title
 - [x] Finish mobile styling on related videos
@@ -103,6 +103,8 @@ Stories Page
 - [x] Initial ui
 
 Resources Page
-- [ ] Initial ui
+- [x] Initial ui
+- [ ] Get final images
+- [ ] Get url for 'Living Word Resources' tile.
 
 

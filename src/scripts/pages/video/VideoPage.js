@@ -49,7 +49,7 @@ function VideoPage() {
   return (
     <div className="row">
       <div className="container-xl" css={styles}>
-        <Hero bg={heroData.bg} layout="centered" variant="contained" short>
+        <Hero bg={heroData.bg} layout="centered" height="sm">
           <img
             alt="logo"
             src={logo}
