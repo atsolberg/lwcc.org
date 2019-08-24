@@ -39,16 +39,17 @@ function ResourcesPage() {
           <div className="mw-480 mr-auto">
             <h2>LW Store</h2>
             <p>
-              Find the details you need and get your questions answered to make
-              your first visit to Living Word comfortable and meaningful for you
-              and your family.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
             </p>
             <a href="http://store.lwcc.org/">Store &rarr;</a>
           </div>
         </Hero>
 
-        <div className="row mb-5">
-          <div className="col-12 col-sm-4">
+        <div className="row">
+          <div className="col-12 col-sm-4 mb-5">
             <ThreeUpTile
               bg="mhministries"
               url="http://machammond.org"
@@ -56,7 +57,7 @@ function ResourcesPage() {
               cta="Learn More"
             />
           </div>
-          <div className="col-12 col-sm-4">
+          <div className="col-12 col-sm-4 mb-5">
             <ThreeUpTile
               bg="lhministries"
               url="http://lynnehammond.org/"
@@ -64,10 +65,10 @@ function ResourcesPage() {
               cta="Learn More"
             />
           </div>
-          <div className="col-12 col-sm-4">
+          <div className="col-12 col-sm-4 mb-5">
             <ThreeUpTile
               bg="location-bp"
-              url="#"
+              url="http://www.machammond.com/"
               title="Living Word Resources"
               cta="Learn More"
             />
@@ -85,11 +86,32 @@ function ResourcesPage() {
           <div className="mw-650 mr-auto">
             <img className="mb-4" src={cfaithLogo} alt="cfaith logo" />
             <p>
-              Find the details you need and get your questions answered to make
-              your first visit to Living Word comfortable and meaningful for you
-              and your family.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
             </p>
             <a href="https://www.cfaith.com/">cfaith &rarr;</a>
+          </div>
+        </Hero>
+
+        <Hero
+          className="mb-5"
+          bg="mhministries"
+          bgColor="section"
+          blend="darken"
+          layout="centered-v"
+          height="md"
+        >
+          <div className="mw-480 mr-auto">
+            <h2>Mac Hammond Ministries Blog</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="http://machammond.org/blog/">Read more &rarr;</a>
           </div>
         </Hero>
       </div>

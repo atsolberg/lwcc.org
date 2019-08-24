@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { string, node, any, oneOf, bool } from 'prop-types';
+import { css } from '@emotion/core';
 
 import styles, { bgs } from './styles';
 
@@ -8,6 +9,7 @@ function Hero({
   bg, // The background image name
   bgColor = 'transparent', // The bg-{color} class
   color = 'white', // The text-{color} class
+  blend = 'normal', // The background-blend-mode value
   children,
   className,
   layout = 'normal',
@@ -17,7 +19,13 @@ function Hero({
 }) {
   return (
     <div
-      css={[styles, bgs[bg]]}
+      css={[
+        styles,
+        bgs[bg],
+        css`
+          background-blend-mode: ${blend};
+        `,
+      ]}
       className={cx(
         className,
         'row',
@@ -61,6 +69,24 @@ Hero.propTypes = {
     'warning',
     'info',
     'light',
+  ]),
+  blend: oneOf([
+    'normal',
+    'multiply',
+    'screen',
+    'overlay',
+    'darken',
+    'lighten',
+    'color-dodge',
+    'color-burn',
+    'hard-light',
+    'soft-light',
+    'difference',
+    'exclusion',
+    'hue',
+    'saturation',
+    'color',
+    'luminosity',
   ]),
   layout: oneOf(['normal', 'centered', 'centered-v']),
   faded: bool,

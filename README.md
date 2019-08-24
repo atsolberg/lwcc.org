@@ -96,8 +96,7 @@ Video Page
 - [x] Figure out how to get related videos for a video on a channel
 - [x] Just use video description as details content under title
 - [x] Finish mobile styling on related videos
-- [ ] Set link (prefix) correctly on related videos, might have to make
-      a generic video page.
+- [x] Make a generic video page for videos linked from 'related'.
 
 Stories Page
 - [x] Initial ui
@@ -105,6 +104,7 @@ Stories Page
 Resources Page
 - [x] Initial ui
 - [ ] Get final images
+- [ ] Get final copy
 - [ ] Get url for 'Living Word Resources' tile.
 
 

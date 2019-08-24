@@ -1,13 +1,14 @@
 import React from 'react';
 import { string, node } from 'prop-types';
+import cx from 'classnames';
 
 import tiles from '../../../img/tiles/*.jpg';
 import Button from '../button';
 import styles from './styles';
 
-function ThreeUpTile({ bg, url, cta, title }) {
+function ThreeUpTile({ bg, url, cta, title, className, ...rest }) {
   return (
-    <div css={styles} className="three-up-tile">
+    <div css={styles} className={cx(className, 'three-up-tile')} {...rest}>
       <img src={tiles[bg]} />
       <div className="cta">
         <h3 className="title">{title}</h3>
