@@ -95,7 +95,7 @@ Video Page
 - [ ] Figure out how to get download content for video
 - [x] Figure out how to get related videos for a video on a channel
 - [x] Just use video description as details content under title
-- [ ] Finish mobile styling on related videos
+- [x] Finish mobile styling on related videos
 - [ ] Set link (prefix) correctly on related videos, might have to make
       a generic video page.
 
