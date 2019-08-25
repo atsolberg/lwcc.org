@@ -19,7 +19,7 @@ From the lwcc.org directory:
 npm run build
 . ./wp-deploy.sh
 ```
-Note: npm runs `prebuild` before, the `build` and `postbuild` after.
+Note: npm runs `prebuild` before the `build` and `postbuild` after.
 The `prebuild` cleans the public directory, and the `postbuild` re-creates the 
 wordpress template using the newly built html.
 
