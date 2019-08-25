@@ -58,7 +58,7 @@ Misc
 - [x] Verify we can just drop the public folder into wp
 - [x] Newsletter signup - finish styling
 - [ ] Newsletter signup - Get mail chimp form submission endpoint
-- [ ] Move ytapi to wp, see youtube php example
+- [ ] Move Youtube api to wp, see youtube php example
 - [ ] Get all the playlists setup correctly in wp
 
 Header
