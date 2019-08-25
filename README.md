@@ -11,15 +11,17 @@ cd lwcc.org
 npm i
 npm run dev
 ```
-Runs parcel in dev mode with the app running at localhost:1234
+Runs parcel in dev mode with the dev server running at https://localhost:1234
 
 ### Build and Deploy to Production
-1. delete the contents of `/public`
-1. run `npm run build:wphtml`
-1. copy the contents of `/public/index.html` and replace the html in `/wp-stuff/react-template.php` with it.
-1. delete `bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs/public` folder
-1. ftp or scp the `public` folder to `bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs`
-1. ftp or scp the `/wp-stuff/react-template.php` to `bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/LWCC/`
+From the lwcc.org directory:
+```shell
+npm run build
+. ./wp-deploy.sh
+```
+Note: npm runs `prebuild` before, the `build` and `postbuild` after.
+The `prebuild` cleans the public directory, and the `postbuild` re-creates the 
+wordpress template using the newly built html.
 
 ### WordPress Shenanigans
 Menu data was accessed form the wp rest api by adding the `WP-REST-API V2 Menus` plugin

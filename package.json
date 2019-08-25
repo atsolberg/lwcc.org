@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "parcel:dev": "parcel ./src/index.html -d public",
-    "parcel:build": "parcel build ./src/index.html -d public",
-    "parcel:build:wp": "parcel build ./src/scripts/index.js -d public --public-url /public/",
-    "parcel:build:wphtml": "parcel build ./src/index.html -d public --public-url /public/",
+    "parcel:build": "parcel build ./src/index.html -d public --public-url /public/",
+    "parcel:build:js": "parcel build ./src/scripts/index.js -d public --public-url /public/",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
@@ -22,9 +21,8 @@
     "start": "npm-run-all -l export:scss:vars parcel:dev",
     "dev": "npm-run-all -l export:scss:vars parcel:dev",
     "prebuild": "shx rm -rf public/*",
-    "build": "npm-run-all -l prebuild export:scss:vars parcel:build",
-    "build:wp": "npm-run-all -l prebuild export:scss:vars parcel:build:wp",
-    "build:wphtml": "npm-run-all -l prebuild export:scss:vars parcel:build:wphtml"
+    "build": "npm-run-all -l export:scss:vars parcel:build",
+    "postbuild": "node create-wp-template"
   },
   "repository": {
     "type": "git",
@@ -51,6 +49,7 @@
     "babel-eslint": "^10.0.2",
     "babel-plugin-emotion": "^10.0.15",
     "bootstrap": "^4.3.1",
+    "chalk": "^2.4.2",
     "classnames": "^2.2.6",
     "core-js": "^3.1.4",
     "custom-event-polyfill": "^1.0.7",
