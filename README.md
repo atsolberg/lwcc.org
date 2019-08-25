@@ -24,7 +24,7 @@ The `prebuild` cleans the public directory, and the `postbuild` re-creates the
 wordpress template using the newly built html.
 
 ### WordPress Shenanigans
-Menu data was accessed form the wp rest api by adding the `WP-REST-API V2 Menus` plugin
+Menu data was accessed from the wp rest api by adding the `WP-REST-API V2 Menus` plugin.
 Playlist data was achieved by adding the `Custom Post Type UI` to create 'Playlist' 
 post types, adding `Advanced Custom Fields` to add custom fields to the custom 
 `Playlist` post types, and `ACF to REST API` to get that data into the rest api.
