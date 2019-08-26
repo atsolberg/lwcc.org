@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "parcel:dev": "parcel ./src/index.html -d public",
-    "parcel:build": "parcel build ./src/index.html -d public --public-url /public/",
+    "parcel:build": "parcel build ./src/index.html ./src//scripts/header-footer.js -d public --public-url /public/",
     "parcel:build:js": "parcel build ./src/scripts/index.js -d public --public-url /public/",
     "test": "jest",
     "test:watch": "jest --watch",

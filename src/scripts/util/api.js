@@ -269,7 +269,7 @@ const api = {
       .get(`${YT_API}/search`, {
         params: {
           key: g_creds.api_key,
-          part: 'id,snippet',
+          part: 'id,snippet,contentDetails',
           type: 'video',
           maxResults: MAX_RESULTS,
           channelId: YT_CHANNEL_ID,

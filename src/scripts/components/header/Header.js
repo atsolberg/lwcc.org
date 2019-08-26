@@ -104,7 +104,7 @@ function Header() {
       {/* MAIN NAV BAR */}
       <div className="container-xl">
         <Navbar collapseOnSelect expand="md" sticky="top">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <Logo color="#4C4E54" width={180} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">

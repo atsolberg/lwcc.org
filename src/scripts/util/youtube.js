@@ -22,7 +22,9 @@ import speakers from '../../img/speakers/*.jpg';
  */
 export function parseVideo(data) {
   const video = {};
-  const { title, publishedAt, description } = data.snippet;
+  const v_publishedAt = prop(data, 'contentDetails.videoPublishedAt');
+  const { title, publishedAt: sn_publishedAt, description } = data.snippet;
+  const publishedAt = v_publishedAt || sn_publishedAt;
 
   video.id =
     prop(data, 'id.videoId') ||

@@ -81,6 +81,8 @@ Footer
 - [x] Footer ui mobile
 - [x] Get urls for privacy policy and terms of use
 - [x] Set st paul link to http://lwcc.org/sainttpaul 
+- [ ] Add newsletter to footer instead of pages
+- [ ] Finish newsletter form submission
 
 Media Page
 - [x] Get youtube data fetching working
@@ -90,10 +92,11 @@ Media Page
 
 Sermons Page 
 - [x] Initial ui
+- [ ] Update playlists to be: 'Current Series', 'Sundays', 'Saturdays', 'Wednesdays', 'Iglesia Espanol', 'Guest'
 
 Video Page
 - [x] Initial ui
-- [ ] Figure out url strategy
+- [x] Figure out url strategy
 - [ ] Figure out how to get download content (backgrounds/quotes) for video
 - [x] Figure out how to get related videos for a video on a channel
 - [x] Just use video description as details content under title
@@ -102,6 +105,7 @@ Video Page
 
 Stories Page
 - [x] Initial ui
+- [ ] Update playlists to be: 'Testimonies', 'Outreach', 'Worship'
 
 Resources Page
 - [x] Initial ui

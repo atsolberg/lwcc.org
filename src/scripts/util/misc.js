@@ -175,3 +175,18 @@ const testMode = getParameterByName('test') !== null;
 
 export const isDebugMode = () => debugMode;
 export const isTestMode = () => testMode;
+
+/**
+ * A suitable replacement for jquery's document ready
+ * @param callback
+ */
+export function docReady(callback) {
+  // in case the document is already rendered
+  if (document.readyState !== 'loading') {
+    callback();
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', callback);
+  } else {
+    console.warn('Could not fire docReady callback :(');
+  }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { string } from 'prop-types';
 import { Link } from '@reach/router';
 
@@ -24,7 +24,17 @@ function VideoTile({ video, prefix = '/media-video' }) {
             <time className="date">
               {format.date(video.date, formats.date.SIMPLE_DOTTED)}
             </time>
-            {video.speaker && <> | {video.speaker} </>}
+            {video.speaker && (
+              <>
+                {' '}
+                |{' '}
+                <Fragment
+                  dangerouslySetInnerHTML={{
+                    __html: video.speaker,
+                  }}
+                />{' '}
+              </>
+            )}
             <h3
               className="title"
               dangerouslySetInnerHTML={{ __html: video.title }}
