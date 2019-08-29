@@ -28,7 +28,7 @@ function VideoTile({ video, prefix = '/media-video' }) {
               <>
                 {' '}
                 |{' '}
-                <Fragment
+                <span
                   dangerouslySetInnerHTML={{
                     __html: video.speaker,
                   }}

@@ -73,7 +73,7 @@ function StoriesPage() {
   return (
     <div className="row">
       <div className="container-xl" css={styles}>
-        <Hero bg="worship" layout="centered">
+        <Hero bg="media" layout="centered">
           <img
             alt="logo"
             src={logo}

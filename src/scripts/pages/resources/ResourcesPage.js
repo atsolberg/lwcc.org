@@ -22,7 +22,7 @@ function ResourcesPage() {
   return (
     <div className="row">
       <div className="container-xl" css={styles}>
-        <Hero bg="worship" layout="centered">
+        <Hero bg="media" layout="centered">
           <img
             alt="logo"
             src={logo}
@@ -67,9 +67,9 @@ function ResourcesPage() {
           </div>
           <div className="col-12 col-sm-4 mb-5">
             <ThreeUpTile
-              bg="location-bp"
+              bg="bible"
               url="http://www.machammond.com/"
-              title="Living Word Resources"
+              title="Mac Hammond Free Resources"
               cta="Learn More"
             />
           </div>
@@ -97,9 +97,8 @@ function ResourcesPage() {
 
         <Hero
           className="mb-5"
-          bg="mhministries"
+          bg="mhm-blog"
           bgColor="section"
-          blend="darken"
           layout="centered-v"
           height="md"
         >
