@@ -42,6 +42,10 @@ const styles = css`
         font-size: 16px;
       }
     }
+
+    .video-tile figure {
+      min-height: inherit;
+    }
   }
 `;
 

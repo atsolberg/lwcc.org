@@ -15,21 +15,24 @@ import MicroCache from './cache';
 const YT_CHANNEL_ID = 'UC6OtG9IPpnEoVpXwaxsXR4g';
 const MAX_RESULTS = 50; // 50 is the largest valid value for Youtube search results
 const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
-const WORSHIP_PL_ID = 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU';
 
 const YT_API = 'https://www.googleapis.com/youtube/v3';
 
 const cache = new MicroCache();
 
 /**
- * Make sure we only include videos from our channel.
+ * Make sure we only include videos from our channel and videos that are not private.
  * Even when specifying our chanel, sometimes yt search
  * includes non-lwcc videos.
  * @param {YoutubeVideo[]} items - array of youtube video search results.
  * @return {YoutubeVideo[]} the filtered array of videos
  */
 function filterForOurs(items) {
-  return items.filter(item => item.snippet.channelId === YT_CHANNEL_ID);
+  return items.filter(
+    item =>
+      item.snippet.channelId === YT_CHANNEL_ID &&
+      item.snippet.title !== 'Private video'
+  );
 }
 
 const api = {
@@ -93,34 +96,29 @@ const api = {
             pl_id: TEST_PL_ID,
           },
           {
-            id: 'weekend',
-            title: 'Weekend Services',
-            pl_id: TEST_PL_ID,
+            id: 'sundays',
+            title: 'Sundays',
+            pl_id: 'PL7LE6jm_pt7yDmn0VlPwmERrHlFDP6GXF',
+          },
+          {
+            id: 'saturdays',
+            title: 'Saturdays',
+            pl_id: 'PL7LE6jm_pt7z8CIobPbY0RDUcZYUo9GQK',
           },
           {
             id: 'wednesdays',
             title: 'Wednesdays',
-            pl_id: TEST_PL_ID,
+            pl_id: 'PL7LE6jm_pt7zYd5mEq0otXWotKYpM4m7B',
+          },
+          {
+            id: 'spanish',
+            title: 'Iglesia Espanol',
+            pl_id: 'PL7LE6jm_pt7w109nBh94aqhRuelaBK7Da',
           },
           {
             id: 'guest',
             title: 'Guest',
             pl_id: 'PL7LE6jm_pt7yXaIukwACfPn8GWamj7NGO',
-          },
-          {
-            id: 'st-paul',
-            title: 'St. Paul',
-            pl_id: TEST_PL_ID,
-          },
-          {
-            id: 'northwest',
-            title: 'Northwest',
-            pl_id: TEST_PL_ID,
-          },
-          {
-            id: 'spanish',
-            title: 'Iglesia Espanol',
-            pl_id: TEST_PL_ID,
           },
         ]);
       }
@@ -130,27 +128,17 @@ const api = {
           {
             id: 'testimonies',
             title: 'Testimonies',
-            pl_id: TEST_PL_ID,
-          },
-          {
-            id: 'church',
-            title: 'Church',
-            pl_id: TEST_PL_ID,
+            pl_id: 'PL7LE6jm_pt7xgNy3u8SIDojkZULftrcV1',
           },
           {
             id: 'outreach',
             title: 'Outreach',
-            pl_id: TEST_PL_ID,
-          },
-          {
-            id: 'creative',
-            title: 'Creative',
-            pl_id: TEST_PL_ID,
+            pl_id: 'PL7LE6jm_pt7ypzOtw40juQo-W3fw56V1j',
           },
           {
             id: 'worship',
             title: 'Worship',
-            pl_id: WORSHIP_PL_ID,
+            pl_id: 'PL7LE6jm_pt7z29u9zIYPbwNY73jm6FqGU',
           },
         ]);
       }
@@ -202,8 +190,9 @@ const api = {
         },
       })
       .then(({ data: { items } }) => {
-        cache.put(key, items);
-        return items;
+        const videos = filterForOurs(items);
+        cache.put(key, videos);
+        return videos;
       });
   },
 

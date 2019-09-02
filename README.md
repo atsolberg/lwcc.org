@@ -57,7 +57,7 @@ Misc
 - [x] Get a valid cert on the dev environment
 - [x] Verify we can just drop the public folder into wp
 - [x] Newsletter signup - finish styling
-- [ ] Newsletter signup - Get mail chimp form submission endpoint
+- [x] Newsletter signup - Get mail chimp form submission endpoint
 - [ ] Move Youtube api to wp, see youtube php example
 - [ ] Get all the playlists setup correctly in wp
 
@@ -80,8 +80,7 @@ Footer
 - [x] Footer ui desktop
 - [x] Footer ui mobile
 - [x] Get urls for privacy policy and terms of use
-- [x] Set st paul link to http://lwcc.org/sainttpaul 
-- [ ] Add newsletter to footer instead of pages
+- [x] Set st paul link to http://lwcc.org/sainttpaul
 - [ ] Finish newsletter form submission
 
 Media Page
@@ -92,7 +91,7 @@ Media Page
 
 Sermons Page 
 - [x] Initial ui
-- [ ] Update playlists to be: 'Current Series', 'Sundays', 'Saturdays', 'Wednesdays', 'Iglesia Espanol', 'Guest'
+- [x] Update playlists to be: 'Current Series', 'Sundays', 'Saturdays', 'Wednesdays', 'Iglesia Espanol', 'Guest'
 
 Video Page
 - [x] Initial ui
@@ -105,7 +104,7 @@ Video Page
 
 Stories Page
 - [x] Initial ui
-- [ ] Update playlists to be: 'Testimonies', 'Outreach', 'Worship'
+- [x] Update playlists to be: 'Testimonies', 'Outreach', 'Worship'
 
 Resources Page
 - [x] Initial ui

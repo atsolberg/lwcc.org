@@ -115,10 +115,6 @@ function SermonsPage() {
           prefix="/media-sermons/sermon"
         />
       </div>
-
-      <div className="container-fluid">
-        <NewsletterSignup />
-      </div>
     </div>
   );
 }

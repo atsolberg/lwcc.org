@@ -4,6 +4,7 @@
 
 import { prop } from './object';
 import speakers from '../../img/speakers/*.jpg';
+import { format } from './misc';
 
 /**
  * The video data parsed a youtube video search result.
@@ -44,8 +45,10 @@ export function parseVideo(data) {
     video.title = title;
   }
 
-  video.thumb = prop(data, 'snippet.thumbnails.high.url');
-  prop(data, 'snippet.thumbnails.standard.url');
+  video.thumb =
+    prop(data, 'snippet.thumbnails.medium.url') ||
+    prop(data, 'snippet.thumbnails.maxres.url') ||
+    prop(data, 'snippet.thumbnails.standard.url');
 
   video.date = new Date(publishedAt);
   video.description = description;

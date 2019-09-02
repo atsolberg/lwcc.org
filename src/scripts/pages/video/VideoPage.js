@@ -49,7 +49,7 @@ function VideoPage() {
   return (
     <div className="row">
       <div className="container-xl" css={styles}>
-        <Hero bg="media" layout="centered" height="sm">
+        <Hero bg="media" layout="centered">
           <img
             alt="logo"
             src={logo}
@@ -74,9 +74,6 @@ function VideoPage() {
 
       <div className="container-fluid">
         <RelatedVideos videoId={id} />
-      </div>
-      <div className="container-fluid">
-        <NewsletterSignup />
       </div>
     </div>
   );

@@ -37,12 +37,11 @@ function ResourcesPage() {
 
         <Hero className="mb-5" bg="store" layout="centered-v" height="md">
           <div className="mw-480 mr-auto">
-            <h2>LW Store</h2>
+            <h2>Living Word Store</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Conveniently providing Bible-based books and resources as well as
+              digital media from our weekly services to help you grow
+              spiritually and win in every area of life!
             </p>
             <a href="http://store.lwcc.org/">Store &rarr;</a>
           </div>
@@ -86,10 +85,10 @@ function ResourcesPage() {
           <div className="mw-650 mr-auto">
             <img className="mb-4" src={cfaithLogo} alt="cfaith logo" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Providing access to an ever-expanding library of multimedia
+              biblical teachings that will assist and enhance your spiritual
+              growth, help you connect with other believers, and strengthen your
+              relationship with Jesus Christ.
             </p>
             <a href="https://www.cfaith.com/">cfaith &rarr;</a>
           </div>
@@ -105,18 +104,14 @@ function ResourcesPage() {
           <div className="mw-480 mr-auto">
             <h2>Mac Hammond Ministries Blog</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Looking for hope, want to grow spiritually? Visit our MHM blog for
+              weekly teachings filled with practical insights and encouragement
+              that will strengthen and energize you to run your race of faith to
+              the fullest!
             </p>
             <a href="http://machammond.org/blog/">Read more &rarr;</a>
           </div>
         </Hero>
-      </div>
-
-      <div className="container-fluid">
-        <NewsletterSignup />
       </div>
     </div>
   );
