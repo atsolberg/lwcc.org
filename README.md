@@ -58,10 +58,11 @@ Misc
 - [x] Verify we can just drop the public folder into wp
 - [x] Newsletter signup - finish styling
 - [x] Newsletter signup - Get mail chimp form submission endpoint
+- [x] Get all the playlists setup correctly in wp
 - [ ] Move Youtube api to wp, see youtube php example
-- [ ] Get all the playlists setup correctly in wp
 
 Header
+- [ ] Only render top nav for now
 - [x] Header top nav ui
 - [x] Header main nav ui
 - [x] Figure out how to get menu data from wp
@@ -108,8 +109,9 @@ Stories Page
 
 Resources Page
 - [x] Initial ui
-- [ ] Get final images
-- [ ] Get final copy
-- [ ] Get url for 'Living Word Resources' tile.
+- [x] Get final images
+- [x] Get final copy
+- [x] Get url for 'Living Word Resources' tile.
+- [ ] Use new tab for links on this page
 
 
