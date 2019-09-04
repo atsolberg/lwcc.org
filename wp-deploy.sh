@@ -9,18 +9,18 @@ CYAN='\033[0;36m' # Cyan
 NC='\033[0m' # No Color
 
 printf "${RED}Deleting${NC} remote public directory contents... "
-ssh bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com rm -rf "/opt/bitnami/apps/wordpress/htdocs/public/*"
+ssh -i ~/.ssh/lw_rsa lwmn8969@184.154.25.131 -p 18765 rm -rf "/home/lwmn8969/public_html/lwcc/public/*"
 echo "✅"
 
 printf "${CYAN}Copying${NC} local public directory contents to remote... "
-rsync -a public/ bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs/public/
+rsync -a public/ lwmn8969@184.154.25.131:/home/lwmn8969/public_html/lwcc/public/
 echo "✅"
 
 printf "${RED}Deleting${NC} remote react-template.php... "
-ssh bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com rm -rf "/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/LWCC/react-template.php"
+ssh lwmn8969@184.154.25.131 -p 18765 rm -rf "/home/lwmn8969/public_html/lwcc/wp-content/themes/LWCC/react-template.php"
 echo "✅"
 
 printf "${CYAN}Copying${NC} local react-template.php to remote...\n"
-scp wp-stuff/react-template.php bitnami@ec2-52-26-12-22.us-west-2.compute.amazonaws.com:/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/LWCC/
+scp wp-stuff/react-template.php lwmn8969@184.154.25.131:/home/lwmn8969/public_html/lwcc/wp-content/themes/LWCC/
 
 printf "${GREEN}Done!${NC}\n"
