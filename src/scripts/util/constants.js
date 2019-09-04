@@ -1,6 +1,6 @@
 /** Store all common constants. */
 
-export const host = 'https://lwcc.partandpixel.com';
+export const host = 'https://dev.lwmn.org';
 
 // Used in console logging
 export const css = {

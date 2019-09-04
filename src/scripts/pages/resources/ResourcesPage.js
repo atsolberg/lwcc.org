@@ -43,7 +43,13 @@ function ResourcesPage() {
               digital media from our weekly services to help you grow
               spiritually and win in every area of life!
             </p>
-            <a href="http://store.lwcc.org/">Store &rarr;</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://store.lwcc.org/"
+            >
+              Store &rarr;
+            </a>
           </div>
         </Hero>
 
@@ -90,7 +96,13 @@ function ResourcesPage() {
               growth, help you connect with other believers, and strengthen your
               relationship with Jesus Christ.
             </p>
-            <a href="https://www.cfaith.com/">cfaith &rarr;</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.cfaith.com/"
+            >
+              cfaith &rarr;
+            </a>
           </div>
         </Hero>
 
@@ -109,7 +121,13 @@ function ResourcesPage() {
               that will strengthen and energize you to run your race of faith to
               the fullest!
             </p>
-            <a href="http://machammond.org/blog/">Read more &rarr;</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://machammond.org/blog/"
+            >
+              Read more &rarr;
+            </a>
           </div>
         </Hero>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { string } from 'prop-types';
 import NavDropdown from 'react-bootstrap/es/NavDropdown';
 
 import styles from './styles';
@@ -19,11 +20,15 @@ function HoverNav(props) {
       css={styles}
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onClick={() => (window.location.href = props.href)}
       {...{
         ...(isMobile() ? {} : { show: open }),
       }}
     />
   );
 }
+HoverNav.propTypes = {
+  href: string,
+};
 
 export default HoverNav;

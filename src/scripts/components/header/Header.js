@@ -125,6 +125,7 @@ function Header() {
                     <HoverNav
                       title={fixTitles(m.title)}
                       id="collasible-nav-dropdown"
+                      href={m.url}
                     >
                       {m.child_items.map(c => (
                         <NavDropdown.Item key={c.ID} href={getPath(c.url)}>

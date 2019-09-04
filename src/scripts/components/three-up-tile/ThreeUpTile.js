@@ -12,7 +12,13 @@ function ThreeUpTile({ bg, url, cta, title, className, ...rest }) {
       <img src={tiles[bg]} className="rounded-top" />
       <div className="cta rounded-bottom">
         <h3 className="title">{title}</h3>
-        <Button className="btn-block" variant="primary" href={url}>
+        <Button
+          className="btn-block"
+          variant="primary"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {cta}
         </Button>
       </div>

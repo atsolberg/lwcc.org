@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import bs from '../../../../postcss_vars';
 import v from '../../../../exported_scss_vars';
-import { tablet, md } from '../../../styles/breakpoints';
+import { mobile, tablet, md } from '../../../styles/breakpoints';
 
 const styles = css`
   .navbar-topper {
@@ -108,7 +108,7 @@ const styles = css`
         // bump it back up after 840.
         font-size: 14px;
 
-        // Green color when on that page
+        // Primary color when on that page
         &.here {
           color: ${bs.primary};
         }
@@ -124,6 +124,26 @@ const styles = css`
       .nav-link {
         font-size: inherit;
         margin-left: 16px;
+      }
+    }
+  }
+
+  /* MENU NAV - make it dark background with light text
+    --------------------------------------------------------------- */
+  ${mobile} {
+    .navbar-collapse {
+      margin-left: -30px;
+      margin-right: -30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: ${v.darkBarBg};
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: #fff;
+
+      // Primary color when on that page
+      &.here {
+        color: ${bs.primary};
       }
     }
   }
