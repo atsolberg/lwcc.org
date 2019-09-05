@@ -98,7 +98,7 @@ export function useABTests() {
   return context;
 }
 
-namespace('app.abtests');
+namespace('lwcc.abtests');
 window.lwcc.abtests.setTestData = setTestData;
 window.lwcc.abtests.getTestData = getTestData;
 

@@ -23,7 +23,9 @@ const styles = css`
     .carousel-indicators {
       display: none;
       ${md} {
-        display: flex;
+        display: none;
+        // We just want to hide this for now
+        //display: flex;
       }
       bottom: -38px;
       li {

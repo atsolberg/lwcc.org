@@ -10,7 +10,7 @@ const Button = ({ label, busy, busyLabel, disabled, children, ...rest }) => {
 
   return (
     <BsButton disabled={busy || disabled} {...rest}>
-      {busy && <Spinner className="bump-left-sm" />}
+      {busy && <Spinner className="mr-sm" />}
       {btnLabel}
     </BsButton>
   );

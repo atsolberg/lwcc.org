@@ -11,8 +11,8 @@ import NewsletterSignup from '../../components/newsletter-signup/NewletterSignup
 import Video from '../../components/video/Video';
 import VideoDescription from '../../components/video-description/VideoDescription';
 
-import styles from './styles';
 import RelatedVideos from '../../components/related-videos/RelatedVideos';
+import styles from './styles';
 
 function getHeroData() {
   const path = getFlatPathName();

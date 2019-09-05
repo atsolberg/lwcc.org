@@ -45,7 +45,7 @@ function VideoSection({ title, videos, loading, prefix }) {
           )}
         </div>
         <div
-          className={cx('tac bump-down-md', {
+          className={cx('tac mt-md', {
             'd-none': visible >= videos.length,
           })}
         >

@@ -1,15 +1,7 @@
 import jscookie from 'js-cookie';
 
-import { entityTable } from '../../util/array';
-
 export const initialState = {
-  loading: true,
-
-  videos: {
-    byId: {},
-    allIds: [],
-  },
-
+  speed: null,
   cookies: jscookie.get(),
 };
 
@@ -19,13 +11,8 @@ export const initialState = {
  */
 const reducer = (draft, action) => {
   switch (action.type) {
-    case 'videos': {
-      draft.videos = entityTable(action.payload);
-      return draft;
-    }
-
-    case 'loading': {
-      draft.loading = action.payload;
+    case 'speed': {
+      draft.speed = action.payload;
       return draft;
     }
 

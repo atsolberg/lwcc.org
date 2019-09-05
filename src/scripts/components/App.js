@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Router } from '@reach/router';
 
 import '../util/polyfill';
@@ -7,6 +7,7 @@ import '../util/cookie';
 import '../util/storage';
 
 import '@fortawesome/fontawesome-free/css/all.css';
+
 import '../../styles/main.scss';
 
 import Header from './header/Header';
@@ -17,11 +18,29 @@ import SermonsPage from '../pages/sermons/SermonsPage';
 import StoriesPage from '../pages/stories/StoriesPage';
 import ResourcesPage from '../pages/resources/ResourcesPage';
 import VideoPage from '../pages/video/VideoPage';
+import { useAppState } from '../state-providers/app/AppStateProvider';
+import testImg from '../../img/video-placeholder.jpg';
 
 /**
  * The top level react component for our site.
  */
 function App() {
+  const { dispatch } = useAppState();
+
+  // Detect connection speed and set in store.
+  useEffect(() => {
+    const startTime = new Date().getTime();
+    const download = new Image();
+    download.onload = () => {
+      const endTime = new Date().getTime();
+      const speed = endTime - startTime;
+      dispatch({ type: 'speed', payload: speed });
+    };
+
+    const url = `${testImg}?_=${startTime}`;
+    download.src = url;
+  }, [dispatch]);
+
   return (
     <div id="react-page-container">
       <Header />

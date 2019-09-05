@@ -7,18 +7,18 @@ import React, { createContext, useContext, useMemo } from 'react';
 import { useImmerReducer } from 'use-immer';
 import reducer, { initialState } from './reducer';
 
-const MessagesContext = createContext(null);
+const AppStateContext = createContext(null);
 
-function MessagesProvider(props) {
+function AppStateProvider(props) {
   const [state, dispatch] = useImmerReducer(reducer, initialState);
-  const value = useMemo(() => [state, dispatch], [state]);
-  return <MessagesContext.Provider value={value} {...props} />;
+  const value = useMemo(() => [state, dispatch], [state, dispatch]);
+  return <AppStateContext.Provider value={value} {...props} />;
 }
 
-export function useMessages() {
-  const context = useContext(MessagesContext);
+export function useAppState() {
+  const context = useContext(AppStateContext);
   if (!context) {
-    throw new Error(`useMessages must be used within an MessagesProvider`);
+    throw new Error(`useAppState must be used within an AppStateProvider`);
   }
   const [state, dispatch] = context;
 
@@ -28,4 +28,4 @@ export function useMessages() {
   };
 }
 
-export default MessagesProvider;
+export default AppStateProvider;
