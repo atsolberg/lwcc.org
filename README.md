@@ -104,7 +104,8 @@ Video Page
 - [x] Just use video description as details content under title
 - [x] Finish mobile styling on related videos
 - [x] Make a generic video page for videos linked from 'related'.
-- [ ] Add social share links to videos
+- [x] Add social share links to videos
+- [ ] After searching, the video thumbs are default quality instead of maxres
 
 Stories Page
 - [x] Initial ui
