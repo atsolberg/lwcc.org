@@ -53,8 +53,6 @@ function Footer() {
               <p>Copyright Living Word 2019</p>
               <p>
                 <a href="/privacy-policy">Privacy Policy</a>
-                <span className="sep"> | </span>
-                <a href="/terms-of-use">Terms of Use</a>
               </p>
             </div>
             <div className="footer-section col-12 col-sm-6 col-lg-3">
