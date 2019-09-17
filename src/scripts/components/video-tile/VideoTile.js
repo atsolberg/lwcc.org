@@ -30,20 +30,21 @@ function VideoTile({ video, prefix = '/media-video' }) {
             />
           )}
           <div className="details">
-            <time className="date">
-              {format.date(video.date, formats.date.SIMPLE_DOTTED)}
-            </time>
-            {video.speaker && (
-              <>
-                {' '}
-                |{' '}
+            <div className="date-speaker">
+              {video.data && (
+                <time className="date">
+                  {format.date(video.date, formats.date.SIMPLE_DOTTED)}
+                </time>
+              )}
+              {video.data && video.speaker && <span> | </span>}
+              {video.speaker && (
                 <span
                   dangerouslySetInnerHTML={{
                     __html: video.speaker,
                   }}
-                />{' '}
-              </>
-            )}
+                />
+              )}
+            </div>
             <h3
               className="title"
               dangerouslySetInnerHTML={{ __html: video.title }}

@@ -13,6 +13,9 @@ import { rif } from '../../util/jsx';
 import Button from '../button';
 
 function sort(a, b) {
+  if (a.position) {
+    return b.position - a.position;
+  }
   return b.date.getTime() - a.date.getTime();
 }
 

@@ -7,7 +7,7 @@ import axios from 'axios';
 import logger from './logger';
 import { isTestMode } from './misc';
 import { namespace } from './object';
-import { g_creds, host } from './constants';
+import { ats_g_creds, g_creds, host } from './constants';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
 import MicroCache from './cache';
@@ -50,7 +50,7 @@ async function getPagedPlaylistItems(id, pageToken) {
   }
 
   const params = {
-    key: g_creds.api_key,
+    key: ats_g_creds.api_key,
     maxResults: MAX_RESULTS,
     part: 'snippet,contentDetails',
     playlistId: id,
@@ -228,7 +228,7 @@ const api = {
     return axios
       .get(`${YT_API}/playlists`, {
         params: {
-          key: g_creds.api_key,
+          key: ats_g_creds.api_key,
           part: 'snippet,contentDetails',
           id,
         },
@@ -250,7 +250,7 @@ const api = {
     return axios
       .get(`${YT_API}/videos`, {
         params: {
-          key: g_creds.api_key,
+          key: ats_g_creds.api_key,
           part: 'id,snippet',
           id,
         },
@@ -272,7 +272,7 @@ const api = {
     return axios
       .get(`${YT_API}/search`, {
         params: {
-          key: g_creds.api_key,
+          key: ats_g_creds.api_key,
           part: 'id,snippet',
           type: 'video',
           maxResults: MAX_RESULTS,
@@ -298,7 +298,7 @@ const api = {
     return axios
       .get(`${YT_API}/search`, {
         params: {
-          key: g_creds.api_key,
+          key: ats_g_creds.api_key,
           part: 'id,snippet',
           type: 'video',
           maxResults: MAX_RESULTS,

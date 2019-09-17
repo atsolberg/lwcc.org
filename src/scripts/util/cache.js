@@ -6,7 +6,7 @@ class MicroCache {
   /**
    * @param {Number} [maxSize] - the number of entries to hold, default is 20.
    */
-  constructor(maxSize = 20) {
+  constructor(maxSize = 100) {
     this.maxSize = maxSize;
     this.map = new Map();
     this.entries = [];

@@ -28,8 +28,10 @@ export function parseVideo(data) {
 
   video.id =
     prop(data, 'id.videoId') ||
-    prop(data.snippet, 'resourceId.videoId') ||
+    prop(data, 'snippet.resourceId.videoId') ||
     data.id;
+
+  video.position = prop(data, 'snippet.position');
 
   const sepIdx = title.indexOf('-');
   if (sepIdx !== -1) {
