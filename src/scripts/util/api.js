@@ -35,6 +35,49 @@ function filterForOurs(items) {
   );
 }
 
+async function getPagedPlaylistItems(id, pageToken) {
+  if (isTestMode()) {
+    return new Promise(resolve => {
+      resolve(TEST_PL_ITEMS_DATA);
+    });
+  }
+
+  const key = `playlist-items-${id}`;
+  if (cache.has(key)) {
+    return new Promise(resolve => {
+      resolve(cache.get(key));
+    });
+  }
+
+  const params = {
+    key: g_creds.api_key,
+    maxResults: MAX_RESULTS,
+    part: 'snippet,contentDetails',
+    playlistId: id,
+  };
+
+  if (pageToken) params.pageToken = pageToken;
+
+  const all = await axios
+    .get(`${YT_API}/playlistItems`, {
+      params,
+    })
+    .then(async function({ data: { items, nextPageToken } }) {
+      const videos = filterForOurs(items);
+
+      // Recursively fetch the next page if needed.
+      if (nextPageToken) {
+        const nextPage = await getPagedPlaylistItems(id, nextPageToken);
+        return [...videos, ...nextPage];
+      }
+
+      return videos;
+    });
+
+  cache.put(key, all);
+  return all;
+}
+
 const api = {
   /**
    * Fetch all menus for the site, or particular menus if specified.
@@ -166,35 +209,7 @@ const api = {
     });
   },
 
-  getVideosForPlayList: id => {
-    if (isTestMode()) {
-      return new Promise(resolve => {
-        resolve(TEST_PL_ITEMS_DATA);
-      });
-    }
-
-    const key = `playlist-items-${id}`;
-    if (cache.has(key)) {
-      return new Promise(resolve => {
-        resolve(cache.get(key));
-      });
-    }
-
-    return axios
-      .get(`${YT_API}/playlistItems`, {
-        params: {
-          key: g_creds.api_key,
-          maxResults: MAX_RESULTS,
-          part: 'snippet,contentDetails',
-          playlistId: id,
-        },
-      })
-      .then(({ data: { items } }) => {
-        const videos = filterForOurs(items);
-        cache.put(key, videos);
-        return videos;
-      });
-  },
+  getVideosForPlayList: getPagedPlaylistItems,
 
   getPlayList: id => {
     if (isTestMode()) {

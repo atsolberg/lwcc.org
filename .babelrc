@@ -1,19 +1,32 @@
 {
-  "presets": ["@babel/react", [
-    "@babel/env",
-    {
-      "targets": {
-        "browsers": ["last 2 versions", "safari >= 9", "ie >= 11"]
-      },
-      "loose": true,
-      "modules": false
-    }
-  ], ["@emotion/babel-preset-css-prop", {
-    // without this, we will get a 'Reference Error: process is not defined'
-    "sourceMap": false
-  }]],
+  "presets": [
+    "@babel/react",
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 9", "ie >= 11"]
+        },
+        "loose": true,
+        "modules": false
+      }
+    ],
+    [
+      "@emotion/babel-preset-css-prop",
+      {
+        // without this, we will get a 'Reference Error: process is not defined'
+        "sourceMap": false
+      }
+    ]
+  ],
 
   "plugins": [
-    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
   ]
 }

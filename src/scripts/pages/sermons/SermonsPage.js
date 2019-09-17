@@ -10,7 +10,6 @@ import Hero from '../../components/hero/Hero';
 import MediaNav from '../../components/media-nav/MediaNav';
 import PlaylistBar from '../../components/playlist-bar/PlaylistBar';
 import VideoSection from '../../components/video-section/VideoSection';
-import NewsletterSignup from '../../components/newsletter-signup/NewletterSignup';
 
 import styles from './styles';
 import { parseVideo } from '../../util/youtube';
