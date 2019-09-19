@@ -24,7 +24,6 @@ function getApiKey() {
   const hour = new Date().getHours();
   return hour < 12 ? g_creds.api_key : ats_g_creds.api_key;
 }
-
 /**
  * Make sure we only include videos from our channel and videos that are not private.
  * Even when specifying our chanel, sometimes yt search
@@ -318,5 +317,8 @@ const api = {
   },
 };
 
-namespace('lwcc.api', api);
+api.getKey = getApiKey;
+
+namespace('lwcc.api');
+window.lwcc.api = api;
 export default api;
