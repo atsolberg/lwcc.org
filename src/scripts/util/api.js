@@ -17,9 +17,13 @@ const MAX_RESULTS = 50; // 50 is the largest valid value for Youtube search resu
 const TEST_PL_ID = 'PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r';
 
 const YT_API = 'https://www.googleapis.com/youtube/v3';
-const API_KEY = g_creds.api_key;
 
 const cache = new MicroCache();
+
+function getApiKey() {
+  const hour = new Date().getHours();
+  return hour < 12 ? g_creds.api_key : ats_g_creds.api_key;
+}
 
 /**
  * Make sure we only include videos from our channel and videos that are not private.
@@ -51,7 +55,7 @@ async function getPagedPlaylistItems(id, pageToken) {
   }
 
   const params = {
-    key: API_KEY,
+    key: getApiKey(),
     maxResults: MAX_RESULTS,
     part: 'snippet,contentDetails',
     playlistId: id,
@@ -229,7 +233,7 @@ const api = {
     return axios
       .get(`${YT_API}/playlists`, {
         params: {
-          key: API_KEY,
+          key: getApiKey(),
           part: 'snippet,contentDetails',
           id,
         },
@@ -251,7 +255,7 @@ const api = {
     return axios
       .get(`${YT_API}/videos`, {
         params: {
-          key: API_KEY,
+          key: getApiKey(),
           part: 'id,snippet',
           id,
         },
@@ -273,7 +277,7 @@ const api = {
     return axios
       .get(`${YT_API}/search`, {
         params: {
-          key: API_KEY,
+          key: getApiKey(),
           part: 'id,snippet',
           type: 'video',
           maxResults: MAX_RESULTS,
@@ -299,7 +303,7 @@ const api = {
     return axios
       .get(`${YT_API}/search`, {
         params: {
-          key: API_KEY,
+          key: getApiKey(),
           part: 'id,snippet',
           type: 'video',
           maxResults: MAX_RESULTS,
