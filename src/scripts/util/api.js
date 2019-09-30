@@ -7,7 +7,7 @@ import axios from 'axios';
 import logger from './logger';
 import { isTestMode } from './misc';
 import { namespace } from './object';
-import { ats_g_creds, g_creds, host } from './constants';
+import { mms_g_creds, ats_g_creds, g_creds, host } from './constants';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
 import MicroCache from './cache';
@@ -21,8 +21,12 @@ const YT_API = 'https://www.googleapis.com/youtube/v3';
 const cache = new MicroCache();
 
 function getApiKey() {
+  let key = g_creds.api_key;
   const hour = new Date().getHours();
-  return hour < 12 ? g_creds.api_key : ats_g_creds.api_key;
+  if (hour >= 8 && hour < 16) key = ats_g_creds.api_key;
+  if (hour >= 16) key = mms_g_creds.api_key;
+
+  return key;
 }
 /**
  * Make sure we only include videos from our channel and videos that are not private.

@@ -129,3 +129,7 @@ export const ats_g_creds = {
   client_id:
     '270265825575-mo560kra42i9es2gi7gshsbudbtmtchv.apps.googleusercontent.com',
 };
+
+export const mms_g_creds = {
+  api_key: 'AIzaSyAee63Qg_t_MumvoJFcuVorfnyj7ecmyKA',
+};
