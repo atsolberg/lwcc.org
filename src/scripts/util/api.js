@@ -7,7 +7,7 @@ import axios from 'axios';
 import logger from './logger';
 import { isTestMode } from './misc';
 import { namespace } from './object';
-import { mms_g_creds, ats_g_creds, g_creds, host } from './constants';
+import { g_creds, host } from './constants';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
 import MicroCache from './cache';
@@ -20,14 +20,6 @@ const YT_API = 'https://www.googleapis.com/youtube/v3';
 
 const cache = new MicroCache();
 
-function getApiKey() {
-  let key = g_creds.api_key;
-  const hour = new Date().getHours();
-  if (hour >= 8 && hour < 16) key = ats_g_creds.api_key;
-  if (hour >= 16) key = mms_g_creds.api_key;
-
-  return key;
-}
 /**
  * Make sure we only include videos from our channel and videos that are not private.
  * Even when specifying our chanel, sometimes yt search
@@ -58,7 +50,7 @@ async function getPagedPlaylistItems(id, pageToken) {
   }
 
   const params = {
-    key: getApiKey(),
+    key: g_creds.api_key,
     maxResults: MAX_RESULTS,
     part: 'snippet,contentDetails',
     playlistId: id,
@@ -70,7 +62,7 @@ async function getPagedPlaylistItems(id, pageToken) {
     .get(`${YT_API}/playlistItems`, {
       params,
     })
-    .then(async function({ data: { items, nextPageToken } }) {
+    .then(async function handlePlaylists({ data: { items, nextPageToken } }) {
       const videos = filterForOurs(items);
 
       // Recursively fetch the next page if needed.
@@ -236,7 +228,7 @@ const api = {
     return axios
       .get(`${YT_API}/playlists`, {
         params: {
-          key: getApiKey(),
+          key: g_creds.api_key,
           part: 'snippet,contentDetails',
           id,
         },
@@ -258,7 +250,7 @@ const api = {
     return axios
       .get(`${YT_API}/videos`, {
         params: {
-          key: getApiKey(),
+          key: g_creds.api_key,
           part: 'id,snippet',
           id,
         },
@@ -280,7 +272,7 @@ const api = {
     return axios
       .get(`${YT_API}/search`, {
         params: {
-          key: getApiKey(),
+          key: g_creds.api_key,
           part: 'id,snippet',
           type: 'video',
           maxResults: MAX_RESULTS,
@@ -306,7 +298,7 @@ const api = {
     return axios
       .get(`${YT_API}/search`, {
         params: {
-          key: getApiKey(),
+          key: g_creds.api_key,
           part: 'id,snippet',
           type: 'video',
           maxResults: MAX_RESULTS,
@@ -320,8 +312,6 @@ const api = {
       });
   },
 };
-
-api.getKey = getApiKey;
 
 namespace('lwcc.api');
 window.lwcc.api = api;
