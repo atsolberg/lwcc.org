@@ -15,7 +15,7 @@ function VideoTile({ video, prefix = '/media-video' }) {
 
   // Use higher res thumb if the download speed is good.
   const thumb =
-    speed < 100 && video.highResThumb ? video.highResThumb : video.thumb;
+    speed < 900 && video.highResThumb ? video.highResThumb : video.thumb;
 
   return (
     <Link to={`${prefix}/?id=${video.id}`} className="video-tile" css={styles}>
