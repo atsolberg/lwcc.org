@@ -20,7 +20,7 @@ try {
 } catch (e) {
   // Ignore error when file doesn't exist
   if (e.code !== 'ENOENT') {
-    console.log('Could not delete file template file.', e);
+    console.log('Could not delete template file.', e);
   }
 }
 
