@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import FormLabel from 'react-bootstrap/es/FormLabel';
-import FormGroup from 'react-bootstrap/es/FormGroup';
+import FormLabel from 'react-bootstrap/FormLabel';
+import FormGroup from 'react-bootstrap/FormGroup';
 
 import { rif } from '../../util/jsx';
 

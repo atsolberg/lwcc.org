@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 import { string, bool, any } from 'prop-types';
-import RbsCheckbox from 'react-bootstrap/es/FormCheck';
-import FormGroup from 'react-bootstrap/es/FormGroup';
+import RbsCheckbox from 'react-bootstrap/FormCheck';
+import FormGroup from 'react-bootstrap/FormGroup';
 
 import HtmlId from '../../html-id/HtmlId';
 import Spinner from '../../spinner/Spinner';

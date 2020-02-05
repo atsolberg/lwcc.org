@@ -12,13 +12,21 @@ export function titlecase(sentence) {
   if (!sentence) return sentence;
   return sentence.replace(
     /\w\S*/g,
-    (word) => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
+    word => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
   );
+}
+
+/**
+ * Returns the input string formatted as lowercase with all space characters
+ * replaced with dashes. i.e. 'Who We Are' -> 'who-we-are'
+ */
+export function dasherize(str = '') {
+  return str.replace(/\s/g, '-').toLowerCase();
 }
 
 export const repeat = (str, times) => new Array(times + 1).join(str);
 
-export const wordCount = (string) => string.trim().split(/\s+/).length;
+export const wordCount = string => string.trim().split(/\s+/).length;
 
 export const pad = (num, maxLength) =>
   repeat(`0`, maxLength - num.toString().length) + num;
@@ -32,7 +40,7 @@ export const endsWith = (s, c) => s[s.length - 1] === c;
  * @return {string}
  */
 export const uuid = () =>
-  'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+  'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
     const r = (Math.random() * 16) | 0;
 
     const v = c === 'x' ? r : (r & 0x3) | 0x8;
@@ -40,13 +48,13 @@ export const uuid = () =>
   });
 
 /** Add a uuid to something if it doesn't already have one. */
-export const lazyId = (o) => {
+export const lazyId = o => {
   o.id = o.id || uuid();
   return o;
 };
 
 /** Return the size of a string in bytes assuming UTF-8 encoding. */
-export const bytes = (str) => {
+export const bytes = str => {
   // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
   const m = encodeURIComponent(str).match(/%[89ABab]/g);
   return str.length + (m ? m.length : 0);

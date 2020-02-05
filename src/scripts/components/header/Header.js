@@ -1,12 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import cx from 'classnames';
 
-import Navbar from 'react-bootstrap/es/Navbar';
-import Nav from 'react-bootstrap/es/Nav';
-import NavDropdown from 'react-bootstrap/es/NavDropdown';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import api from '../../util/api';
 import { prop } from '../../util/object';
+import { dasherize } from '../../util/string';
 import nav_top from '../../__tests__/data/nav_top';
 import nav_main from '../../__tests__/data/nav_main';
 
@@ -124,11 +125,15 @@ function Header() {
                   {prop(m, 'child_items.length') > 0 && (
                     <HoverNav
                       title={fixTitles(m.title)}
-                      id="collasible-nav-dropdown"
+                      id={dasherize(m.title)}
                       href={m.url}
                     >
                       {m.child_items.map(c => (
-                        <NavDropdown.Item key={c.ID} href={getPath(c.url)}>
+                        <NavDropdown.Item
+                          key={c.ID}
+                          href={getPath(c.url)}
+                          id={dasherize(c.title)}
+                        >
                           {c.title}
                         </NavDropdown.Item>
                       ))}
@@ -143,6 +148,7 @@ function Header() {
                       })}
                       data-where={where}
                       data-here={getHere(m.url)}
+                      id={dasherize(m.title)}
                     >
                       {fixTitles(m.title)}
                     </Nav.Link>

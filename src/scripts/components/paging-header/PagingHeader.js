@@ -1,10 +1,10 @@
 import React from 'react';
 import { arrayOf, bool, func, number, oneOf, shape, string } from 'prop-types';
 
-import Dropdown from 'react-bootstrap/es/Dropdown';
-import DropdownToggle from 'react-bootstrap/es/DropdownToggle';
-import DropdownMenu from 'react-bootstrap/es/DropdownMenu';
-import DropdownItem from 'react-bootstrap/es/DropdownItem';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownToggle from 'react-bootstrap/DropdownToggle';
+import DropdownMenu from 'react-bootstrap/DropdownMenu';
+import DropdownItem from 'react-bootstrap/DropdownItem';
 
 import useHtmlId from '../../hooks/useHtmlId';
 import styles from './styles';

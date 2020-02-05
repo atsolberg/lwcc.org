@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { array } from 'prop-types';
-import Collapse from 'react-bootstrap/es/Collapse';
+import Collapse from 'react-bootstrap/Collapse';
 
 import { host, keyCodes } from '../../util/constants';
 import Button from '../button';

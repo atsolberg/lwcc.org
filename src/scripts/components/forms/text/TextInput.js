@@ -11,10 +11,10 @@ import {
 } from 'prop-types';
 import cx from 'classnames';
 
-import FormLabel from 'react-bootstrap/es/FormLabel';
-import FormControl from 'react-bootstrap/es/FormControl';
-import FormGroup from 'react-bootstrap/es/FormGroup';
-import InputGroup from 'react-bootstrap/es/InputGroup';
+import FormLabel from 'react-bootstrap/FormLabel';
+import FormControl from 'react-bootstrap/FormControl';
+import FormGroup from 'react-bootstrap/FormGroup';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 import HtmlId from '../../html-id/HtmlId';
 import { rif } from '../../../util/jsx';

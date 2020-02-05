@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { string } from 'prop-types';
-import NavDropdown from 'react-bootstrap/es/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import styles from './styles';
 import { isMobile } from '../../util/device';

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
-import Carousel from 'react-bootstrap/es/Carousel';
+import Carousel from 'react-bootstrap/Carousel';
 
 import api from '../../util/api';
 import { arrays } from '../../util/array';

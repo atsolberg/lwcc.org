@@ -1,5 +1,5 @@
 import React from 'react';
-import BsButton from 'react-bootstrap/es/Button';
+import BsButton from 'react-bootstrap/Button';
 import Spinner from '../spinner/Spinner';
 
 /**
