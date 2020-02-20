@@ -57,7 +57,13 @@ function Footer() {
             </div>
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
-                <strong>Brooklyn Park</strong>
+                <a
+                  href="https://www.lwcc.org/locations/brooklynpark/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <strong>Brooklyn Park</strong>
+                </a>
               </p>
               <p>
                 9201 75th Avenue North
@@ -80,7 +86,7 @@ function Footer() {
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
                 <a
-                  href="https://lwcc.org/saintpaul"
+                  href="https://www.lwcc.org/saintpaul/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -106,7 +112,7 @@ function Footer() {
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
                 <a
-                  href="https://lwcc.org/northwest"
+                  href="https://www.lwcc.org/northwest/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
