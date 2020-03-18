@@ -58,8 +58,9 @@ async function getPagedPlaylistItems(id, pageToken) {
 
   if (pageToken) params.pageToken = pageToken;
 
+  const ts = Date.now();
   const all = await axios
-    .get(`${YT_API}/playlistItems`, {
+    .get(`${YT_API}/playlistItems?_=${ts}`, {
       params,
     })
     .then(async function handlePlaylists({ data: { items, nextPageToken } }) {
@@ -83,17 +84,18 @@ const api = {
    * Fetch all menus for the site, or particular menus if specified.
    */
   getMenus: (...ids) => {
+    const ts = Date.now();
     // Fetch all
     if (!ids.length) {
-      return axios.get(`${host}/wp-json/menus/v1/menus`);
+      return axios.get(`${host}/wp-json/menus/v1/menus?_=${ts}`);
     }
     // Fetch the one specified
     if (ids.lenth === 1) {
-      return axios.get(`${host}/wp-json/menus/v1/menus/${ids[0]}`);
+      return axios.get(`${host}/wp-json/menus/v1/menus/${ids[0]}?_=${ts}`);
     }
     // Fetch all specified
     return Promise.all(
-      ids.map(id => axios.get(`${host}/wp-json/menus/v1/menus/${id}`))
+      ids.map(id => axios.get(`${host}/wp-json/menus/v1/menus/${id}?_=${ts}`))
     );
   },
 
@@ -196,9 +198,10 @@ const api = {
    * @return {Promise<string>}
    */
   getCurrentSeriesId: () => {
+    const ts = Date.now();
     return new Promise(resolve => {
       axios
-        .get(`${host}/wp-json/wp/v2/playlists/2669`)
+        .get(`${host}/wp-json/wp/v2/playlists/2669?_=${ts}`)
         .then(({ data }) => {
           resolve(data.acf.id);
         })
@@ -218,6 +221,7 @@ const api = {
       });
     }
 
+    const ts = Date.now();
     const key = `playlist-${id}`;
     if (cache.has(key)) {
       return new Promise(resolve => {
@@ -226,7 +230,7 @@ const api = {
     }
 
     return axios
-      .get(`${YT_API}/playlists`, {
+      .get(`${YT_API}/playlists?_=${ts}`, {
         params: {
           key: g_creds.api_key,
           part: 'snippet,contentDetails',
@@ -247,8 +251,9 @@ const api = {
       });
     }
 
+    const ts = Date.now();
     return axios
-      .get(`${YT_API}/videos`, {
+      .get(`${YT_API}/videos?_=${ts}`, {
         params: {
           key: g_creds.api_key,
           part: 'id,snippet',
@@ -269,8 +274,9 @@ const api = {
       });
     }
 
+    const ts = Date.now();
     return axios
-      .get(`${YT_API}/search`, {
+      .get(`${YT_API}/search?_=${ts}`, {
         params: {
           key: g_creds.api_key,
           part: 'id,snippet',
@@ -295,8 +301,9 @@ const api = {
       });
     }
 
+    const ts = Date.now();
     return axios
-      .get(`${YT_API}/search`, {
+      .get(`${YT_API}/search?_=${ts}`, {
         params: {
           key: g_creds.api_key,
           part: 'id,snippet',
