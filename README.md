@@ -17,7 +17,7 @@ Runs parcel in dev mode with the dev server running at https://localhost:1234
 From the lwcc.org directory:
 ```shell
 npm run build
-. ./wp-deploy.sh
+. ./scripts/wp-deploy.sh
 ```
 Note: npm runs `prebuild` before the `build` and `postbuild` after.
 The `prebuild` cleans the public directory, and the `postbuild` re-creates the 
