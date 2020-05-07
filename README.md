@@ -2,9 +2,9 @@
 React app for the lwcc.org site.
 
 ### Development
-Install [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
-and then use it to install node: `nvm install node`
-then clone repo and start the `dev` script:
+1. Install [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
+1. Install node: `nvm install node`
+1. Clone repo, install node modules, and start the `dev` server:
 ```shell
 git clone https://github.com/atsolberg/lwcc.org.git
 cd lwcc.org
@@ -19,15 +19,16 @@ From the lwcc.org directory:
 npm run build
 . ./scripts/wp-deploy.sh
 ```
-Note: npm runs `prebuild` before the `build` and `postbuild` after.
-The `prebuild` cleans the public directory, and the `postbuild` re-creates the 
-wordpress template using the newly built html.
+_Note_: npm runs `prebuild` before the `build` and `postbuild` after.  
+The `prebuild` cleans the public directory.  
+The `postbuild` re-creates the wordpress template using the newly built html.
 
 ### WordPress Shenanigans
-Menu data was accessed from the wp rest api by adding the `WP-REST-API V2 Menus` plugin.
-Playlist data was achieved by adding the `Custom Post Type UI` to create 'Playlist' 
-post types, adding `Advanced Custom Fields` to add custom fields to the custom 
-`Playlist` post types, and `ACF to REST API` to get that data into the rest api.
+Menu data was accessed from the wp rest api by adding the `WP-REST-API V2 Menus` plugin.  
+Playlist data was achieved by adding the `Custom Post Type UI` to create 'Playlist'   
+post types, adding `Advanced Custom Fields` to add custom fields to the custom  
+`Playlist` post types, and `ACF to REST API` to get that data into the rest api.  
+
 Example Playlist Request:
 ```
 https://52.26.12.22/wp-json/wp/v2/playlists/2669
@@ -51,71 +52,4 @@ Response:
 
 
 ### TODO
-Misc
-- [x] Figure out youtube api
-- [x] Get current series playlist id
-- [x] Get a valid cert on the dev environment
-- [x] Verify we can just drop the public folder into wp
-- [x] Newsletter signup - finish styling
-- [x] Newsletter signup - Get mail chimp form submission endpoint
-- [x] Get all the playlists setup correctly in wp
-- [ ] Move Youtube api to wp, see youtube php example
-- [ ] Ministry - Prayer: Fix css (column wrapping) on events components
-
-Header
-- [ ] Desktop: hover to open, click to navigate. Mobile: no sub-menus 
-- [ ] Get valid cert on new dev server 
-- [x] Header top nav ui
-- [x] Header main nav ui
-- [x] Figure out how to get menu data from wp
-- [x] Figure out how to get live streaming status from Youtube
-- [x] Set 'live' link to hidden when off-air
-- [x] Set 'live' link url to churchonline.org
-- [x] Shrink top nav content on mobile
-- [x] Shrink navs on desktop so they don't wrap
-
-Search
-- [x] Search functionality
-- [x] Search bar, close on esc key 
-- [x] Search bar ui, probably a slide in bar
-
-Footer
-- [x] Footer ui desktop
-- [x] Footer ui mobile
-- [x] Get urls for privacy policy and terms of use
-- [x] Set st paul link to http://lwcc.org/sainttpaul
-- [ ] Finish newsletter form submission
-
-Media Page
-- [x] Get youtube data fetching working
-- [x] Search
-- [x] Speaker portraits on video tiles
-- [x] Implement 'load more' feature
-
-Sermons Page 
-- [x] Initial ui
-- [x] Update playlists to be: 'Current Series', 'Sundays', 'Saturdays', 'Wednesdays', 'Iglesia Espanol', 'Guest'
-
-Video Page
-- [x] Initial ui
-- [x] Figure out url strategy
-- [ ] Figure out how to get download content (backgrounds/quotes) for video
-- [x] Figure out how to get related videos for a video on a channel
-- [x] Just use video description as details content under title
-- [x] Finish mobile styling on related videos
-- [x] Make a generic video page for videos linked from 'related'.
-- [x] Add social share links to videos
-- [ ] After searching, the video thumbs are default quality instead of maxres
-
-Stories Page
-- [x] Initial ui
-- [x] Update playlists to be: 'Testimonies', 'Outreach', 'Worship'
-
-Resources Page
-- [x] Initial ui
-- [x] Get final images
-- [x] Get final copy
-- [x] Get url for 'Living Word Resources' tile.
-- [x] Use new tab for links on this page
-
-
+[ ] - fix the menu hamburger starting as an 'x'
