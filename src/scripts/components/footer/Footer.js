@@ -76,7 +76,7 @@ function Footer() {
               <p>
                 <strong>Service Times</strong>
                 <br />
-                Sun 9 &amp; 11 a.m.
+                Sun 10 a.m.
                 <br />
                 Sat 5 p.m.
                 <br />
@@ -132,7 +132,7 @@ function Footer() {
               <p>
                 <strong>Service Times</strong>
                 <br />
-                Sun 9 &amp; 11 a.m.
+                Sun 10:45 a.m.
               </p>
             </div>
           </div>
