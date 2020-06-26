@@ -50,7 +50,7 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-              <p>Copyright Living Word 2019</p>
+              <p>Copyright Living Word 2020</p>
               <p>
                 <a href="/privacy-policy">Privacy Policy</a>
               </p>
@@ -79,8 +79,6 @@ function Footer() {
                 Sun 10 a.m.
                 <br />
                 Sat 5 p.m.
-                <br />
-                Wed 7 p.m.
               </p>
             </div>
             <div className="footer-section col-12 col-sm-6 col-lg-3">
