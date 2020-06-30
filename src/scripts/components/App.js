@@ -47,6 +47,7 @@ function App() {
       <Main>
         <Router>
           <SermonsPage path="/media-sermons" />
+          <SermonsPage path="/media-sermons.html" />
           <StoriesPage path="/media-stories" />
           <ResourcesPage path="/media-resources" />
           <VideoPage path="/media-sermons/sermon" />
