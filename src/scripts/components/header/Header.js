@@ -103,7 +103,7 @@ function Header() {
       <SearchBar search={[searching, setSearching]} />
 
       {/* MAIN NAV BAR */}
-      <div className="container-xl">
+      <div className="container-xl bg-white">
         <Navbar collapseOnSelect expand="md" sticky="top">
           <Navbar.Brand href="/">
             <Logo color="#4C4E54" width={180} />

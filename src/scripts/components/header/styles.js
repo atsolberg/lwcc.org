@@ -84,14 +84,14 @@ const styles = css`
       position: relative;
       transition: 0.3s;
     }
-    .navbar-toggler.collapsed .icon-bar:nth-of-type(2) {
+    .navbar-toggler:not(.collapsed) .icon-bar:nth-of-type(2) {
       top: 6px;
       transform: rotate(45deg);
     }
-    .navbar-toggler.collapsed .icon-bar:nth-of-type(3) {
+    .navbar-toggler:not(.collapsed) .icon-bar:nth-of-type(3) {
       background-color: transparent;
     }
-    .navbar-toggler.collapsed .icon-bar:nth-of-type(4) {
+    .navbar-toggler:not(.collapsed) .icon-bar:nth-of-type(4) {
       top: -6px;
       transform: rotate(-45deg);
     }
