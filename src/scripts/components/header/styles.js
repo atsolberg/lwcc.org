@@ -4,6 +4,8 @@ import v from '../../../../exported_scss_vars';
 import { mobile, tablet, md } from '../../../styles/breakpoints';
 
 const styles = css`
+  background-color: #fff;
+
   .navbar-topper {
     height: 50px;
     line-height: 50px;
