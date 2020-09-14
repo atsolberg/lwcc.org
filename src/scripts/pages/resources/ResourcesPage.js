@@ -37,7 +37,7 @@ function ResourcesPage() {
 
         <Hero className="mb-5" bg="store" layout="centered-v" height="md">
           <div className="mw-480 mr-auto">
-            <h2>Living Word Store</h2>
+            <h2>Mac Hammond Ministries Store</h2>
             <p>
               Conveniently providing Bible-based books and resources as well as
               digital media from our weekly services to help you grow
@@ -46,7 +46,7 @@ function ResourcesPage() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="http://store.lwcc.org/"
+              href="https://store.machammond.org/"
             >
               Store &rarr;
             </a>
