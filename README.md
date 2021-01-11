@@ -14,11 +14,17 @@ npm run dev
 Runs parcel in dev mode with the dev server running at https://localhost:1234
 
 ### Build and Deploy to Production
-From the lwcc.org directory:
+1. From the lwcc.org directory, run:
 ```shell
 npm run build
 . ./scripts/wp-deploy.sh
 ```
+2. From the wp server, download `/www/lwcc.org/public_html/wp-content/themes/LWCC/footer.php` file
+3. Update the `v` param in the header-footer.js script to the current timestamp:
+```html
+<script src="/public/scripts/header-footer.js?v=1610394195400"></script>
+``` 
+
 _Note_: npm runs `prebuild` before the `build` and `postbuild` after.  
 The `prebuild` cleans the public directory.  
 The `postbuild` re-creates the wordpress template using the newly built html.
@@ -49,7 +55,3 @@ Response:
   }
 }
 ```
-
-
-### TODO
-[ ] - fix the menu hamburger starting as an 'x'
