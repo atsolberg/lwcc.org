@@ -97,13 +97,7 @@ function Footer() {
                   <strong>Saint Paul</strong>
                 </a>
               </p>
-              <p>
-                Union Depot
-                <br />
-                240 E Kellogg Blvd #70
-                <br />
-                St Paul, MN 55101
-              </p>
+              <p>Streaming Live!</p>
 
               <PhoneEmail p="763.315.7000" e="saintpaul@lwcc.org" />
 
