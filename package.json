@@ -9,7 +9,7 @@
     "parcel:dev:media": "parcel ./src/media-sermons.html --out-dir public",
     "parcel:build": "parcel build ./src/index.html ./src/scripts/header-footer.js --out-dir public --public-url /public/",
     "parcel:build:js": "parcel build ./src/scripts/index.js --out-dir public --public-url /public/",
-    "parcel:build:vercel": "parcel build ./src/header-footer.html ./src/media-sermons.html --out-dir public --public-url /public/",
+    "parcel:build:vercel": "parcel build ./src/header-footer.html ./src/media-sermons.html --out-dir public",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
