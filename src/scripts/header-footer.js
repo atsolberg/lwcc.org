@@ -19,7 +19,8 @@ function init() {
 
   // If header-footer.html is the entry file, the css will be added
   // When header-footer.js is the entry file, we need to add it
-  if (!window.location.host.match(/vercel\.app$/i)) {
+  const inject_stylesheet = !window.location.host.match(/vercel\.app$/i);
+  if (inject_stylesheet) {
     // Add the stylesheet link
     const link = document.createElement('link');
     link.type = 'text/css';
@@ -45,7 +46,7 @@ function init() {
   parent.style.paddingTop = '0';
 
   header.id = 'react-header';
-  header.style.opacity = '0';
+  header.style.opacity = inject_stylesheet ? '1' : '0';
   header.style.transition = 'opacity 400ms ease-in-out';
   parent.prepend(header);
 
