@@ -48,7 +48,7 @@ export const arrays = {
    * @param {boolean} before -
    */
   weave(arr, o, before = false) {
-    const next = (i) => {
+    const next = i => {
       if (Array.isArray(o)) return o[i];
       if (typeof o === 'function') return o(i);
       return o;
@@ -259,7 +259,7 @@ export const arrays = {
 
       return indexA - indexB;
     };
-  }
+  },
 };
 
 /** Common reducer callbacks. */
@@ -274,10 +274,10 @@ export const reducers = {
    * Create a reducer to build an entity table mapped by item `field`.
    * @param {string} field - the property name or property path of the id.
    */
-  by: (field) => (acc, item) => {
+  by: field => (acc, item) => {
     acc[prop(item, field)] = item;
     return acc;
-  }
+  },
 };
 
 /**
@@ -288,7 +288,7 @@ export const reducers = {
 export const entityTable = (arr, by = 'id') => {
   const reducer = by === 'id' ? reducers.id : reducers.by(by);
   const table = { byId: arr.reduce(reducer, {}) };
-  table.allIds = arr.map((o) => o[by]);
+  table.allIds = arr.map(o => o[by]);
 
   return table;
 };

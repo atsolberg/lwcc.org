@@ -16,10 +16,14 @@ function init() {
   // Add css, but why do I need to do this?
   const { head } = document;
   const link = document.createElement('link');
+  const header = document.createElement('div');
+  const footer = document.createElement('div');
 
   link.type = 'text/css';
   link.rel = 'stylesheet';
   link.href = '/public/scripts/header-footer.css';
+  link.onload = () => (header.style.opacity = '1');
+  link.onerror = () => (header.style.opacity = '1');
 
   head.appendChild(link);
 
@@ -31,16 +35,19 @@ function init() {
   old_top.parentNode.removeChild(old_top);
   old_header.parentNode.removeChild(old_header);
 
-  const header = document.createElement('div');
-  const footer = document.createElement('div');
   const parent = document.getElementById('page-container');
+
   parent.removeAttribute('style');
   parent.style.paddingTop = '0';
 
+  header.id = 'react-header';
+  header.style.opacity = '0';
+  header.style.transition = 'opacity 400ms ease-in-out';
   parent.prepend(header);
 
   render(<Header />, header);
 
+  footer.id = 'react-footer';
   old_footer.insertAdjacentElement('afterend', footer);
   old_footer.parentNode.removeChild(old_footer);
 

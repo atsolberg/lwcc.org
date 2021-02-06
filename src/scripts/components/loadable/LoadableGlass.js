@@ -13,7 +13,7 @@ const LoadableGlass = ({
   spinner = false,
   width = '40',
   copy = '',
-  children
+  children,
 }) => (
   <div className="loadable">
     {children}
@@ -35,7 +35,7 @@ LoadableGlass.propTypes = {
   spinner: bool.isRequired,
   width: oneOfType([string, number]),
   copy: string,
-  children: node
+  children: node,
 };
 
 export default LoadableGlass;

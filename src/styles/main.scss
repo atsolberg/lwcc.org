@@ -16,19 +16,17 @@
 // Import our variables first so we can overwrite bootstraps
 // @see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
 // @see https://parceljs.org/recipes.html#customizing-bootstrap-styles
-@import "variables.scss";
-@import "~bootstrap/scss/bootstrap";
+@import 'variables.scss';
+@import '~bootstrap/scss/bootstrap';
 
 /* Set variables that depend on bootstrap variables */
-$screen-mobile: map-get($grid-breakpoints, "md") - 1;
-$screen-tablet: map-get($grid-breakpoints, "md");
-$screen-desktop: map-get($grid-breakpoints, "lg");
-$gray: map-get($colors, "gray");
-$gray-dark: map-get($colors, "gray-dark");
+$screen-mobile: map-get($grid-breakpoints, 'md') - 1;
+$screen-tablet: map-get($grid-breakpoints, 'md');
+$screen-desktop: map-get($grid-breakpoints, 'lg');
+$gray: map-get($colors, 'gray');
+$gray-dark: map-get($colors, 'gray-dark');
 
-
-
-  /* MIXINS
+/* MIXINS
   --------------------------------------------------------------- */
 
 @mixin tablet {
@@ -91,9 +89,9 @@ $gray-dark: map-get($colors, "gray-dark");
 @mixin bg-gradient($bgcolor: $primary, $transparency: 0.5) {
   background-color: $bgcolor;
   @include gradient-x-three-colors(
-      $start-color: $bgcolor,
-      $mid-color: transparentize($white, $transparency),
-      $end-color: $bgcolor
+    $start-color: $bgcolor,
+    $mid-color: transparentize($white, $transparency),
+    $end-color: $bgcolor
   );
 }
 
@@ -136,7 +134,15 @@ $gray-dark: map-get($colors, "gray-dark");
 // BS smartly chooses a dark (#111) color if the background is too light, this lets you
 // override that and just specify the color in the two spots needed.
 // @see node_modules/bootstrap/scss/mixins/_buttons.scss#button-variant
-@mixin button-variant-with-color($color, $background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+@mixin button-variant-with-color(
+  $color,
+  $background,
+  $border,
+  $hover-background: darken($background, 7.5%),
+  $hover-border: darken($border, 10%),
+  $active-background: darken($background, 10%),
+  $active-border: darken($border, 12.5%)
+) {
   // color: color-yiq($background);
   color: $color;
   @include gradient-bg($background);
@@ -154,9 +160,18 @@ $gray-dark: map-get($colors, "gray-dark");
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
-      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      box-shadow: $btn-box-shadow,
+        0
+          0
+          0
+          $btn-focus-width
+          rgba(mix(color-yiq($background), $border, 15%), 0.5);
     } @else {
-      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      box-shadow: 0
+        0
+        0
+        $btn-focus-width
+        rgba(mix(color-yiq($background), $border, 15%), 0.5);
     }
   }
 
@@ -187,14 +202,22 @@ $gray-dark: map-get($colors, "gray-dark");
     &:focus {
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows and $btn-active-box-shadow != none {
-        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+        box-shadow: $btn-active-box-shadow,
+          0
+            0
+            0
+            $btn-focus-width
+            rgba(mix(color-yiq($background), $border, 15%), 0.5);
       } @else {
-        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+        box-shadow: 0
+          0
+          0
+          $btn-focus-width
+          rgba(mix(color-yiq($background), $border, 15%), 0.5);
       }
     }
   }
 }
-
 
 // Override the primary button with our variant mixin to get the white color back
 .btn-primary {
@@ -203,9 +226,10 @@ $gray-dark: map-get($colors, "gray-dark");
 
 /* APP - our global styles for our app
 --------------------------------------------------------------- */
-@import "_global";
-
+@import '_global';
 
 /* Wordpress site overrides
 --------------------------------------------------------------- */
-#bitnami-banner { display: none !important; }
+#bitnami-banner {
+  display: none !important;
+}

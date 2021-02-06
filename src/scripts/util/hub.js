@@ -30,7 +30,7 @@ const log = (topic, listeners, data) => {
     `${styles.strong}`,
     `${styles.normal}`,
     `${styles.value}`,
-    `${styles.normal}`
+    `${styles.normal}`,
   ];
 
   grouper.apply(console, [notif, ...consoleStyles]);
@@ -44,7 +44,7 @@ const mod = {
     modal: 'modal',
     modalReady: 'modal.ready',
     unmodal: 'unmodal',
-    activity: 'activity'
+    activity: 'activity',
   },
 
   /**
@@ -68,7 +68,7 @@ const mod = {
     return {
       remove: () => {
         delete topics[topic][index];
-      }
+      },
     };
   },
 
@@ -84,10 +84,10 @@ const mod = {
 
     // Cycle through topics queue, fire!
     const listeners = topics[topic];
-    listeners.forEach((listener) => listener(data || {}));
+    listeners.forEach(listener => listener(data || {}));
 
     log(topic, listeners.length, data);
-  }
+  },
 };
 
 /**

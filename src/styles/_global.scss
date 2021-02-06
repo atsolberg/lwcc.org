@@ -447,22 +447,25 @@ a.text-secondary :focus {
    SPACING
    ============================================================ */
 
-
 $bumpers: (
   xl: 60px,
   lg: 40px,
   '': 20px,
   md: 15px,
   sm: 10px,
-  xs: 5px
+  xs: 5px,
 );
 
 @mixin make_bumpers($prefix, $prop) {
   @each $size, $value in $bumpers {
     @if $size == '' {
-      .#{$prefix} { #{$prop}: $value !important; }
+      .#{$prefix} {
+        #{$prop}: $value !important;
+      }
     } @else {
-      .#{$prefix}-#{$size} { #{$prop}: $value !important; }
+      .#{$prefix}-#{$size} {
+        #{$prop}: $value !important;
+      }
     }
   }
 }
