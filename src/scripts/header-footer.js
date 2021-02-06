@@ -13,19 +13,23 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
 function init() {
-  // Add css, but why do I need to do this?
   const { head } = document;
-  const link = document.createElement('link');
   const header = document.createElement('div');
   const footer = document.createElement('div');
 
-  link.type = 'text/css';
-  link.rel = 'stylesheet';
-  link.href = '/public/scripts/header-footer.css';
-  link.onload = () => (header.style.opacity = '1');
-  link.onerror = () => (header.style.opacity = '1');
+  // If header-footer.html is the entry file, the css will be added
+  // When header-footer.js is the entry file, we need to add it
+  if (!window.location.host.match(/vercel\.app$/i)) {
+    // Add the stylesheet link
+    const link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = '/public/scripts/header-footer.css';
+    link.onload = () => (header.style.opacity = '1');
+    link.onerror = () => (header.style.opacity = '1');
 
-  head.appendChild(link);
+    head.appendChild(link);
+  }
 
   // Remove the old header elements
   const old_top = document.getElementById('top-header');
