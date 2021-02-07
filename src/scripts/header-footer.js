@@ -46,7 +46,7 @@ function init() {
   parent.style.paddingTop = '0';
 
   header.id = 'react-header';
-  header.style.opacity = inject_stylesheet ? '1' : '0';
+  header.style.opacity = inject_stylesheet ? '0' : '1';
   header.style.transition = 'opacity 400ms ease-in-out';
   parent.prepend(header);
 
