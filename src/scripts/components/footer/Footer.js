@@ -50,13 +50,13 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-              <p>Copyright Living Word 2020</p>
+              <p>Copyright Living Word 2021</p>
               <p>
                 <a href="/privacy-policy">Privacy Policy</a>
               </p>
             </div>
 
-            {/* Brooklyn Park Hours */}
+            {/* Brooklyn Park */}
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
                 <a
@@ -67,6 +67,7 @@ function Footer() {
                   <strong>Brooklyn Park</strong>
                 </a>
               </p>
+
               <p>
                 9201 75th Avenue North
                 <br />
@@ -86,29 +87,36 @@ function Footer() {
               </p>
             </div>
 
-            {/* Saint Paul Hours */}
+            {/* Iglesia Español */}
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
                 <a
-                  href="https://www.lwcc.org/saintpaul/"
+                  href="https://www.lwcc.org/iglesiaespanol/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <strong>Saint Paul</strong>
+                  <strong>Iglesia Español</strong>
                 </a>
               </p>
-              <p>Streaming Live!</p>
 
-              <PhoneEmail p="763.315.7000" e="saintpaul@lwcc.org" />
+              <p>
+                9201 75th Avenue North
+                <br />
+                Brooklyn Park, MN 55428
+                <br />
+                Main Campus Chapel
+              </p>
+
+              <PhoneEmail p="763.315.7000" e="info@lwcc.org" />
 
               <p>
                 <strong>Service Times</strong>
                 <br />
-                Sun 11 a.m.
+                Sun 10:45 a.m.
               </p>
             </div>
 
-            {/* Rogers Hours */}
+            {/* Rogers */}
             <div className="footer-section col-12 col-sm-6 col-lg-3">
               <p>
                 <a
