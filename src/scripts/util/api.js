@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import logger from './logger';
 import { isTestMode } from './misc';
-import { namespace } from './object';
+import { namespace, prop } from './object';
 import { g_creds, host } from './constants';
 import TEST_PL_ITEMS_DATA from '../__tests__/data/pl_items_the_simple_life';
 import TEST_PL_DATA from '../__tests__/data/pl_the_simple_life';
@@ -30,8 +30,8 @@ const cache = new MicroCache();
 function filterForOurs(items) {
   return items.filter(
     item =>
-      item.snippet.channelId === YT_CHANNEL_ID &&
-      item.snippet.title !== 'Private video'
+      prop(item, 'snippet.channelId') === YT_CHANNEL_ID &&
+      prop(item, 'snippet.title') !== 'Private video'
   );
 }
 

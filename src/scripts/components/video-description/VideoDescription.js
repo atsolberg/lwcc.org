@@ -21,7 +21,13 @@ function VideoDescription({ data }) {
       {!loading && (
         <>
           <h3 dangerouslySetInnerHTML={{ __html: video.title }} />
-          <div dangerouslySetInnerHTML={{ __html: video.description }} />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: video.description
+                .replaceAll(/(https:\/\/[^\s+]+)\s/g, '<a href="$1">$1</a><br>')
+                .replaceAll(/\n/g, '<br>'),
+            }}
+          />
           <ul className="list-unstyled list-inline social-links">
             <li className="list-inline-item">
               <span>SHARE</span>
