@@ -50,6 +50,11 @@ function Footer() {
                   </a>
                 </li>
               </ul>
+              <p>
+                <a href="https://lwcc.buzzsprout.com/">
+                  Subscribe to Our Podcast!
+                </a>
+              </p>
               <p>Copyright Living Word 2021</p>
               <p>
                 <a href="/privacy-policy">Privacy Policy</a>
