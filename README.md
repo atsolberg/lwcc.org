@@ -3,8 +3,9 @@ React app for the lwcc.org site.
 
 ### Development
 1. Install [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
-1. Install node: `nvm install node`
-1. Clone repo, install node modules, and start the `dev` server:
+2. Install node: `nvm install node`
+3. Make sure you are using node 12 with `nvm use 12` 
+4. Clone repo, install node modules, and start the `dev` server:
 ```shell
 git clone https://github.com/atsolberg/lwcc.org.git
 cd lwcc.org
@@ -14,7 +15,8 @@ npm run dev
 Runs parcel in dev mode with the dev server running at https://localhost:1234
 
 ### Build and Deploy to Production
-1. From the lwcc.org directory, run:
+1. Make sure you are using node 12 with `nvm use 12`
+2. From the lwcc.org directory, run:
 ```shell
 npm run build
 . ./scripts/wp-deploy.sh

@@ -55,7 +55,7 @@ function Footer() {
                   Subscribe to Our Podcast!
                 </a>
               </p>
-              <p>Copyright Living Word 2021</p>
+              <p>Copyright Living Word 2022</p>
               <p>
                 <a href="/privacy-policy">Privacy Policy</a>
               </p>
