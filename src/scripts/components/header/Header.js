@@ -35,13 +35,16 @@ function fixTitles(title) {
   if (title.toLowerCase() === 'member log in') {
     return (
       <>
-        <span className="d-none d-sm-inline">{title}</span>
+        <span
+          className="d-none d-sm-inline"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
         <span className="d-sm-none">Login</span>
       </>
     );
   }
 
-  return title;
+  return <span dangerouslySetInnerHTML={{ __html: title }} />;
 }
 
 /**
@@ -134,7 +137,7 @@ function Header() {
                           href={getPath(c.url)}
                           id={dasherize(c.title)}
                         >
-                          {c.title}
+                          <span dangerouslySetInnerHTML={{ __html: c.title }} />
                         </NavDropdown.Item>
                       ))}
                     </HoverNav>

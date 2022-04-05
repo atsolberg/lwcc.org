@@ -52,7 +52,12 @@ function Footer() {
               </ul>
               <p>
                 <a href="https://lwcc.buzzsprout.com/">
-                  Subscribe to Our Podcast!
+                  Sunday Service Podcast
+                </a>
+              </p>
+              <p>
+                <a href="https://podcasts.apple.com/us/podcast/the-final-hour/id1609783460">
+                  The Final Hour Podcast
                 </a>
               </p>
               <p>Copyright Living Word 2022</p>
