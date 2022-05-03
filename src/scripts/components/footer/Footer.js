@@ -56,7 +56,7 @@ function Footer() {
                 </a>
               </p>
               <p>
-                <a href="https://podcasts.apple.com/us/podcast/the-final-hour/id1609783460">
+                <a href="https://www.thefinalhourpodcast.com">
                   The Final Hour Podcast
                 </a>
               </p>
