@@ -140,9 +140,7 @@ function Footer() {
                 </a>
               </p>
               <p>
-                Emagine Theatre
-                <br />
-                13692 Rogers Dr.
+                10925 Trail Haven Rd,
                 <br />
                 Rogers, MN 55374
               </p>
@@ -152,7 +150,7 @@ function Footer() {
               <p>
                 <strong>Service Times</strong>
                 <br />
-                11 a.m.
+                10:30 a.m.
               </p>
             </div>
           </div>
