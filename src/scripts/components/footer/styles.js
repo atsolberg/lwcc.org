@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import bs from '../../../../postcss_vars';
 import v from '../../../../exported_scss_vars';
 import { desktop, tablet, xl } from '../../../styles/breakpoints';

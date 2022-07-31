@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import api from '../../util/api';
 import logo from '../../../img/icons/logo-192.png';
@@ -40,8 +40,8 @@ function VideoPage() {
   const heroData = getHeroData();
 
   useEffect(() => {
-    api.getMediaPages().then(data => setPages(data));
-    api.getVideoDetails(id).then(details => {
+    api.getMediaPages().then((data) => setPages(data));
+    api.getVideoDetails(id).then((details) => {
       setData(details);
     });
   }, [id]);

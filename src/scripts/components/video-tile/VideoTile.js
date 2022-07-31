@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 import { format, formats } from '../../util/misc';
 import { videoType } from '../../types/video';

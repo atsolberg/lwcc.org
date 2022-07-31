@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import v from '../../../../exported_scss_vars';
 import { sm, max } from '../../../styles/breakpoints';

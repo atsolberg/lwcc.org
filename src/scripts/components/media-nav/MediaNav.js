@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { string, arrayOf, shape, oneOf, bool, any } from 'prop-types';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 import { getFlatPathName } from '../../util/misc';
 import styles from './styles';
@@ -15,7 +15,7 @@ function MediaNav({ items, variant = 'normal', centered = false, className }) {
         '-centered': centered,
       })}
     >
-      {items.map(item => (
+      {items.map((item) => (
         <li
           key={item.title}
           className={cx('list-inline-item', {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import logger from '../../util/logger';
 import { prop } from '../../util/object';
@@ -26,21 +26,21 @@ function SermonsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    api.getMediaPages().then(data => setPages(data));
-    api.getPlayLists('sermons').then(data => setPlaylists(data));
+    api.getMediaPages().then((data) => setPages(data));
+    api.getPlayLists('sermons').then((data) => setPlaylists(data));
 
-    api.getCurrentSeriesId().then(id => {
+    api.getCurrentSeriesId().then((id) => {
       setCurrentSeriesId(id);
 
-      api.getPlayList(id).then(pl => {
+      api.getPlayList(id).then((pl) => {
         const title = prop(pl, 'snippet.localized.title') || '';
         setCurrentSeriesTitle(title);
         setHeader(title);
       });
 
-      api.getVideosForPlayList(id).then(videos => {
+      api.getVideosForPlayList(id).then((videos) => {
         setLoading(false);
-        setVideos(videos.map(v => parseVideo(v)));
+        setVideos(videos.map((v) => parseVideo(v)));
       });
     });
   }, []);
@@ -62,10 +62,10 @@ function SermonsPage() {
 
     const id = isCurrentSeries
       ? currentSeriesId
-      : playlists.find(pl => pl.id === value).pl_id;
+      : playlists.find((pl) => pl.id === value).pl_id;
 
-    api.getVideosForPlayList(id).then(videos => {
-      setVideos(videos.map(v => parseVideo(v)));
+    api.getVideosForPlayList(id).then((videos) => {
+      setVideos(videos.map((v) => parseVideo(v)));
     });
   }
 
@@ -74,12 +74,12 @@ function SermonsPage() {
     if (q.trim().length > 0) {
       api
         .searchVideos(q)
-        .then(videos => {
+        .then((videos) => {
           setActivePlaylist(null);
-          setVideos(videos.map(v => parseVideo(v)));
+          setVideos(videos.map((v) => parseVideo(v)));
           setHeader(`Search results for: "${q}"`);
         })
-        .catch(err => logger.error('search error: ', err));
+        .catch((err) => logger.error('search error: ', err));
     }
   }
 

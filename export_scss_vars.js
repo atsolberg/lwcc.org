@@ -1,6 +1,6 @@
 /**
  * This will create a file called `exported_scss_vars.json` at the project root
- * that will contain all the scss variables name/value pairs our our _variables.scss file.
+ * that will contain all the scss variables name/value pairs our _variables.scss file.
  * Names are converted to camel case.
  *
  * This is run automatically by before parcel by the npm 'dev' and 'build' scripts.
