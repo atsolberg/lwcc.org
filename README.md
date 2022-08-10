@@ -4,7 +4,7 @@ React app for the lwcc.org site.
 ### Development
 1. Install [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
 2. Install node: `nvm install node`
-3. Make sure you are using node 12 with `nvm use 12` 
+3. Make sure you are using node 16 with `nvm use 16` 
 4. Clone repo, install node modules, and start the `dev` server:
 ```shell
 git clone https://github.com/atsolberg/lwcc.org.git
@@ -15,7 +15,7 @@ npm run dev
 Runs parcel in dev mode with the dev server running at https://localhost:1234
 
 ### Build and Deploy to Production
-1. Make sure you are using node 12 with `nvm use 12`
+1. Make sure you are using node 16 with `nvm use 16`
 2. From the lwcc.org directory, run:
 ```shell
 npm run build
@@ -29,7 +29,7 @@ npm run build
 
 _Note_: npm runs `prebuild` before the `build` and `postbuild` after.  
 The `prebuild` cleans the public directory.  
-The `postbuild` re-creates the wordpress template using the newly built html.
+The `postbuild` re-creates the WordPress template using the newly built html.
 
 ### WordPress Shenanigans
 Menu data was accessed from the wp rest api by adding the `WP-REST-API V2 Menus` plugin.  
