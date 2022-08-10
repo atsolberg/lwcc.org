@@ -1,134 +1,8 @@
-/* ============================================================
-
-    The main scss file for the app.
-
-    TABLE OF CONTENTS
-
-    VARIABLES
-    MIXINS
-    APP
-
-   ============================================================ */
-
-/* VARIABLES
---------------------------------------------------------------- */
-
 // Import our variables first so we can overwrite bootstraps
 // @see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
 // @see https://parceljs.org/recipes.html#customizing-bootstrap-styles
 @import 'variables.scss';
 @import '~bootstrap/scss/bootstrap';
-
-/* Set variables that depend on bootstrap variables */
-$screen-mobile: map-get($grid-breakpoints, 'md') - 1;
-$screen-tablet: map-get($grid-breakpoints, 'md');
-$screen-desktop: map-get($grid-breakpoints, 'lg');
-$gray: map-get($colors, 'gray');
-$gray-dark: map-get($colors, 'gray-dark');
-
-/* MIXINS
-  --------------------------------------------------------------- */
-
-@mixin tablet {
-  @media (min-width: $screen-tablet) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: $screen-desktop) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: $screen-mobile) {
-    @content;
-  }
-}
-
-// Translate the block to the center vertically
-// and horizontally.
-@mixin center-block($left: null, $right: null) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// Translate the block to the center vertically
-// and set the `left` or `right` if provided.
-@mixin v-center-block($left: null, $right: null) {
-  position: absolute;
-  @if variable-exists(left) {
-    left: $left;
-  }
-  @if variable-exists(right) {
-    right: $right;
-  }
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-// Translate the block to the center horizontally
-// and set the `top` if provided.
-@mixin h-center-block($top: null) {
-  position: absolute;
-  @if variable-exists(top) {
-    top: $top;
-  }
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@mixin bg-center-cover($img) {
-  background: url($img) no-repeat center center scroll;
-  background-size: cover;
-}
-
-@mixin bg-gradient($bgcolor: $primary, $transparency: 0.5) {
-  background-color: $bgcolor;
-  @include gradient-x-three-colors(
-    $start-color: $bgcolor,
-    $mid-color: transparentize($white, $transparency),
-    $end-color: $bgcolor
-  );
-}
-
-@mixin border-tail($color, $height: 18px, $width: 15px) {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 0;
-  height: 0;
-  border-top: solid $height $color;
-  border-left: solid $width transparent;
-  border-right: solid $width transparent;
-  z-index: 1;
-}
-
-@mixin shadow() {
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.24);
-}
-
-// Button sizes with all 4 vertical and horizontal padding options.
-@mixin button-size-full(
-  $padding-top,
-  $padding-right,
-  $padding-bottom,
-  $padding-left,
-  $font-size,
-  $line-height,
-  $border-radius
-) {
-  padding: $padding-top $padding-right $padding-bottom $padding-left;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
-}
 
 .btn-primary {
   @include button-variant($primary, $primary, #fff);
@@ -136,7 +10,17 @@ $gray-dark: map-get($colors, 'gray-dark');
 
 /* APP - our global styles for our app
 --------------------------------------------------------------- */
-@import '_global';
+
+// A container just like bootstrap's `container-fluid` class
+// but it stops at 1140px. Use instead of `container-fluid`.
+.container-xl {
+  max-width: map_get($container-max-widths, xl);
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* Wordpress site overrides
 --------------------------------------------------------------- */

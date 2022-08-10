@@ -1,5 +1,5 @@
 # 📖 lwcc.org
-React app for the lwcc.org site.
+React app for the lwcc.org site header and footer.
 
 ### Development
 1. Install [nvm](https://github.com/nvm-sh/nvm#installation-and-update)
@@ -22,38 +22,13 @@ npm run build
 . ./scripts/wp-deploy.sh
 ```
 2. From the wp server, download `/www/lwcc.org/public_html/wp-content/themes/LWCC/footer.php` file
-3. Update the `v` param in the header-footer.js script to the current timestamp:
+3. Update the `v` param in the header-footer script and css link to the current timestamp:
 ```html
-<script src="/public/scripts/header-footer.js?v=1610394195400"></script>
+<script src="/public/header-footer.js?v=1660089730678"></script>
 ``` 
 
 _Note_: npm runs `prebuild` before the `build` and `postbuild` after.  
-The `prebuild` cleans the public directory.  
-The `postbuild` re-creates the WordPress template using the newly built html.
+The `prebuild` cleans the public directory.
 
 ### WordPress Shenanigans
-Menu data was accessed from the wp rest api by adding the `WP-REST-API V2 Menus` plugin.  
-Playlist data was achieved by adding the `Custom Post Type UI` to create 'Playlist'   
-post types, adding `Advanced Custom Fields` to add custom fields to the custom  
-`Playlist` post types, and `ACF to REST API` to get that data into the rest api.  
-
-Example Playlist Request:
-```
-https://52.26.12.22/wp-json/wp/v2/playlists/2669
-```
-Response:
-```json
-{
-  "id": 2669,
-  "slug": "current-series",
-  "type": "playlists",
-  "title": {
-    "rendered": "Current Series"
-  },
-  
-  "acf": {
-    "name": "Current Series",
-    "id": "PL7LE6jm_pt7yg5Xw-z1HS8T-wEacfYy2r"
-  }
-}
-```
+Menu data was accessed from the wp rest api by adding the `WP-REST-API V2 Menus` plugin.

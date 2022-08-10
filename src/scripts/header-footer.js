@@ -1,11 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './util/polyfill';
-import './util/hub';
-import './util/cookie';
-import './util/storage';
 
-import '@fortawesome/fontawesome-free/css/all.css';
+import './util/polyfill';
+
 import '../styles/main.scss';
 import { docReady } from './util/misc';
 
@@ -19,8 +16,14 @@ function init() {
 
   // If header-footer.html is the entry file, the css will be added
   // When header-footer.js is the entry file, we need to add it
-  const inject_stylesheet = !window.location.host.match(/vercel\.app$/i);
+  const existing_css =
+    Array.from(document.querySelectorAll('link')).filter((l) =>
+      l.href.includes('header-footer.css')
+    ).length > 0;
+  const inject_stylesheet =
+    !existing_css && !window.location.host.match(/vercel\.app$/i);
   if (inject_stylesheet) {
+    console.log('injecting header-footer.css');
     // Add the stylesheet link
     const link = document.createElement('link');
     link.type = 'text/css';
@@ -31,6 +34,14 @@ function init() {
 
     head.appendChild(link);
   }
+
+  const fa_script = document.createElement('script');
+  fa_script.setAttribute('crossorigin', 'anonymous');
+  fa_script.src = 'https://kit.fontawesome.com/fe766b0f79.js';
+  fa_script.type = 'text/javascript';
+  fa_script.id = 'fa-script';
+
+  document.body.appendChild(fa_script);
 
   // Remove the old header elements
   const old_top = document.getElementById('top-header');

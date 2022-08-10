@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Deletes the remote host's /public dir and the /wp-content/themes/LWCC/react-template.php file.
-# Then copies my /public dir and react-template.php to the remote host.
+# Deletes the remote host's /public dir.
+# Then copies my /public dir to the remote host.
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -24,12 +24,5 @@ echo "✅"
 printf "${CYAN}Copying${NC} local public directory contents to remote... "
 rsync -e 'ssh -p 18765' -a public/ u3-m255kwj632s3@35.209.180.216:/home/u3-m255kwj632s3/www/lwcc.org/public_html/public/
 echo "✅"
-
-printf "${RED}Deleting${NC} remote react-template.php... "
-ssh u3-m255kwj632s3@35.209.180.216 -p 18765 rm -rf "/home/u3-m255kwj632s3/www/lwcc.org/public_html/wp-content/themes/LWCC/react-template.php"
-echo "✅"
-
-printf "${CYAN}Copying${NC} local react-template.php to remote...\n"
-scp -P 18765 ~/Development/atsolberg/lwcc.org/wp-stuff/react-template.php u3-m255kwj632s3@35.209.180.216:/home/u3-m255kwj632s3/www/lwcc.org/public_html/wp-content/themes/LWCC/
 
 printf "${GREEN}Done!${NC}\n"
