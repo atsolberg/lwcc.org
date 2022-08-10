@@ -16,6 +16,16 @@ $border-radius-sm: 4px;
 $border-radius: 4px;
 $border-radius-lg: 4px;
 
+// These are here just so postcss can see and export them to json
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
 /* All our non-bootstrap variables
 --------------------------------------------------------------- */
 $dark-bar-bg: #4a4f55;

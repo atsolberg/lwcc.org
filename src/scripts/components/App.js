@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Router } from '@reach/router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import '../util/polyfill';
 import '../util/hub';
@@ -45,15 +45,17 @@ function App() {
     <div id="react-page-container">
       <Header />
       <Main>
-        <Router>
-          <SermonsPage path="/media-sermons" />
-          <SermonsPage path="/media-sermons.html" />
-          <StoriesPage path="/media-stories" />
-          <ResourcesPage path="/media-resources" />
-          <VideoPage path="/media-sermons/sermon" />
-          <VideoPage path="/media-stories/story" />
-          <VideoPage path="/media-video" />
-        </Router>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/media-sermons" element={<SermonsPage />} />
+            <Route path="/media-sermons.html" element={<SermonsPage />} />
+            <Route path="/media-stories" element={<StoriesPage />} />
+            <Route path="/media-resources" element={<ResourcesPage />} />
+            <Route path="/media-sermons/sermon" element={<VideoPage />} />
+            <Route path="/media-stories/story" element={<VideoPage />} />
+            <Route path="/media-video" element={<VideoPage />} />
+          </Routes>
+        </BrowserRouter>
       </Main>
       <Footer />
     </div>

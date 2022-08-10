@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { string, node, any, oneOf, bool } from 'prop-types';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import styles, { bgs } from './styles';
 

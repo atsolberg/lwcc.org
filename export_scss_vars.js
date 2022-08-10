@@ -1,6 +1,6 @@
 /**
  * This will create a file called `exported_scss_vars.json` at the project root
- * that will contain all the scss variables name/value pairs our our _variables.scss file.
+ * that will contain all the scss variables name/value pairs our _variables.scss file.
  * Names are converted to camel case.
  *
  * This is run automatically by before parcel by the npm 'dev' and 'build' scripts.
@@ -9,17 +9,38 @@
 
 const fs = require('fs');
 const postcss = require('postcss');
-const scssSyntax = require('postcss-scss');
-const exportVars = require('postcss-export-vars');
+const postcss_scss = require('postcss-scss');
+const postcss_export_vars = require('postcss-export-vars');
 
 fs.readFile('src/styles/_variables.scss', (err, css) => {
-  postcss([exportVars({ file: 'exported_scss_vars' })])
+  postcss([postcss_export_vars({ file: 'exported_scss_vars' })])
     .process(css, {
       from: 'src/styles/_variables.scss',
-      to: 'src/styles/scss-vars.json',
-      syntax: scssSyntax,
+      syntax: postcss_scss,
+      parser: postcss_scss,
     })
     .then(() => {
-      // Leave this here, without the .then call, the file won't get output.
+      // Update file to parse maps correctly
+      const content = fs.readFileSync('exported_scss_vars.json', 'utf8');
+      const result = JSON.parse(content);
+      Object.entries(result).forEach(([k, v]) => {
+        // Fix entries of scss maps
+        if (v.startsWith('(')) {
+          const params = v
+            .replaceAll(/\s/g, '')
+            .replaceAll('!default', '')
+            .replaceAll(/[()]/g, '')
+            .split(',')
+            .filter(Boolean)
+            .map((param) => param.split(':'));
+          const next = Object.fromEntries(params);
+          result[k] = next;
+        }
+      });
+      fs.writeFileSync(
+        'exported_scss_vars.json',
+        JSON.stringify(result, null, 2),
+        'utf8'
+      );
     });
 });

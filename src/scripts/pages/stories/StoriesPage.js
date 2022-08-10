@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import logger from '../../util/logger';
 import api from '../../util/api';
@@ -24,17 +24,17 @@ function StoriesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    api.getMediaPages().then(data => setPages(data));
+    api.getMediaPages().then((data) => setPages(data));
 
-    api.getPlayLists('stories').then(data => {
+    api.getPlayLists('stories').then((data) => {
       setPlaylists(data);
 
       const [first] = data;
       setHeader(first.title);
       setActivePlaylist(first.id);
-      api.getVideosForPlayList(first.pl_id).then(videos => {
+      api.getVideosForPlayList(first.pl_id).then((videos) => {
         setLoading(false);
-        setVideos(videos.map(v => parseVideo(v)));
+        setVideos(videos.map((v) => parseVideo(v)));
       });
     });
   }, []);
@@ -49,10 +49,10 @@ function StoriesPage() {
     setActivePlaylist(value);
     setHeader(title);
 
-    const id = playlists.find(pl => pl.id === value).pl_id;
+    const id = playlists.find((pl) => pl.id === value).pl_id;
 
-    api.getVideosForPlayList(id).then(videos => {
-      setVideos(videos.map(v => parseVideo(v)));
+    api.getVideosForPlayList(id).then((videos) => {
+      setVideos(videos.map((v) => parseVideo(v)));
     });
   }
 
@@ -61,12 +61,12 @@ function StoriesPage() {
     if (q.trim().length > 0) {
       api
         .searchVideos(q)
-        .then(videos => {
+        .then((videos) => {
           setActivePlaylist(null);
-          setVideos(videos.map(v => parseVideo(v)));
+          setVideos(videos.map((v) => parseVideo(v)));
           setHeader(`Search results for: "${q}"`);
         })
-        .catch(err => logger.error('search error: ', err));
+        .catch((err) => logger.error('search error: ', err));
     }
   }
 

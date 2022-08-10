@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import cx from 'classnames';
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 
 /**
  * A css transition to do a fade in and out.

@@ -150,7 +150,7 @@ function Footer() {
               <p>
                 <strong>Service Times</strong>
                 <br />
-                10:30 a.m.
+                Sun 10:30 a.m.
               </p>
             </div>
           </div>

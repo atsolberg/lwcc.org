@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import logo from '../../../img/icons/logo-192.png';
 import cfaithLogo from '../../../img/logos/cfaith.png';
@@ -16,7 +16,7 @@ function ResourcesPage() {
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
-    api.getMediaPages().then(data => setPages(data));
+    api.getMediaPages().then((data) => setPages(data));
   }, []);
 
   return (

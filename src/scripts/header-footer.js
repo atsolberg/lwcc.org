@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './util/polyfill';
 import './util/hub';
 import './util/cookie';
@@ -50,13 +50,15 @@ function init() {
   header.style.transition = 'opacity 400ms ease-in-out';
   parent.prepend(header);
 
-  render(<Header />, header);
+  const root_header = createRoot(header);
+  root_header.render(<Header />);
 
   footer.id = 'react-footer';
   old_footer.insertAdjacentElement('afterend', footer);
   old_footer.parentNode.removeChild(old_footer);
 
-  render(<Footer />, footer);
+  const root_footer = createRoot(footer);
+  root_footer.render(<Footer />);
 }
 
 docReady(init);

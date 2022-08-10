@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import bs from '../../../../postcss_vars';
 import { mobile, tablet } from '../../../styles/breakpoints';
 import { clearFix } from '../../../styles/mixins';

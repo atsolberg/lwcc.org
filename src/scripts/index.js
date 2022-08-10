@@ -1,16 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import ABTestsProvider from './components/ABTestsProvider';
 import App from './components/App';
 import AppStateProvider from './state-providers/app/AppStateProvider';
 
-const root = document.getElementById('page-container');
-render(
+const target = document.getElementById('page-container');
+const root = createRoot(target);
+root.render(
   <ABTestsProvider>
     <AppStateProvider>
       <App />
     </AppStateProvider>
-  </ABTestsProvider>,
-  root
+  </ABTestsProvider>
 );

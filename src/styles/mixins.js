@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { transparentize } from 'polished';
 
 import bs from '../../postcss_vars';
@@ -126,7 +126,7 @@ export const vCenterBlock = (left, right) => css`
 
 // Translate the block to the center horizontally
 // and set the `top` if provided.
-export const hCenterBlock = top => `
+export const hCenterBlock = (top) => `
   position: absolute;
   ${typeof type !== 'undefined' && `top: ${top}`}
   left: 50%;
@@ -137,7 +137,7 @@ export const hCenterBlock = top => `
    BACKGROUNDS
    ============================================================ */
 
-export const bgCenterCover = img => `
+export const bgCenterCover = (img) => `
   background: url(${img}) no-repeat center center scroll;
   background-size: cover;
 `;

@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { mobile } from '../../../styles/breakpoints';
 
 const styles = css`
