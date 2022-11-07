@@ -8,6 +8,7 @@
     "prebuild": "shx rm -rf public/*",
     "build": "parcel build ./src/scripts/header-footer.js --dist-dir public --public-url /public/",
     "vercel-build": "parcel build ./src/header-footer.html --dist-dir public",
+    "dev-hf-html": "parcel ./src/header-footer.html --dist-dir public",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
