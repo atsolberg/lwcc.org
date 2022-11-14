@@ -1,18 +1,19 @@
 import React from 'react';
+import FooterLink from './FooterLink';
 
 function PhoneEmail({ p, e }) {
   return (
-    <p className="phone-email">
-      <a
-        className="d-lg-block d-xl-inline"
+    <p className="mb-8">
+      <FooterLink
+        className="lg:block xl:inline"
         href={`tel:${p.replace(new RegExp('[^\\d]', 'g'), '')}`}
       >
         {p}
-      </a>
-      <span className="d-lg-none d-xl-inline"> | </span>
-      <a className="d-lg-block d-xl-inline" href={`mailto:${e}`}>
+      </FooterLink>
+      <span className="lg:hidden xl:inline"> | </span>
+      <FooterLink className="lg:block xl:inline" href={`mailto:${e}`}>
         {e}
-      </a>
+      </FooterLink>
     </p>
   );
 }

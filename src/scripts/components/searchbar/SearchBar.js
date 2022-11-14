@@ -1,27 +1,22 @@
 import React, { useEffect, useRef } from 'react';
 import { array } from 'prop-types';
-import Collapse from 'react-bootstrap/Collapse';
+import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 import { host, keyCodes } from '../../util/constants';
-import Button from '../button';
-
-import styles from './styles';
+import Button from '../button/Button';
 
 function SearchBar({ search: [searching, setSearching] }) {
   const inputRef = useRef();
 
   // Focus after opening
   useEffect(() => {
-    if (searching) {
-      setTimeout(() => {
-        inputRef.current.focus();
-      }, 1);
-    }
+    if (searching) setTimeout(() => inputRef.current.focus(), 1);
   }, [searching]);
 
   function onSearch() {
     window.location.href = `${host}/?s=${inputRef.current.value}`;
   }
+
   function onKeyDown({ keyCode }) {
     if (keyCode === keyCodes.enter) {
       onSearch();
@@ -31,27 +26,30 @@ function SearchBar({ search: [searching, setSearching] }) {
   }
 
   return (
-    <Collapse in={searching}>
-      <div className="row" css={styles}>
+    <div>
+      <div className="bg-white">
         <div className="col-12">
-          <div className="container searchbar p-sm">
-            <div className="input-group">
+          <div className="container-sm p-3">
+            <div className="flex items-center justify-center max-w-[400px] my-0 mx-auto focus:ring-primary">
               <input
+                type="text"
                 tabIndex={0}
                 ref={inputRef}
-                className="form-control"
+                className="form-input focus:ring-primary focus:border-primary"
                 onKeyDown={onKeyDown}
               />
-              <div className="input-group-append">
-                <Button variant="primary" onClick={onSearch}>
-                  <i className="fa fa-search" />
-                </Button>
-              </div>
+              <Button
+                variant="primary"
+                onClick={onSearch}
+                className="rounded-l-none"
+              >
+                <MagnifyingGlassIcon width="24" />
+              </Button>
             </div>
           </div>
         </div>
       </div>
-    </Collapse>
+    </div>
   );
 }
 SearchBar.propTypes = {

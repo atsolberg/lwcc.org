@@ -1,33 +1,13 @@
-/* BOOTSTRAP
-   Override bootstrap variables before importing bootstrap
---------------------------------------------------------------- */
-$font-size-base: 1rem; // Not changing, just setting so we can use it on the next line
-$font-size-lg: $font-size-base * 1; // Dropped letters down from 14px tall to 12px tall
-$input-btn-padding-y-lg: 0.688em; // Bump vertical padding to get the lg buttons back up to 48px tall
-
-$primary: #64cbc9;
-$body-color: #3a3c3e;
-
-$navbar-light-color: $body-color;
-$navbar-light-hover-color: $primary;
-$navbar-light-active-color: $primary;
-
-$border-radius-sm: 4px;
-$border-radius: 4px;
-$border-radius-lg: 4px;
-
-// These are here just so postcss can see and export them to json
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-) !default;
-
-/* All our non-bootstrap variables
---------------------------------------------------------------- */
-$dark-bar-bg: #4a4f55;
-$section-bg: #f6f6f6;
-$max-width: 1140px;
+//$primary: #64cbc9;
+//$body-color: #3a3c3e;
+//$grid-breakpoints: (
+//  xs: 0,
+//  sm: 576px,
+//  md: 768px,
+//  lg: 992px,
+//  xl: 1200px,
+//  xxl: 1400px,
+//) !default;
+//$dark-bar-bg: #4a4f55;
+//$section-bg: #f6f6f6;
+//$max-width: 1140px;

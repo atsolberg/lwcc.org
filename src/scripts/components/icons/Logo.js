@@ -1,15 +1,16 @@
 import React from 'react';
 import { string, number, oneOfType } from 'prop-types';
 
-function Logo({ color = 'currentColor', width = '100%', height }) {
+function Logo({ color = 'currentColor', width = '100%', height, ...rest }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       viewBox="0 0 179.472 28.494"
       {...(typeof height !== 'undefined' ? { height } : {})}
+      {...rest}
     >
-      <g id="logo" transform="translate(0 -0.495)">
+      <g transform="translate(0 -0.495)">
         <path
           d="M5.079,22.495a22.138,22.138,0,0,1,13.348,4.2V9.849A9.849,9.849,0,0,0,8.578,0H0V23.035a24.463,24.463,0,0,1,5.079-.54"
           transform="translate(0 0.495)"

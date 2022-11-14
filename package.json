@@ -9,6 +9,8 @@
     "build": "parcel build ./src/scripts/header-footer.js --dist-dir public --public-url /public/",
     "vercel-build": "parcel build ./src/header-footer.html --dist-dir public",
     "dev-hf-html": "parcel ./src/header-footer.html --dist-dir public",
+    "tw-build": "npx tailwindcss -i ./src/input.css -o ./public/tw-output.css",
+    "tw-watch": "npx tailwindcss -i ./src/input.css -o ./public/tw-output.css --watch",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
@@ -35,21 +37,20 @@
   "homepage": "https://github.com/atsolberg/lwcc.org#readme",
   "dependencies": {
     "@babel/preset-env": "^7.18.9",
-    "@emotion/babel-preset-css-prop": "^11.2.0",
-    "@emotion/react": "^11.9.3",
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.13",
     "axios": "^0.27.2",
     "babel-eslint": "^10.0.2",
     "babel-plugin-emotion": "^11.0.0",
-    "bootstrap": "^5.2.0",
     "chalk": "^4.1.2",
     "classnames": "^2.3.1",
     "core-js": "^3.24.1",
     "custom-event-polyfill": "^1.0.7",
     "eslint-plugin-jest": "^26.7.0",
+    "js-cookie": "^3.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-async-script": "^1.2.0",
-    "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "url-polyfill": "^1.1.12"
   },
@@ -60,6 +61,7 @@
     "@babel/preset-react": "^7.18.6",
     "@parcel/resolver-glob": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/react": "^18.0.15",
     "babel-core": "^6.26.3",
     "babel-jest": "^28.1.3",
@@ -74,6 +76,7 @@
     "parcel": "^2.3.2",
     "prettier": "^2.7.1",
     "process": "^0.11.10",
-    "shx": "^0.3.4"
+    "shx": "^0.3.4",
+    "tailwindcss": "^3.2.4"
   }
 }

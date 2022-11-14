@@ -2,11 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 import './util/polyfill';
-
-import '../styles/main.scss';
 import { docReady } from './util/misc';
 
-import Header from './components/header/Header';
+import Header from './components/headerv2/Headerv2';
 import Footer from './components/footer/Footer';
 
 function init() {
@@ -14,36 +12,36 @@ function init() {
   const header = document.createElement('div');
   const footer = document.createElement('div');
 
+  // Use tailwind's recommended font
+  // @see https://tailwindui.com/documentation#optional-add-the-inter-font-family
+  const font = document.createElement('link');
+  font.rel = 'stylesheet';
+  font.href = 'https://rsms.me/inter/inter.css';
+  head.appendChild(font);
+
   // If header-footer.html is the entry file, the css will be added
   // When header-footer.js is the entry file, we need to add it
   const existing_css =
     Array.from(document.querySelectorAll('link')).filter((l) =>
-      l.href.includes('header-footer.css')
+      l.href.includes('tw-output')
     ).length > 0;
   const inject_stylesheet =
     !existing_css && !window.location.host.match(/vercel\.app$/i);
   if (inject_stylesheet) {
-    console.log('injecting header-footer.css');
+    console.log('injecting tw-output.css');
+
     // Add the stylesheet link
     const link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = '/public/scripts/header-footer.css';
+    link.href = '/public/tw-output.css';
     link.onload = () => (header.style.opacity = '1');
     link.onerror = () => (header.style.opacity = '1');
 
     head.appendChild(link);
   }
 
-  const fa_script = document.createElement('script');
-  fa_script.setAttribute('crossorigin', 'anonymous');
-  fa_script.src = 'https://kit.fontawesome.com/fe766b0f79.js';
-  fa_script.type = 'text/javascript';
-  fa_script.id = 'fa-script';
-
-  document.body.appendChild(fa_script);
-
-  // Remove the old header elements
+  // Remove the old header/footer elements
   const old_top = document.getElementById('top-header');
   const old_header = document.getElementById('main-header');
   const old_footer = document.getElementById('main-footer');
