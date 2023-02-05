@@ -25,27 +25,27 @@ function Footer() {
               </a>
               <ul className="social-icons list-unstyled list-inline">
                 <li className="social-icon list-inline-item">
-                  <a href="http://www.facebook.com/livingwordmn">
+                  <a href="https://www.facebook.com/livingwordmn">
                     <Facebook />
                   </a>
                 </li>
                 <li className="social-icon list-inline-item">
-                  <a href="http://www.twitter.com/livingwordmn">
+                  <a href="https://www.twitter.com/livingwordmn">
                     <Twitter />
                   </a>
                 </li>
                 <li className="social-icon list-inline-item">
-                  <a href="http://www.instagram.com/livingwordmn">
+                  <a href="https://www.instagram.com/livingwordmn">
                     <Instagram />
                   </a>
                 </li>
                 <li className="social-icon list-inline-item">
-                  <a href="http://www.vimeo.com/livingwordmn">
+                  <a href="https://www.vimeo.com/livingwordmn">
                     <Vimeo />
                   </a>
                 </li>
                 <li className="social-icon list-inline-item">
-                  <a href="http://www.youtube.com/livingwordmn">
+                  <a href="https://www.youtube.com/@LivingWordChristianCenterMN">
                     <Youtube />
                   </a>
                 </li>
