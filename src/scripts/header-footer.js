@@ -37,8 +37,8 @@ function init() {
   const old_header = document.getElementById('main-header');
   const old_footer = document.getElementById('main-footer');
 
-  old_top.parentNode.removeChild(old_top);
-  old_header.parentNode.removeChild(old_header);
+  if (old_top) old_top.parentNode.removeChild(old_top);
+  if (old_header) old_header.parentNode.removeChild(old_header);
 
   const parent = document.getElementById('page-container');
 
@@ -53,8 +53,8 @@ function init() {
   render(<Header />, header);
 
   footer.id = 'react-footer';
-  old_footer.insertAdjacentElement('afterend', footer);
-  old_footer.parentNode.removeChild(old_footer);
+  if (old_footer) old_footer.insertAdjacentElement('afterend', footer);
+  if (old_footer) old_footer.parentNode.removeChild(old_footer);
 
   render(<Footer />, footer);
 }
